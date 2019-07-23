@@ -7,6 +7,7 @@ export default class App extends React.Component {
         return (
             <div>
                 <MessagesList
+                    currentUserId={1}
                     messages={messagesJSON}
                 />
             </div>

@@ -18,6 +18,38 @@
   "id": 1,
   "body": "hello John",
   "read": {
+    "status": true,
+    "timestamp": "2019-07-23T20:10:14+00:00"
+  },
+  "recipient": {
+    "userId": 100,
+    "userName": "johnSmith100"
+  },
+  "createdAt": "2019-07-23T20:10:14+00:00",
+  "createdBy": {
+    "userId": 1,
+    "userName": "mikeham98"
+  }
+},{
+  "id": 2,
+  "body": "how are you Mike",
+  "read": {
+    "status": true,
+    "timestamp": "2019-07-23T20:16:14+00:00"
+  },
+  "recipient": {
+    "userId": 1,
+    "userName": "mikeham98"
+  },
+  "createdAt": "2019-07-23T20:15:14+00:00",
+  "createdBy": {
+    "userId": 100,
+    "userName": "johnSmith100"
+  }
+},{
+  "id": 3,
+  "body": "I am good thank you john how are you",
+  "read": {
     "status": false,
     "timestamp": null
   },
@@ -25,7 +57,7 @@
     "userId": 100,
     "userName": "johnSmith100"
   },
-  "createdAt": "2019-07-23T20:10:14+00:00",
+  "createdAt": "2019-07-23T20:17:00+00:00",
   "createdBy": {
     "userId": 1,
     "userName": "mikeham98"
