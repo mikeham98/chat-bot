@@ -1,5 +1,7 @@
+@import './colors.scss';
+
 .messageContainer {
-  background-color: #f3f3f3;
+  background-color: white;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -12,23 +14,25 @@
   max-width: 60%;
 }
 
+.message {
+  border-radius: 1em;
+  padding: 5px 10px;
+  color: $blue-ink;
+}
+
 .leftMessage {
   align-self: flex-start;
   .message {
-    background-color: red;
+    background-color: $light-gray;
   }
 }
 
 .rightMessage {
   align-self: flex-end;
   .message {
-    background-color: blue;
+    background-color: $hot-pink;
+    color: white;
   }
-}
-
-.message {
-  border-radius: 1em;
-  padding: 5px 10px;
 }
 
 @media only screen and (max-width: 600px) {
