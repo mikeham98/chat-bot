@@ -7,6 +7,10 @@ import Message from "./Message";
 import {left, right} from "../../../config/messages.config";
 
 export default class MessagesList extends React.PureComponent {
+    componentDidMount() {
+        this.messageContainer.scrollTop = this.messageContainer.scrollHeight;
+    }
+
     returnMessageClassName(position) {
         const classNames = [styles.messageWrapper];
         if(position === right) {
@@ -36,7 +40,7 @@ export default class MessagesList extends React.PureComponent {
 
     render() {
         return (
-            <div className={styles.messageContainer}>
+            <div ref={(ref) => this.messageContainer = ref} id='messageContainer' className={styles.messageContainer}>
                 {this.returnMessages()}
             </div>
         )
