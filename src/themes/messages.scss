@@ -1,5 +1,38 @@
 .messageContainer {
-  background-color: red;
+  background-color: #f3f3f3;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.messageWrapper {
+  margin: 5px;
+  position: relative;
+  box-sizing: border-box;
+  max-width: 60%;
+}
+
+.leftMessage {
+  align-self: flex-start;
+  .message {
+    background-color: red;
+  }
+}
+
+.rightMessage {
+  align-self: flex-end;
+  .message {
+    background-color: blue;
+  }
+}
+
+.message {
+  border-radius: 1em;
+  padding: 5px 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .messageWrapper {
+    max-width: 90%;
+  }
 }
