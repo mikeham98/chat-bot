@@ -37,6 +37,12 @@
   }
 }
 
+.replyInProgress {
+  font-weight: 600;
+  font-size: 0.8em;
+  color: $gray;
+}
+
 @media only screen and (max-width: 600px) {
   .messageWrapper {
     max-width: 90%;

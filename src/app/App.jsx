@@ -10,6 +10,7 @@ export default class App extends React.Component {
                 <MessagesList
                     currentUserId={1}
                     messages={messagesJSON}
+                    replying
                 />
                 <ReactTooltip
                     place="bottom"
