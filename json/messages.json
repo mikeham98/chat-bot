@@ -1,0 +1,33 @@
+[{
+  "id": 0,
+  "body": "hello Mike",
+  "read": {
+    "status": true,
+    "timestamp": "2019-07-23T20:04:14+00:00"
+  },
+  "recipient": {
+    "userId": 1,
+    "userName": "mikeham98"
+  },
+  "createdAt": "2019-07-23T20:04:14+00:00",
+  "createdBy": {
+    "userId": 100,
+    "userName": "johnSmith100"
+  }
+},{
+  "id": 1,
+  "body": "hello John",
+  "read": {
+    "status": false,
+    "timestamp": null
+  },
+  "recipient": {
+    "userId": 100,
+    "userName": "johnSmith100"
+  },
+  "createdAt": "2019-07-23T20:10:14+00:00",
+  "createdBy": {
+    "userId": 1,
+    "userName": "mikeham98"
+  }
+}]
