@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import classnames from 'classnames';
 import styles from '../../../../themes/messages.scss';
 import isPopulatedArray from "../../../util/isPopulatedArray";
@@ -24,6 +25,7 @@ export default class MessagesList extends React.PureComponent {
                 return (
                     <div className={this.returnMessageClassName(position)}>
                         <Message
+                            dateTime={moment(message.createdAt).fromNow()}
                             body={message.body}
                         />
                     </div>

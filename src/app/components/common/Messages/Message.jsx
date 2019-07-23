@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from '../../../../themes/messages.scss';
 
-const Message = ({body}) => {
+const Message = ({body, dateTime}) => {
     return (
-        <div className={styles.message}>
+        <div className={styles.message} data-tip={dateTime}>
             {body}
         </div>
     );
