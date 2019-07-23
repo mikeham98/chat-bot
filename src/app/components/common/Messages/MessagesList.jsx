@@ -40,7 +40,10 @@ export default class MessagesList extends React.PureComponent {
 
     render() {
         return (
-            <div ref={(ref) => this.messageContainer = ref} id='messageContainer' className={styles.messageContainer}>
+            <div
+                ref={(ref) => this.messageContainer = ref}
+                className={styles.messageContainer}
+            >
                 {this.returnMessages()}
             </div>
         )
