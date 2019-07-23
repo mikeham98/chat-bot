@@ -1,17 +1,25 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import ReactTooltip from 'react-tooltip';
-import MessagesList from "./components/common/Messages/MessagesList";
-import messagesJSON from "../../json/messages.json";
+import store from "./store";
+import messagesReducer from "./reducers/conversation/index.reducers";
+
+const MessagesListContainer = React.lazy(() =>
+    import(/* webpackChunkName: "MESSAGES_LIST_CONTAINER" */ "./containers/Messages/MessageListContainer")
+        .then(() => {
+            store.injectReducer('conversation', messagesReducer);
+            return import ("./containers/Messages/MessageListContainer");
+        })
+);
 
 export default class App extends React.Component {
     render() {
         return (
             <div>
-                <MessagesList
-                    currentUserId={1}
-                    messages={messagesJSON}
-                    replying
-                />
+                <Suspense fallback={<div>Loading...</div>}>
+                    <MessagesListContainer
+                        currentUserId={1}
+                    />
+                </Suspense>
                 <ReactTooltip
                     place="bottom"
                     delayShow={800}
