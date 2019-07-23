@@ -2,10 +2,10 @@ import {constants} from "../../actions/conversation/index.actions";
 
 const initialState = {
     messages: [],
-    replying: true
+    replying: false
 };
 
-const messagesReducer = (state = initialState, action) => {
+const conversationReducer = (state = initialState, action) => {
     switch (action.type) {
         case constants.GET_CONVERSATION_MESSAGES:
             return {
@@ -17,4 +17,4 @@ const messagesReducer = (state = initialState, action) => {
     }
 };
 
-export default messagesReducer;
+export default conversationReducer;

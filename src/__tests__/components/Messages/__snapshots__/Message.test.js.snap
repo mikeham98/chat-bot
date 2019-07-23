@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Message render should render a message body along with a data-tip 1`] = `
+<div
+  className="message"
+  data-tip="10 minutes ago"
+>
+  Hello world
+</div>
+`;

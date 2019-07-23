@@ -1,12 +1,12 @@
 import React, {Suspense} from 'react';
 import ReactTooltip from 'react-tooltip';
 import store from "./store";
-import messagesReducer from "./reducers/conversation/index.reducers";
+import conversationReducer from "./reducers/conversation/index.reducers";
 
 const MessagesListContainer = React.lazy(() =>
     import(/* webpackChunkName: "MESSAGES_LIST_CONTAINER" */ "./containers/Messages/MessageListContainer")
         .then(() => {
-            store.injectReducer('conversation', messagesReducer);
+            store.injectReducer('conversation', conversationReducer);
             return import ("./containers/Messages/MessageListContainer");
         })
 );

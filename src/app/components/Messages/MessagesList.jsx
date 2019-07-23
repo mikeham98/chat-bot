@@ -7,6 +7,11 @@ import Message from "./Message";
 import {left, right} from "../../config/messages.config";
 
 export default class MessagesList extends React.PureComponent {
+    constructor(props) {
+        super(props);
+        this.messageContainerRef = this.messageContainerRef.bind(this);
+    }
+
     componentDidMount() {
         this.scrollToBottom();
     }
@@ -37,7 +42,7 @@ export default class MessagesList extends React.PureComponent {
             return messages.map(message => {
                 const position = currentUserId === message.createdBy.userId ? right : left;
                 return (
-                    <div className={this.returnMessageClassName(position)}>
+                    <div key={message.id} className={this.returnMessageClassName(position)}>
                         <Message
                             dateTime={moment(message.createdAt).fromNow()}
                             body={message.body}
@@ -48,11 +53,15 @@ export default class MessagesList extends React.PureComponent {
         }
     }
 
+    messageContainerRef(ref) {
+        this.messageContainer = ref;
+    }
+
     render() {
         const {replying} = this.props;
         return (
             <div
-                ref={(ref) => this.messageContainer = ref}
+                ref={this.messageContainerRef}
                 className={styles.messageContainer}
             >
                 {this.returnMessages()}

@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessagesList render should render a list of messages 1`] = `
+<MessagesList
+  currentUserId={1}
+  messages={
+    Array [
+      Object {
+        "body": "Hello Mike",
+        "createdAt": "2019-07-23T12:00:00+00:00",
+        "createdBy": Object {
+          "userId": 100,
+          "userName": "johnSmith100",
+        },
+        "id": 0,
+        "read": Object {
+          "status": true,
+          "timestamp": "2019-07-23T12:00:15+00:00",
+        },
+        "recipient": Object {
+          "userId": 1,
+          "userName": "mikeham98",
+        },
+      },
+      Object {
+        "body": "Hello John, how are you?",
+        "createdAt": "2019-07-23T12:01:30+00:00",
+        "createdBy": Object {
+          "userId": 1,
+          "userName": "mikeham98",
+        },
+        "id": 1,
+        "read": Object {
+          "status": false,
+          "timestamp": null,
+        },
+        "recipient": Object {
+          "userId": 100,
+          "userName": "johnSmith100",
+        },
+      },
+    ]
+  }
+  replying={false}
+>
+  <div
+    className="messageContainer"
+  >
+    <div
+      className="messageWrapper leftMessage"
+      key="0"
+    >
+      <Memo(Message)
+        body="Hello Mike"
+        dateTime="10 minutes ago"
+      >
+        <div
+          className="message"
+          data-tip="10 minutes ago"
+        >
+          Hello Mike
+        </div>
+      </Memo(Message)>
+    </div>
+    <div
+      className="messageWrapper rightMessage"
+      key="1"
+    >
+      <Memo(Message)
+        body="Hello John, how are you?"
+        dateTime="10 minutes ago"
+      >
+        <div
+          className="message"
+          data-tip="10 minutes ago"
+        >
+          Hello John, how are you?
+        </div>
+      </Memo(Message)>
+    </div>
+  </div>
+</MessagesList>
+`;
+
+exports[`MessagesList render should render no messages 1`] = `
+<MessagesList
+  currentUserId={1}
+  messages={Array []}
+  replying={false}
+>
+  <div
+    className="messageContainer"
+  />
+</MessagesList>
+`;

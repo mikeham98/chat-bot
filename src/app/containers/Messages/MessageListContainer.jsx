@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import MessagesList from "../../components/Messages/MessagesList";
 import {getConversationMessages} from "../../actions/conversation/index.actions";
 
-class MessageListContainer extends React.Component{
+export class MessageListContainer extends React.Component{
     componentDidMount() {
         this.props.getConversationMessages();
     }

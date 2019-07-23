@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageListContainer render should render MessageList component 1`] = `
+<MessagesList
+  currentUserId={1}
+  messages={
+    Array [
+      1,
+      2,
+      3,
+      4,
+      5,
+    ]
+  }
+  replying={true}
+/>
+`;
