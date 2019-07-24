@@ -19,16 +19,20 @@ export default class MessageForm extends React.Component {
         this.props.sendMessage(message, callback);
     }
 
+    validate(values) {
+        let errors = {};
+        if (!values.message) {
+            errors.message = 'Required';
+        }
+        return errors;
+    }
+
     render() {
         return (
             <Formik
                 initialValues={this.props.initialValues}
                 onSubmit={this.handleSubmit}
-                // validationSchema={Yup.object().shape({
-                //     email: Yup.string()
-                //         .email()
-                //         .required('Required'),
-                // })}
+                validate={this.validate}
             >
                 {formikProps => {
                     const {
