@@ -19,9 +19,6 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                 },
-                resolve: {
-                    extensions: ['.js', '.jsx'],
-                },
             },
             {
                 test: /\.html$/,
@@ -77,6 +74,6 @@ module.exports = {
         })
     ],
     resolve: {
-        extensions: [".js", ".jsx"],
+        extensions: [".js", ".jsx", ".json"],
     },
 };
