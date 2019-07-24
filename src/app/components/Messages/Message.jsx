@@ -1,14 +1,14 @@
 import React from 'react';
 import styles from '../../../themes/messages.scss';
 
-const Message = ({body, dateTime}) => {
+const Message = ({body, dateTime, showDateTime}) => {
     return (
-        <React.Fragment>
+        <div className={styles.messageContent}>
             <div className={styles.message}>
                 {body}
             </div>
-            <span className={styles.messageCreatedAt}>{dateTime}</span>
-        </React.Fragment>
+            {showDateTime && <span className={styles.messageCreatedAt}>{dateTime}</span>}
+        </div>
     );
 };
 

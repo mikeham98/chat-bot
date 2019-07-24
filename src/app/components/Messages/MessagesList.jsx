@@ -10,6 +10,9 @@ import formatDateTime from "../../util/formatDateTime";
 export default class MessagesList extends React.PureComponent {
     constructor(props) {
         super(props);
+        this.state = {
+            clickedMessageId: null
+        };
         this.messageContainerRef = this.messageContainerRef.bind(this);
     }
 
@@ -42,9 +45,12 @@ export default class MessagesList extends React.PureComponent {
         if (isPopulatedArray(messages)) {
             return messages.map(message => {
                 const position = currentUserId === message.createdBy.userId ? right : left;
+                // showDateTime is implemented here so that only one message at a time can show the date/time
+                const showDateTime = message.id === this.state.clickedMessageId;
                 return (
-                    <div key={message.id} className={this.returnMessageClassName(position)}>
+                    <div key={message.id} onClick={() => this.setState({clickedMessageId: showDateTime ? null : message.id})} className={this.returnMessageClassName(position)}>
                         <Message
+                            showDateTime={showDateTime}
                             dateTime={formatDateTime(message.createdAt)}
                             body={message.body}
                         />

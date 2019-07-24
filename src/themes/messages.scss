@@ -40,6 +40,10 @@
   }
 }
 
+.messageContent {
+  transition: 1s ease-in-out;
+}
+
 .messageCreatedAt {
   margin-top: 10px;
   display: block;
