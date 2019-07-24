@@ -4,6 +4,10 @@ const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 describe('formatDateTime', () => {
+    it('should return N/A', () => {
+        const dateTime = 'Hello world';
+        expect(formatDateTime(dateTime)).toBe('N/A');
+    });
     it('should return day of the week, hours/minutes, am/pm', () => {
         const dateTime = new Date();
         const day = dateTime.getDay();
