@@ -1,6 +1,7 @@
 import React from 'react';
 import {mount} from 'enzyme';
 import MessagesList from '../../../app/components/Messages/MessagesList';
+import Message from '../../../app/components/Messages/Message';
 
 // formatDateTime has been mocked out due to the nature of re-running tests in the future and the current date changing.
 jest.mock('../../../app/util/formatDateTime.js', () => ({
@@ -45,7 +46,6 @@ describe('MessagesList', () => {
     });
 
     describe('functionality', () => {
-
         describe('scrollToBottom', () => {
             beforeEach(() => {
                 jest.spyOn(MessagesList.prototype, 'scrollToBottom');
@@ -120,6 +120,27 @@ describe('MessagesList', () => {
                     ]
                 });
                 expect(MessagesList.prototype.scrollToBottom).toHaveBeenCalledTimes(1);
+            });
+        });
+        describe('showDateTime', () => {
+            it('should be set to true for the first message', () => {
+                expect(wrapper().find(Message).at(0).props().showDateTime).toBeFalsy();
+                wrapper().find(Message).at(0).parent().props().onClick();
+                wrapper().update();
+                expect(wrapper().find(Message).at(0).props().showDateTime).toBeTruthy();
+            });
+            it('should be set to true for the first message then false on click of the second' +
+                ' message which now has showDateTime set to true', () => {
+                expect(wrapper().find(Message).at(0).props().showDateTime).toBeFalsy();
+                expect(wrapper().find(Message).at(1).props().showDateTime).toBeFalsy();
+                wrapper().find(Message).at(0).parent().props().onClick();
+                wrapper().update();
+                expect(wrapper().find(Message).at(0).props().showDateTime).toBeTruthy();
+                expect(wrapper().find(Message).at(1).props().showDateTime).toBeFalsy();
+                wrapper().find(Message).at(1).parent().props().onClick();
+                wrapper().update();
+                expect(wrapper().find(Message).at(0).props().showDateTime).toBeFalsy();
+                expect(wrapper().find(Message).at(1).props().showDateTime).toBeTruthy();
             });
         });
     });

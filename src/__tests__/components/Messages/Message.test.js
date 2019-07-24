@@ -16,13 +16,20 @@ describe('Message', () => {
     beforeEach(() => {
         props = {
             body: 'Hello world',
-            dateTime: '10 minutes ago'
+            dateTime: '10 minutes ago',
+            showDateTime: false
         };
         shallowedWrapper = undefined;
     });
 
     describe('render', () => {
-        it('should render a message body along with a data-tip', () => {
+        it('should render a message body', () => {
+            expect(wrapper()).toMatchSnapshot();
+        });
+        it('should render a message body along with showDateTime', () => {
+            wrapper().setProps({
+                showDateTime: true
+            });
             expect(wrapper()).toMatchSnapshot();
         });
     });

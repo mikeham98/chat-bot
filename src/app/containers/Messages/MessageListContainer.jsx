@@ -20,7 +20,7 @@ export class MessageListContainer extends React.Component{
     }
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
     return {
         replying: state.conversation.replying,
         messages: state.conversation.messages
