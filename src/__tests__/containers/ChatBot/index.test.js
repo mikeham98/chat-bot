@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {MessageListContainer} from '../../../app/containers/Messages/MessageListContainer';
+import {MessageListContainer} from '../../../app/containers/ChatBot/MessageListContainer';
 
 describe('MessageListContainer', () => {
 

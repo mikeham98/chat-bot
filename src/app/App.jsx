@@ -1,5 +1,5 @@
 import React from 'react';
-import MessagesLayout from "./layout/MessagesLayout";
+import ChatBotLayout from "./layout/ChatBotLayout";
 import ConversationPanelLayout from "./layout/ConversationPanelLayout";
 import styles from '../themes/components/layout.scss';
 
@@ -10,7 +10,7 @@ export default class App extends React.Component {
                 <div className={styles.chatBotContainer}>
                     <div className={styles.chatBotWrapper}>
                         <ConversationPanelLayout/>
-                        <MessagesLayout/>
+                        <ChatBotLayout/>
                     </div>
                 </div>
             </div>

@@ -79,11 +79,17 @@ export default class SideBar extends React.PureComponent {
                 <div ref={ref => this.sideBarWrapper = ref} style={{width: 300}}>
                     <div className={styles.sideBarMenuWrapper}>
                         <div className={styles.sideBarMenu}>
-                            <div style={{width: '100%'}}>
-                                <h1>
+                            <div style={{
+                                width: '100%',
+                                display: 'flex',
+                                flexDirection: 'column'
+                            }}>
+                                <h1 className={styles.sideBarMenuTitle}>
                                     {this.props.title}
                                 </h1>
-                                {this.props.children}
+                                <div className={styles.sideBarMenuChildren}>
+                                    {this.props.children}
+                                </div>
                             </div>
                         </div>
                         <div ref={(ref) => this.sideBarDraggableHandle = ref} className={styles.sideBarDraggableHandle}>

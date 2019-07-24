@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import Message from '../../../app/components/Messages/Message';
+import Message from '../../../app/components/ChatBot/Message';
 
 describe('Message', () => {
 

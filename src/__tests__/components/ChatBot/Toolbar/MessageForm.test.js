@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import MessageForm from '../../../../app/components/Toolbar/Message/MessageForm';
+import MessageForm from '../../../../app/components/ChatBot/Toolbar/MessageForm';
 import IconButton from "../../../../app/components/common/Icon/IconButton";
 
 jest.mock("../../../../app/components/common/Icon/index.jsx", () => {

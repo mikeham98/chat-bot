@@ -1,6 +1,6 @@
-import conversationReducer from '../../../app/reducers/conversation/index.reducers';
+import messagesReducer from '../../../app/reducers/messages/index.reducers';
 
-describe('conversationReducer', () => {
+describe('messagesReducer', () => {
     describe('with action type', () => {
         describe('RANDOM', () => {
             it('should return current state', () => {
@@ -12,7 +12,7 @@ describe('conversationReducer', () => {
                     type: 'RANDOM',
                     payload: [1, 2, 3, 4, 5]
                 };
-                expect(conversationReducer(state, action)).toEqual(state);
+                expect(messagesReducer(state, action)).toEqual(state);
             });
 
             it('should return initial state', () => {
@@ -24,7 +24,7 @@ describe('conversationReducer', () => {
                     messages: [],
                     replying: false
                 };
-                expect(conversationReducer(undefined, action)).toEqual(initialState);
+                expect(messagesReducer(undefined, action)).toEqual(initialState);
             })
         });
         describe('GET_CONVERSATION_MESSAGES', () => {
@@ -41,7 +41,7 @@ describe('conversationReducer', () => {
                     messages: [1, 2, 3, 4, 5],
                     replying: true
                 };
-                expect(conversationReducer(state, action)).toEqual(expectedState);
+                expect(messagesReducer(state, action)).toEqual(expectedState);
             });
         });
     });

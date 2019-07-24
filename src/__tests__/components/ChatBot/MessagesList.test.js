@@ -1,7 +1,7 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import MessagesList from '../../../app/components/Messages/MessagesList';
-import Message from '../../../app/components/Messages/Message';
+import MessagesList from '../../../app/components/ChatBot/MessagesList';
+import Message from '../../../app/components/ChatBot/Message';
 
 // formatDateTime has been mocked out due to the nature of re-running tests in the future and the current date changing.
 jest.mock('../../../app/util/formatDateTime.js', () => ({

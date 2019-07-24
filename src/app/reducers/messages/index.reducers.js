@@ -5,7 +5,7 @@ const initialState = {
     replying: false
 };
 
-const conversationReducer = (state = initialState, action) => {
+const messagesReducer = (state = initialState, action) => {
     switch (action.type) {
         case constants.GET_CONVERSATION_MESSAGES:
             return {
@@ -17,4 +17,4 @@ const conversationReducer = (state = initialState, action) => {
     }
 };
 
-export default conversationReducer;
+export default messagesReducer;

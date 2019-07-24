@@ -46,8 +46,19 @@
   flex-grow: 1;
   flex-shrink: 1;
   display: flex;
-  h1 {
-    padding: 50px 20px 20px 20px;
-    width: 300px;
-  }
+  width: 300px;
+}
+
+.sideBarMenuTitle {
+  flex: 1;
+  // min-width is set to 300px so content doesn't overflow onto new line on resize of side bar
+  min-width: 300px;
+  padding: 50px 20px 20px 20px;
+}
+
+.sideBarMenuChildren {
+  flex: 10;
+  // min-width is set to 300px so content doesn't overflow onto new line on resize of side bar
+  min-width: 300px;
+  overflow: scroll;
 }

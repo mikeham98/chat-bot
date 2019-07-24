@@ -1,0 +1,21 @@
+@import '../colors';
+
+.conversationListWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.conversationWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid $light-gray;
+  img {
+    height: 40px;
+    width: 40px;
+    margin: 0 20px;
+    border-radius: 20px;
+  }
+}

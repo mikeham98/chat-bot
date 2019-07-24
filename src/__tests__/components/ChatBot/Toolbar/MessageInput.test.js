@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import MessageInput from '../../../../app/components/Toolbar/Message/MessageInput';
+import MessageInput from '../../../../app/components/ChatBot/Toolbar/MessageInput';
 
 describe('MessageInput', () => {
     let shallowedWrapper;
