@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import classnames from 'classnames';
-import styles from '../../../themes/messages.scss';
+import styles from '../../../themes/components/messages.scss';
 import isPopulatedArray from "../../util/isPopulatedArray";
 import Message from "./Message";
 import {left, right} from "../../config/messages.config";

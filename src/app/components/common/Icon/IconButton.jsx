@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../../../themes/icon.scss';
+import styles from '../../../../themes/components/icon.scss';
 import Icon from "./index";
 
 const IconButton = ({onClick, type, icon, style, color, hoverColor, height, width, disabled}) => {

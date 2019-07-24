@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../../../themes/toolbar.scss';
+import styles from '../../../../themes/components/toolbar.scss';
 
 const MessageInput = ({value, onChange, onBlur}) => {
     return (

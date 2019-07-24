@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../../themes/messages.scss';
+import styles from '../../../themes/components/messages.scss';
 
 const Message = ({body, dateTime, showDateTime}) => {
     return (

@@ -1,0 +1,21 @@
+.chatBotContainer {
+  box-sizing: border-box;
+  display: flex;
+  min-height: 100%;
+}
+
+.chatBotWrapper {
+  height: 100vh;
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.messageLayoutWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  flex: 1;
+  min-width: 0;
+  padding: 20px;
+}
