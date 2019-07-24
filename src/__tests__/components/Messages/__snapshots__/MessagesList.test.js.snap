@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MessagesList render should render a list of messages 1`] = `
+exports[`MessagesList render should return a list of messages 1`] = `
 <MessagesList
   currentUserId={1}
   messages={
@@ -49,48 +49,50 @@ exports[`MessagesList render should render a list of messages 1`] = `
     <div
       className="messageWrapper leftMessage"
       key="0"
+      onClick={[Function]}
     >
       <Memo(Message)
         body="Hello Mike"
         dateTime="10:30 am"
+        showDateTime={false}
       >
         <div
-          className="message"
+          className="messageContent"
         >
-          Hello Mike
+          <div
+            className="message"
+          >
+            Hello Mike
+          </div>
         </div>
-        <span
-          className="messageCreatedAt"
-        >
-          10:30 am
-        </span>
       </Memo(Message)>
     </div>
     <div
       className="messageWrapper rightMessage"
       key="1"
+      onClick={[Function]}
     >
       <Memo(Message)
         body="Hello John, how are you?"
         dateTime="10:30 am"
+        showDateTime={false}
       >
         <div
-          className="message"
+          className="messageContent"
         >
-          Hello John, how are you?
+          <div
+            className="message"
+          >
+            Hello John, how are you?
+          </div>
         </div>
-        <span
-          className="messageCreatedAt"
-        >
-          10:30 am
-        </span>
       </Memo(Message)>
     </div>
   </div>
 </MessagesList>
 `;
 
-exports[`MessagesList render should render no messages 1`] = `
+exports[`MessagesList render should return no messages 1`] = `
 <MessagesList
   currentUserId={1}
   messages={Array []}

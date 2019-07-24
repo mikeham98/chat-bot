@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageInput render should return an input component 1`] = `
+<input
+  className="messageInputWrapper"
+  name="message"
+  onBlur={[MockFunction]}
+  onChange={[MockFunction]}
+  placeholder="Type a message..."
+  type="text"
+  value="This is a message"
+/>
+`;

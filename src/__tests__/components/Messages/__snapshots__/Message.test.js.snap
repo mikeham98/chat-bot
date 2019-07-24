@@ -1,7 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Message render should render a message body along with a data-tip 1`] = `
-<Fragment>
+exports[`Message render should return a message body 1`] = `
+<div
+  className="messageContent"
+>
+  <div
+    className="message"
+  >
+    Hello world
+  </div>
+</div>
+`;
+
+exports[`Message render should return a message body along with showDateTime 1`] = `
+<div
+  className="messageContent"
+>
   <div
     className="message"
   >
@@ -12,5 +26,5 @@ exports[`Message render should render a message body along with a data-tip 1`] =
   >
     10 minutes ago
   </span>
-</Fragment>
+</div>
 `;

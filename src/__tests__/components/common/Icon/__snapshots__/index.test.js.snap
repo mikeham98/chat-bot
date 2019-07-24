@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon render should return IconComponent 1`] = `
+<IconComponent
+  fill="red"
+  height="20px"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  width="20px"
+/>
+`;

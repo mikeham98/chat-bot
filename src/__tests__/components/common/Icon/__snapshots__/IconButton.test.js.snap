@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconButton render should return a button with an Icon component as a child 1`] = `
+<button
+  className="iconButton"
+  disabled={true}
+  onClick={[MockFunction]}
+  style={
+    Object {
+      "margin": "10px",
+      "padding": "10px",
+    }
+  }
+  type="text"
+>
+  <Icon
+    IconComponent="I am an icon"
+    color="red"
+    height="20px"
+    hoverColor="blue"
+    width="20px"
+  />
+</button>
+`;

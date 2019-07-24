@@ -15,7 +15,7 @@ describe('MessageListContainer', () => {
 
     beforeEach(() => {
         props = {
-            getConversationMessages: jest.fn(),
+            getMessages: jest.fn(),
             messages: [1, 2, 3, 4, 5],
             replying: true,
             currentUserId: 1
@@ -24,16 +24,16 @@ describe('MessageListContainer', () => {
     });
 
     describe('render', () => {
-        it('should render MessageList component', () => {
+        it('should return MessageList component', () => {
             expect(wrapper()).toMatchSnapshot();
         });
     });
 
     describe('functionality', () => {
-        it('should call getConversationMessages on mount', () => {
-            expect(props.getConversationMessages).not.toHaveBeenCalled();
+        it('should call getMessages on mount', () => {
+            expect(props.getMessages).not.toHaveBeenCalled();
             wrapper();
-            expect(props.getConversationMessages).toHaveBeenCalledTimes(1);
+            expect(props.getMessages).toHaveBeenCalledTimes(1);
         });
     });
 });

@@ -1,4 +1,4 @@
-@import './colors.scss';
+@import 'colors';
 
 .messageContainer {
   background-color: white;
@@ -6,7 +6,7 @@
   flex-direction: column;
   position: relative;
   overflow: scroll;
-  height: 100vh;
+  height: 50vh;
 }
 
 .messageWrapper {
@@ -17,6 +17,7 @@
 }
 
 .message {
+  display: inline-flex;
   border-radius: 1em;
   padding: 5px 10px;
   color: $blue-ink;
@@ -39,7 +40,13 @@
   }
 }
 
+.messageContent {
+  transition: 1s ease-in-out;
+}
+
 .messageCreatedAt {
+  margin-top: 10px;
+  display: block;
   font-weight: 600;
   font-size: 0.6em;
   color: $cartoon-shadow;
