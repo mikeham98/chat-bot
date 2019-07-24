@@ -5,6 +5,7 @@ import styles from '../../../themes/messages.scss';
 import isPopulatedArray from "../../util/isPopulatedArray";
 import Message from "./Message";
 import {left, right} from "../../config/messages.config";
+import formatDateTime from "../../util/formatDateTime";
 
 export default class MessagesList extends React.PureComponent {
     constructor(props) {
@@ -44,7 +45,7 @@ export default class MessagesList extends React.PureComponent {
                 return (
                     <div key={message.id} className={this.returnMessageClassName(position)}>
                         <Message
-                            dateTime={moment(message.createdAt).fromNow()}
+                            dateTime={formatDateTime(message.createdAt)}
                             body={message.body}
                         />
                     </div>

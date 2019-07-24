@@ -1,5 +1,4 @@
 import React, {Suspense} from 'react';
-import ReactTooltip from 'react-tooltip';
 import store from "./store";
 import conversationReducer from "./reducers/conversation/index.reducers";
 
@@ -20,12 +19,6 @@ export default class App extends React.Component {
                         currentUserId={1}
                     />
                 </Suspense>
-                <ReactTooltip
-                    place="bottom"
-                    delayShow={800}
-                    type="dark"
-                    effect="solid"
-                />
             </div>
         );
     }

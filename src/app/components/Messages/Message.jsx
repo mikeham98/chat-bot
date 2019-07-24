@@ -3,9 +3,12 @@ import styles from '../../../themes/messages.scss';
 
 const Message = ({body, dateTime}) => {
     return (
-        <div className={styles.message} data-tip={dateTime}>
-            {body}
-        </div>
+        <React.Fragment>
+            <div className={styles.message}>
+                {body}
+            </div>
+            <span className={styles.messageCreatedAt}>{dateTime}</span>
+        </React.Fragment>
     );
 };
 

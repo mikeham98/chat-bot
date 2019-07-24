@@ -24,6 +24,7 @@
 
 .leftMessage {
   align-self: flex-start;
+  text-align: left;
   .message {
     background-color: $light-gray;
   }
@@ -31,10 +32,17 @@
 
 .rightMessage {
   align-self: flex-end;
+  text-align: right;
   .message {
     background-color: $hot-pink;
     color: white;
   }
+}
+
+.messageCreatedAt {
+  font-weight: 600;
+  font-size: 0.6em;
+  color: $cartoon-shadow;
 }
 
 .replyInProgress {

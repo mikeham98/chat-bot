@@ -2,13 +2,10 @@ import React from 'react';
 import {mount} from 'enzyme';
 import MessagesList from '../../../app/components/Messages/MessagesList';
 
-// moment is mocked out as it has already been tested by their developers
-// and the fromNow function will return a different result due to the messages createdAt date being static
-jest.mock('moment', () => ({
+// formatDateTime has been mocked out due to the nature of re-running tests in the future and the current date changing.
+jest.mock('../../../app/util/formatDateTime.js', () => ({
     __esModule: true,
-    default: () => ({
-        fromNow: () => '10 minutes ago'
-    })
+    default: () => '10:30 am'
 }));
 
 describe('MessagesList', () => {
