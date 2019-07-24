@@ -1,5 +1,5 @@
-import messages from '../../../../json/messages';
-import {constants, getConversationMessages} from '../../../app/actions/conversation/index.actions';
+import messages from '../../../../db/db';
+import {constants, getConversationMessages} from '../../../app/actions/messages/index.actions';
 
 const mockDispatch = jest.fn();
 const dispatch = (thunk) => thunk(mockDispatch);

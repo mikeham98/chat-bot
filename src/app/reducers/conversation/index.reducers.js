@@ -1,4 +1,4 @@
-import {constants} from "../../actions/conversation/index.actions";
+import {constants} from "../../actions/messages/index.actions";
 
 const initialState = {
     messages: [],

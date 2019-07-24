@@ -1,11 +1,11 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import MessagesList from "../../components/Messages/MessagesList";
-import {getConversationMessages} from "../../actions/conversation/index.actions";
+import {getMessages} from "../../actions/messages/index.actions";
 
 export class MessageListContainer extends React.Component{
     componentDidMount() {
-        this.props.getConversationMessages();
+        this.props.getMessages();
     }
 
     render() {
@@ -27,4 +27,12 @@ const mapStateToProps = (state, ownProps) => {
     }
 };
 
-export default connect(mapStateToProps, {getConversationMessages})(MessageListContainer);
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        getMessages: () => {
+            dispatch(getMessages(ownProps.conversationId))
+        }
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(MessageListContainer);
