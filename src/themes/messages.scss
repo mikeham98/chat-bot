@@ -1,4 +1,4 @@
-@import './colors.scss';
+@import 'colors';
 
 .messageContainer {
   background-color: white;
@@ -17,6 +17,7 @@
 }
 
 .message {
+  display: inline-flex;
   border-radius: 1em;
   padding: 5px 10px;
   color: $blue-ink;
@@ -40,6 +41,8 @@
 }
 
 .messageCreatedAt {
+  margin-top: 10px;
+  display: block;
   font-weight: 600;
   font-size: 0.6em;
   color: $cartoon-shadow;

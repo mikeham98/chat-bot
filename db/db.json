@@ -257,6 +257,114 @@
       },
       "conversationId": "bot1",
       "id": 13
+    },
+    {
+      "body": "",
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": 100,
+        "userName": "johnSmith100"
+      },
+      "createdAt": "2019-07-24T18:31:08.142Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "bot1",
+      "id": 14
+    },
+    {
+      "body": "",
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": 100,
+        "userName": "johnSmith100"
+      },
+      "createdAt": "2019-07-24T18:31:10.803Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "bot1",
+      "id": 15
+    },
+    {
+      "body": "",
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": 100,
+        "userName": "johnSmith100"
+      },
+      "createdAt": "2019-07-24T18:31:48.967Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "bot1",
+      "id": 16
+    },
+    {
+      "body": "test",
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": 100,
+        "userName": "johnSmith100"
+      },
+      "createdAt": "2019-07-24T18:48:18.242Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "bot1",
+      "id": 17
+    },
+    {
+      "body": "dzfgsdfgsdfg",
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": 100,
+        "userName": "johnSmith100"
+      },
+      "createdAt": "2019-07-24T18:48:21.323Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "bot1",
+      "id": 18
+    },
+    {
+      "body": "adfgsdfg",
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": 100,
+        "userName": "johnSmith100"
+      },
+      "createdAt": "2019-07-24T18:52:01.627Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "bot1",
+      "id": 19
     }
   ]
 }

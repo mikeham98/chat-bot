@@ -1,4 +1,8 @@
-@import './colors';
+@import 'colors';
+
+.messageFormWrapper {
+  display: flex;
+}
 
 .messageInputWrapper {
   box-sizing: border-box;
@@ -6,7 +10,7 @@
   border: 1px solid $light-gray;
   color: $blue-ink;
   background-color: transparent;
-  width: 30%;
+  flex: 1;
   border-radius: 1em;
   font-size: 1em;
   line-height: 1em;
