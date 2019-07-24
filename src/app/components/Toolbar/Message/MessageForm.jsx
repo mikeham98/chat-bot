@@ -1,11 +1,11 @@
 import React from 'react';
 import {Formik} from 'formik';
 import MessageInput from './MessageInput';
-import IconButton from "../../common/Icon/Button";
+import IconButton from "../../common/Icon/IconButton";
 import sendLogo from '../../../../../assets/icons/right-arrow-1.svg';
 import styles from '../../../../themes/toolbar.scss';
 
-export default class MessageForm extends React.Component {
+class MessageForm extends React.Component {
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -37,8 +37,6 @@ export default class MessageForm extends React.Component {
                 {formikProps => {
                     const {
                         values,
-                        touched,
-                        errors,
                         isSubmitting,
                         handleChange,
                         handleBlur,
@@ -50,14 +48,12 @@ export default class MessageForm extends React.Component {
                                 value={values.message}
                                 onChange={handleChange}
                                 onBlur={handleBlur}
-                                touched={touched.message}
-                                error={errors.message}
                             />
                             <IconButton
                                 type='submit'
                                 icon={sendLogo}
                                 style={{margin: '0 10px'}}
-                                color={values.message.length ? '#172B4D' : '#939aab'}
+                                color={(values.message && values.message.length) ? '#172B4D' : '#939aab'}
                                 height='30px'
                                 width='30px'
                                 disabled={isSubmitting}
@@ -75,3 +71,5 @@ MessageForm.defaultProps = {
         message: ''
     }
 };
+
+export default MessageForm;

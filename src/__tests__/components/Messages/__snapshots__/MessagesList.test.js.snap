@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MessagesList render should render a list of messages 1`] = `
+exports[`MessagesList render should return a list of messages 1`] = `
 <MessagesList
   currentUserId={1}
   messages={
@@ -92,7 +92,7 @@ exports[`MessagesList render should render a list of messages 1`] = `
 </MessagesList>
 `;
 
-exports[`MessagesList render should render no messages 1`] = `
+exports[`MessagesList render should return no messages 1`] = `
 <MessagesList
   currentUserId={1}
   messages={Array []}

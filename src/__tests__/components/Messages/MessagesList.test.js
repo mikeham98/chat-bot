@@ -29,14 +29,14 @@ describe('MessagesList', () => {
     });
 
     describe('render', () => {
-        it('should render a list of messages', () => {
+        it('should return a list of messages', () => {
             expect(wrapper()).toMatchSnapshot();
         });
-        it('should render no messages', () => {
+        it('should return no messages', () => {
             props.messages = [];
             expect(wrapper()).toMatchSnapshot();
         });
-        it('should render ChatBot is replying... text', () => {
+        it('should return ChatBot is replying... text', () => {
             expect(wrapper().find('.replyInProgress')).toHaveLength(0);
             wrapper().setProps({
                 replying: true
@@ -128,6 +128,15 @@ describe('MessagesList', () => {
                 wrapper().find(Message).at(0).parent().props().onClick();
                 wrapper().update();
                 expect(wrapper().find(Message).at(0).props().showDateTime).toBeTruthy();
+            });
+            it('should be set to true for the first message and then false on re-clicking', () => {
+                expect(wrapper().find(Message).at(0).props().showDateTime).toBeFalsy();
+                wrapper().find(Message).at(0).parent().props().onClick();
+                wrapper().update();
+                expect(wrapper().find(Message).at(0).props().showDateTime).toBeTruthy();
+                wrapper().find(Message).at(0).parent().props().onClick();
+                wrapper().update();
+                expect(wrapper().find(Message).at(0).props().showDateTime).toBeFalsy();
             });
             it('should be set to true for the first message then false on click of the second' +
                 ' message which now has showDateTime set to true', () => {

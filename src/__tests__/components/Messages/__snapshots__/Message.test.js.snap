@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Message render should render a message body 1`] = `
+exports[`Message render should return a message body 1`] = `
 <div
   className="messageContent"
 >
@@ -12,7 +12,7 @@ exports[`Message render should render a message body 1`] = `
 </div>
 `;
 
-exports[`Message render should render a message body along with showDateTime 1`] = `
+exports[`Message render should return a message body along with showDateTime 1`] = `
 <div
   className="messageContent"
 >

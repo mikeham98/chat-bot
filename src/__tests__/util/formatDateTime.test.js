@@ -11,8 +11,9 @@ describe('formatDateTime', () => {
     it('should return day of the week, hours/minutes, am/pm', () => {
         const dateTime = new Date();
         const day = dateTime.getDay();
-        const hours = dateTime.getHours();
+        let hours = dateTime.getHours();
         const dayTime = hours >= 12 ? 'pm' : 'am';
+        hours = hours > 12 ? hours - 12 : hours;
         let minutes = dateTime.getMinutes();
         minutes = minutes < 10 ? '0'+minutes : minutes;
 
@@ -23,8 +24,9 @@ describe('formatDateTime', () => {
         dateTime.setDate(dateTime.getDate() - 7);
         const date = dateTime.getDate();
         const month = dateTime.getMonth();
-        const hours = dateTime.getHours();
+        let hours = dateTime.getHours();
         const dayTime = hours >= 12 ? 'pm' : 'am';
+        hours = hours > 12 ? hours - 12 : hours;
         let minutes = dateTime.getMinutes();
         minutes = minutes < 10 ? '0'+minutes : minutes;
 
@@ -36,8 +38,9 @@ describe('formatDateTime', () => {
         const year = dateTime.getFullYear();
         const date = dateTime.getDate();
         const month = dateTime.getMonth();
-        const hours = dateTime.getHours();
+        let hours = dateTime.getHours();
         const dayTime = hours >= 12 ? 'pm' : 'am';
+        hours = hours > 12 ? hours - 12 : hours;
         let minutes = dateTime.getMinutes();
         minutes = minutes < 10 ? '0'+minutes : minutes;
 

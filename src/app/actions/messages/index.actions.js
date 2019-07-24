@@ -5,7 +5,7 @@ export const constants = {
 };
 
 export const getMessages = (conversationId) => (dispatch) => {
-    axiosInstance.get(`/conversation/${conversationId}/messages`)
+    return axiosInstance.get(`/conversation/${conversationId}/messages`)
         .then(response => {
             dispatch({
                 type: constants.GET_CONVERSATION_MESSAGES,

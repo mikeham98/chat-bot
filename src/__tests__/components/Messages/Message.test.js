@@ -23,10 +23,10 @@ describe('Message', () => {
     });
 
     describe('render', () => {
-        it('should render a message body', () => {
+        it('should return a message body', () => {
             expect(wrapper()).toMatchSnapshot();
         });
-        it('should render a message body along with showDateTime', () => {
+        it('should return a message body along with showDateTime', () => {
             wrapper().setProps({
                 showDateTime: true
             });

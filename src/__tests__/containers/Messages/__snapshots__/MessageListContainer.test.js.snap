@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MessageListContainer render should render MessageList component 1`] = `
+exports[`MessageListContainer render should return MessageList component 1`] = `
 <MessagesList
   currentUserId={1}
   messages={

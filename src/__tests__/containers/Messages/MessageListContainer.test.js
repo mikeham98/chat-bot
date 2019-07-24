@@ -24,7 +24,7 @@ describe('MessageListContainer', () => {
     });
 
     describe('render', () => {
-        it('should render MessageList component', () => {
+        it('should return MessageList component', () => {
             expect(wrapper()).toMatchSnapshot();
         });
     });

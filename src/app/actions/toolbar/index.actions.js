@@ -13,8 +13,8 @@ export const sendMessage = (conversationId, message, callback) => (dispatch) => 
         createdAt: new Date(),
         createdBy: currentUser
     };
-    axiosInstance.post(`/conversation/${conversationId}/messages`, objectToSend)
-        .then(response => {
+    return axiosInstance.post(`/conversation/${conversationId}/messages`, objectToSend)
+        .then(() => {
             callback();
             dispatch(getMessages(conversationId));
         })
