@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MessageListContainer render should return MessageList component 1`] = `
-<MessagesList
+exports[`ChatBotContainer render should return ChatBot component 1`] = `
+<ChatBot
   currentUserId={1}
   messages={
     Array [
@@ -13,5 +13,6 @@ exports[`MessageListContainer render should return MessageList component 1`] = `
     ]
   }
   replying={true}
+  sendMessage={[Function]}
 />
 `;

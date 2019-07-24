@@ -1,5 +1,5 @@
-import axiosInstance from '../../../app/actions/axiosInstance';
-import {constants, getMessages} from '../../../app/actions/messages/index.actions';
+import axiosInstance from '../../../../app/actions/axiosInstance';
+import {constants, getMessages} from '../../../../app/actions/chatBot/messages/index.actions';
 import MockAdapter from 'axios-mock-adapter';
 
 const mockAxios = new MockAdapter(axiosInstance);

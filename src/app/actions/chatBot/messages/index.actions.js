@@ -1,4 +1,4 @@
-import axiosInstance from '../axiosInstance';
+import axiosInstance from '../../axiosInstance';
 
 export const constants = {
     GET_CONVERSATION_MESSAGES: 'GET_CONVERSATION_MESSAGES'

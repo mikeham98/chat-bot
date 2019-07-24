@@ -1,10 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {getMessages} from "../../actions/messages/index.actions";
-import {sendMessage} from "../../actions/toolbar/index.actions";
+import {getMessages} from "../../actions/chatBot/messages/index.actions";
+import {sendMessage} from "../../actions/chatBot/toolbar/index.actions";
 import ChatBot from "../../components/ChatBot";
 
-class ChatBotContainer extends React.Component {
+export class ChatBotContainer extends React.Component {
     constructor(props) {
         super(props);
         this.sendMessage = this.sendMessage.bind(this);
@@ -43,7 +43,9 @@ class ChatBotContainer extends React.Component {
 }
 
 const mapStateToProps = (state) => {
+    // hard coded current user id to 1
     return {
+        currentUserId: 1,
         replying: state.messages.replying,
         messages: state.messages.messages,
         currentConversationId: state.conversations.currentConversationId

@@ -13,6 +13,7 @@ describe('formatDateTime', () => {
         const day = dateTime.getDay();
         let hours = dateTime.getHours();
         const dayTime = hours >= 12 ? 'pm' : 'am';
+        hours = hours === 0 ? 12 : hours;
         hours = hours > 12 ? hours - 12 : hours;
         let minutes = dateTime.getMinutes();
         minutes = minutes < 10 ? '0'+minutes : minutes;
@@ -26,6 +27,7 @@ describe('formatDateTime', () => {
         const month = dateTime.getMonth();
         let hours = dateTime.getHours();
         const dayTime = hours >= 12 ? 'pm' : 'am';
+        hours = hours === 0 ? 12 : hours;
         hours = hours > 12 ? hours - 12 : hours;
         let minutes = dateTime.getMinutes();
         minutes = minutes < 10 ? '0'+minutes : minutes;
@@ -40,10 +42,10 @@ describe('formatDateTime', () => {
         const month = dateTime.getMonth();
         let hours = dateTime.getHours();
         const dayTime = hours >= 12 ? 'pm' : 'am';
+        hours = hours === 0 ? 12 : hours;
         hours = hours > 12 ? hours - 12 : hours;
         let minutes = dateTime.getMinutes();
         minutes = minutes < 10 ? '0'+minutes : minutes;
-
         expect(formatDateTime(dateTime)).toBe(`${date} ${months[month]} ${year} ${hours}:${minutes} ${dayTime}`);
     });
 });

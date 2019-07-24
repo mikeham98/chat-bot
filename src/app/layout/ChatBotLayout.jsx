@@ -15,9 +15,7 @@ export default class ChatBotLayout extends React.Component {
     render() {
         return (
             <Suspense fallback={<div>Loading...</div>}>
-                    <ChatBotContainer
-                        currentUserId={1}
-                    />
+                    <ChatBotContainer/>
             </Suspense>
         )
     }

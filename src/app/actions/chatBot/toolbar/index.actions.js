@@ -1,5 +1,5 @@
-import axiosInstance from '../axiosInstance';
-import {currentUser, bots} from '../../../../db/config';
+import axiosInstance from '../../axiosInstance';
+import {currentUser, bots} from '../../../../../db/config';
 import {getMessages} from '../messages/index.actions'
 
 export const sendMessage = (conversationId, message, callback) => (dispatch) => {
