@@ -1,0 +1,64 @@
+@import '../colors';
+
+.sideBarContainer {
+  display: flex;
+  position: relative;
+}
+
+.sideBarDraggableHandle {
+  cursor: ew-resize;
+  height: 100%;
+  position: absolute;
+  right: -16px;
+  width: 16px;
+  z-index: 100;
+}
+
+.sideBarDraggableHandle:hover::before {
+  background-color: $flat-lavender;
+}
+
+.sideBarDraggableHandle::before {
+  content: "";
+  height: 100%;
+  left: -1px;
+  position: absolute;
+  width: 2px;
+  transition: background-color 300ms ease-in-out 200ms;
+}
+
+.sideBarMenuWrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  left: 0px;
+  width: inherit;
+  z-index: 300;
+  transition: height 0.25s ease-in-out 0s;
+}
+
+.sideBarMenu {
+  background-color: white;
+  overflow: hidden;
+  border-right: 1px solid $light-gray;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  width: 300px;
+}
+
+.sideBarMenuTitle {
+  flex: 1;
+  // min-width is set to 300px so content doesn't overflow onto new line on resize of side bar
+  min-width: 300px;
+  padding: 50px 20px 20px 20px;
+}
+
+.sideBarMenuChildren {
+  flex: 10;
+  // min-width is set to 300px so content doesn't overflow onto new line on resize of side bar
+  min-width: 300px;
+  overflow: scroll;
+}

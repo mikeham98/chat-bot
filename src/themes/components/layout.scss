@@ -1,0 +1,43 @@
+@import '../colors';
+
+.chatBotContainer {
+  box-sizing: border-box;
+  display: flex;
+  min-height: 100%;
+}
+
+.chatBotWrapper {
+  height: 100vh;
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.messageSection {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.headerLayout {
+  height: 50px;
+  background-color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: $light-gray;
+}
+
+.chatBotLayoutWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  flex: 1;
+  min-width: 0;
+  padding: 20px;
+}
+
+.centerChatBotSpinner {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}

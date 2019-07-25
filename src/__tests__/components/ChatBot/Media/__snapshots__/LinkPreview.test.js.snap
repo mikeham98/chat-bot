@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinkPreview render should return an img tag and render a title and description 1`] = `
+<div
+  className="mediaLinkPreviewWrapper"
+  onClick={[Function]}
+>
+  <img
+    src="http://www.link.co.uk/article.jpg"
+  />
+  <div
+    className="mediaLinkPreviewMeta"
+  >
+    <span
+      className="mediaLinkPreviewTitle"
+    >
+      An interesting Article
+    </span>
+    <span
+      className="mediaLinkPreviewDescription"
+    >
+      This article is very interesting...
+    </span>
+  </div>
+</div>
+`;

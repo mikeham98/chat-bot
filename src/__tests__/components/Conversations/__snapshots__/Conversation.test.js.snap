@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Conversation render should return a div with a className of conversationWrapper and conversationSelected 1`] = `
+<div
+  className="conversationWrapper conversationSelected"
+>
+  <img
+    src="http://www.image.co.uk/img1"
+  />
+  <span>
+    John Smith
+  </span>
+</div>
+`;
+
+exports[`Conversation render should return a div with an image and a name 1`] = `
+<div
+  className="conversationWrapper"
+>
+  <img
+    src="http://www.image.co.uk/img1"
+  />
+  <span>
+    John Smith
+  </span>
+</div>
+`;

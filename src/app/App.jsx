@@ -1,30 +1,24 @@
-import React, {Suspense} from 'react';
-import store from "./store";
-import conversationReducer from "./reducers/conversation/index.reducers";
-import MessageFormContainer from './containers/Toolbar/Message/MessageFormContainer';
+import React from 'react';
+import ThemeContainer from "./containers/Theme/ThemeContainer";
+import ChatBotLayout from "./layout/ChatBotLayout";
+import ConversationPanelLayout from "./layout/ConversationPanelLayout";
+import styles from '../themes/components/layout.scss';
 
-const MessagesListContainer = React.lazy(() =>
-    import(/* webpackChunkName: "MESSAGES_LIST_CONTAINER" */ "./containers/Messages/MessageListContainer")
-        .then(() => {
-            store.injectReducer('conversation', conversationReducer);
-            return import ("./containers/Messages/MessageListContainer");
-        })
-);
+
 
 export default class App extends React.Component {
     render() {
         return (
-            <div>
-                <Suspense fallback={<div>Loading...</div>}>
-                    <MessagesListContainer
-                        currentUserId={1}
-                        conversationId={'bot1'}
-                    />
-                    <MessageFormContainer
-                        conversationId={'bot1'}
-                    />
-                </Suspense>
-            </div>
+            <ThemeContainer>
+                <div className={styles.chatBotContainer}>
+                    <div className={styles.chatBotWrapper}>
+                        <ConversationPanelLayout/>
+                        <div className={styles.messageSection}>
+                            <ChatBotLayout/>
+                        </div>
+                    </div>
+                </div>
+            </ThemeContainer>
         );
     }
 }

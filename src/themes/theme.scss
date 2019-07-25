@@ -1,0 +1,34 @@
+@import 'colors';
+
+.darkTheme {
+  color: white;
+  background-color: $flat-black;
+  .messageOptionWrapper .messageOption, .leftMessage .message {
+    border-color: $jet-black;
+  }
+  .messageOptionWrapper .messageOptionDisabled, .messageOptionWrapper .messageOptionDisabled:hover {
+    color: $dark-gray;
+  }
+
+  .mediaLinkPreviewWrapper .mediaLinkPreviewMeta .mediaLinkPreviewDescription, .leftMessage .message {
+    color: white;
+  }
+  .conversationWrapper,
+  .sideBarMenu,
+  .mediaLinkPreviewWrapper,
+  .mediaImagePreviewImage,
+  .headerLayout {
+    border-color: $dark-gray;
+  }
+  .mediaLinkPreviewWrapper .mediaLinkPreviewMeta, .leftMessage .message {
+    background-color: $jet-black;
+  }
+  .messageFormWrapper, .headerLayout, .sideBarMenu, .messageOptionWrapper, .messageContainer {
+    background-color: $flat-black;
+  }
+  .messageFormWrapper {
+    input {
+      color: white
+    }
+  }
+}

@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImagePreview render should return an img tag with the src set to 'http://www.image.co.uk/img1' 1`] = `
+<img
+  className="mediaImagePreviewImage"
+  src="http://www.image.co.uk/img1"
+/>
+`;
