@@ -12,6 +12,16 @@ const messagesReducer = (state = initialState, action) => {
                 ...state,
                 messages: action.payload
             };
+        case constants.START_BOT_TYPING:
+            return {
+                ...state,
+                replying: true
+            };
+        case constants.STOP_BOT_TYPING:
+            return {
+                ...state,
+                replying: false
+            };
         default:
             return state
     }

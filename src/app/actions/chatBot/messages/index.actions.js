@@ -1,7 +1,9 @@
 import axiosInstance from '../../axiosInstance';
 
 export const constants = {
-    GET_CONVERSATION_MESSAGES: 'GET_CONVERSATION_MESSAGES'
+    GET_CONVERSATION_MESSAGES: 'GET_CONVERSATION_MESSAGES',
+    START_BOT_TYPING: 'START_BOT_TYPING',
+    STOP_BOT_TYPING: 'STOP_BOT_TYPING'
 };
 
 export const getMessages = (conversationId) => (dispatch) => {
