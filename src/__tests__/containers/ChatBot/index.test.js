@@ -1,6 +1,13 @@
 import React from 'react';
+// import babel-polyfill to allow async/await
+import 'babel-polyfill';
 import {shallow} from 'enzyme';
 import {ChatBotContainer} from '../../../app/containers/ChatBot/index';
+import {setOption} from '../../../app/actions/chatBot/messages/index.actions';
+
+jest.mock('../../../app/actions/chatBot/messages/index.actions', () => ({
+    setOption: jest.fn()
+}));
 
 describe('ChatBotContainer', () => {
 
@@ -17,6 +24,7 @@ describe('ChatBotContainer', () => {
         props = {
             getMessages: jest.fn(),
             sendMessage: jest.fn(),
+            setOption: jest.fn(),
             messages: [1, 2, 3, 4, 5],
             replying: true,
             currentConversationId: 100,
@@ -64,6 +72,16 @@ describe('ChatBotContainer', () => {
                     wrapper().find('ChatBot').first().props().sendMessage(message, callback);
                     expect(props.sendMessage).toHaveBeenCalledTimes(1);
                     expect(props.sendMessage).toHaveBeenCalledWith(100, message, expect.any(Function));
+                });
+            });
+            describe('setOption', () => {
+                it('should be called call of onClickOption with 42 (optionId), 5 (messageId), and a function (getMessages)', () => {
+                    const optionId = 42;
+                    const messageId = 5;
+                    expect(setOption).not.toHaveBeenCalled();
+                    wrapper().find('ChatBot').first().props().onClickOption(optionId, messageId);
+                    expect(setOption).toHaveBeenCalledTimes(1);
+                    expect(setOption).toHaveBeenCalledWith(42, 5, expect.any(Function));
                 });
             });
         });

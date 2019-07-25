@@ -1,13 +1,16 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {getMessages} from "../../actions/chatBot/messages/index.actions";
+import {currentUser} from '../../../../db/config';
+import {getMessages, setOption} from "../../actions/chatBot/messages/index.actions";
 import {sendMessage} from "../../actions/chatBot/toolbar/index.actions";
 import ChatBot from "../../components/ChatBot";
 
 export class ChatBotContainer extends React.Component {
     constructor(props) {
         super(props);
+        this.getMessages = this.getMessages.bind(this);
         this.sendMessage = this.sendMessage.bind(this);
+        this.setOption = this.setOption.bind(this);
     }
 
     componentDidMount() {
@@ -29,26 +32,35 @@ export class ChatBotContainer extends React.Component {
         this.props.sendMessage(currentConversationId, message, callback);
     }
 
+    setOption(optionId, messageId) {
+        setOption(optionId, messageId, this.getMessages)
+    }
+
     render() {
-        const {messages, replying, currentUserId} = this.props;
+        const {messages, replying, botName, currentUserId} = this.props;
         return (
             <ChatBot
                 messages={messages}
+                botName={botName}
                 replying={replying}
                 currentUserId={currentUserId}
                 sendMessage={this.sendMessage}
+                onClickOption={this.setOption}
             />
         )
     }
 }
 
 const mapStateToProps = (state) => {
-    // hard coded current user id to 1
+    const currentConversationId = state.conversations.currentConversationId;
+
+    const currentConversation = state.conversations.conversations.find(e => e.id === currentConversationId);
     return {
-        currentUserId: 1,
+        currentUserId: currentUser.userId,
         replying: state.messages.replying,
         messages: state.messages.messages,
-        currentConversationId: state.conversations.currentConversationId
+        currentConversationId,
+        botName: currentConversation && currentConversation.profile.name
     }
 };
 
@@ -59,6 +71,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         sendMessage: (conversationId, message, callback) => {
             dispatch(sendMessage(conversationId, message, callback))
+        },
+        setOption: (optionId, messageId, callback) => {
+            dispatch()
         }
     }
 };

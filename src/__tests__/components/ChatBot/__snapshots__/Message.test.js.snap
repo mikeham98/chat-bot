@@ -1,30 +1,137 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Message render should return a message body 1`] = `
+exports[`Message render should return a message body with media and options 1`] = `
 <div
   className="messageContent"
 >
   <div
     className="message"
+    onClick={[MockFunction]}
   >
-    Hello world
+    <span
+      className="messageBody"
+    >
+      Hello world
+    </span>
+    <Options
+      onClick={[Function]}
+      options={
+        Array [
+          1,
+          2,
+          3,
+          4,
+          5,
+        ]
+      }
+      selectedOption={1}
+    />
   </div>
+  <Media
+    media={
+      Array [
+        1,
+        2,
+      ]
+    }
+  />
 </div>
 `;
 
-exports[`Message render should return a message body along with showDateTime 1`] = `
+exports[`Message render should return a message body with media and options along with showDateTime 1`] = `
 <div
   className="messageContent"
 >
   <div
     className="message"
+    onClick={[MockFunction]}
   >
-    Hello world
+    <span
+      className="messageBody"
+    >
+      Hello world
+    </span>
+    <Options
+      onClick={[Function]}
+      options={
+        Array [
+          1,
+          2,
+          3,
+          4,
+          5,
+        ]
+      }
+      selectedOption={1}
+    />
   </div>
+  <Media
+    media={
+      Array [
+        1,
+        2,
+      ]
+    }
+  />
   <span
     className="messageCreatedAt"
   >
     10 minutes ago
   </span>
+</div>
+`;
+
+exports[`Message render should return a message body without media 1`] = `
+<div
+  className="messageContent"
+>
+  <div
+    className="message"
+    onClick={[MockFunction]}
+  >
+    <span
+      className="messageBody"
+    >
+      Hello world
+    </span>
+    <Options
+      onClick={[Function]}
+      options={
+        Array [
+          1,
+          2,
+          3,
+          4,
+          5,
+        ]
+      }
+      selectedOption={1}
+    />
+  </div>
+</div>
+`;
+
+exports[`Message render should return a message body without options 1`] = `
+<div
+  className="messageContent"
+>
+  <div
+    className="message"
+    onClick={[MockFunction]}
+  >
+    <span
+      className="messageBody"
+    >
+      Hello world
+    </span>
+  </div>
+  <Media
+    media={
+      Array [
+        1,
+        2,
+      ]
+    }
+  />
 </div>
 `;

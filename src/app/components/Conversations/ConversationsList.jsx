@@ -3,7 +3,7 @@ import Conversation from "./Conversation";
 import isPopulatedArray from "../../util/isPopulatedArray";
 import styles from "../../../themes/components/conversations.scss";
 
-export default class ConversationsList extends React.Component {
+export default class ConversationsList extends React.PureComponent {
     returnConversations() {
         const {conversations} = this.props;
         if(isPopulatedArray(conversations)) {
@@ -11,6 +11,7 @@ export default class ConversationsList extends React.Component {
                 return (
                     <Conversation
                         key={conversation.id}
+                        selected={conversation.selected}
                         name={conversation.profile.name}
                         image={conversation.profile.img}
                         onClick={() => this.props.onClickConversation(conversation.id)}
