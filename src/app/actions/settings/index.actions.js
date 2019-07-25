@@ -16,6 +16,12 @@ export const getTheme = () => (dispatch) => {
             }
         });
 };
+export const setTheme = (theme) => (dispatch) => {
+    return axiosInstance.patch('/settings', {theme})
+        .then(() => {
+            dispatch(getTheme());
+        });
+};
 
 export const setLightTheme = {
     type: constants.SET_LIGHT_THEME
