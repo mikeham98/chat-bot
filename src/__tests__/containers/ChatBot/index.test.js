@@ -42,13 +42,13 @@ describe('ChatBotContainer', () => {
     describe('functionality', () => {
         describe('props', () => {
             describe('getMessages', () => {
-                it('should call getMessages on mount', () => {
+                it('should be called on mount', () => {
                     expect(props.getMessages).not.toHaveBeenCalled();
                     wrapper();
                     expect(props.getMessages).toHaveBeenCalledTimes(1);
                     expect(props.getMessages).toHaveBeenCalledWith(100);
                 });
-                it('should call getMessages on update only when props have changes', () => {
+                it('should be called on update only when props have changes', () => {
                     expect(props.getMessages).not.toHaveBeenCalled();
                     wrapper();
                     expect(props.getMessages).toHaveBeenCalledTimes(1);

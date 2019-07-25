@@ -13,7 +13,7 @@ export const getConversationList = () => (dispatch) => {
                 type: constants.GET_CONVERSATION_LIST,
                 payload: data
             });
-            if(isPopulatedArray(data)){
+            if (isPopulatedArray(data)) {
                 const firstConversation = data[0];
                 dispatch(setCurrentConversation(firstConversation.id))
             }
@@ -22,9 +22,7 @@ export const getConversationList = () => (dispatch) => {
 
         });
 };
-export const setCurrentConversation = (currentConversationId) => (dispatch) => {
-    dispatch({
-        type: constants.SET_CURRENT_CONVERSATION,
-        payload: currentConversationId
-    })
-};
+export const setCurrentConversation = (currentConversationId) => ({
+    type: constants.SET_CURRENT_CONVERSATION,
+    payload: currentConversationId
+});

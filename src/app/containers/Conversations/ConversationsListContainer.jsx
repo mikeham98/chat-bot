@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import ConversationsList from '../../components/Conversations/ConversationsList';
 import {getConversationList, setCurrentConversation} from '../../actions/conversations/index.actions';
 
-class ConversationsListContainer extends React.PureComponent {
+export class ConversationsListContainer extends React.PureComponent {
     constructor(props) {
         super(props);
         this.onClickConversation = this.onClickConversation.bind(this);

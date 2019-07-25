@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConversationsListContainer render should return ConversationsList component 1`] = `
+<ConversationsList
+  conversations={
+    Array [
+      1,
+      2,
+      3,
+    ]
+  }
+  onClickConversation={[Function]}
+/>
+`;
