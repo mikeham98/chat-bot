@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner render should return a div with a className prop set to spinner 1`] = `
+<div
+  className="spinner"
+/>
+`;
