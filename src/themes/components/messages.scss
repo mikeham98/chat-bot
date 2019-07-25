@@ -32,7 +32,9 @@
   align-self: flex-start;
   text-align: left;
   .message {
-    border: 1px solid $light-gray;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $light-gray;
     background-color: $light-gray;
   }
 }

@@ -12,7 +12,9 @@
   cursor: pointer;
   height: 60px;
   width: 100%;
-  border-bottom: 1px solid $light-gray;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: $light-gray;
   img {
     height: 30px;
     width: 30px;

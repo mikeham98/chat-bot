@@ -2,7 +2,9 @@
 
 .mediaLinkPreviewWrapper, .mediaImagePreviewImage {
   margin: 10px 0 5px 0;
-  border: 1px solid $light-gray;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $light-gray;
   border-radius: 1em;
   overflow: hidden;
 }
@@ -29,6 +31,7 @@
   width: 300px;
   .mediaLinkPreviewMeta {
     padding: 10px;
+    background-color: white;
     flex-direction: column;
     display: flex;
     justify-content: space-evenly;

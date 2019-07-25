@@ -21,7 +21,9 @@
 .headerLayout {
   height: 50px;
   background-color: white;
-  border-bottom: 1px solid $light-gray;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: $light-gray;
 }
 
 .chatBotLayoutWrapper {

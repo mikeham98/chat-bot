@@ -53,7 +53,7 @@ class MessageForm extends React.Component {
                                 type='submit'
                                 icon={sendIcon}
                                 style={{margin: '0 10px'}}
-                                color={(values.message && values.message.length) ? '#172B4D' : '#939aab'}
+                                color={(values.message && values.message.length) ? '#6872FF' : '#939aab'}
                                 height='30px'
                                 width='30px'
                                 disabled={isSubmitting}
