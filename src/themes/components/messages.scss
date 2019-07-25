@@ -19,7 +19,11 @@
 .message {
   display: inline-flex;
   border-radius: 1em;
-  padding: 5px 10px;
+  flex-direction: column;
+  overflow: hidden;
+  .messageBody {
+    padding: 5px 10px;
+  }
   color: $blue-ink;
 }
 
@@ -27,6 +31,7 @@
   align-self: flex-start;
   text-align: left;
   .message {
+    border: 1px solid $light-gray;
     background-color: $light-gray;
   }
 }
@@ -63,6 +68,31 @@
   flex-direction: column;
   justify-content: flex-end;
   padding: 20px 0;
+}
+
+.messageOptionWrapper {
+  background-color: white;
+  text-align: center;
+  .messageOption {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: $light-gray;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.2s ease-in-out;
+  }
+  .messageOption:hover, .messageOptionSelected {
+    color: $flat-lavender;
+  }
+  .messageOption:nth-last-of-type(1) {
+    border-bottom-color: transparent;
+  }
+  .messageOptionSelected, .messageOptionDisabled {
+    cursor: default;
+  }
+  .messageOptionDisabled, .messageOptionDisabled:hover {
+    color: $light-gray;
+  }
 }
 
 @media only screen and (max-width: 600px) {

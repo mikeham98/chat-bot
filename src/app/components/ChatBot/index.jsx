@@ -5,7 +5,7 @@ import MessageForm from "./Toolbar/MessageForm";
 
 export default class ChatBot extends React.Component {
     render() {
-        const {messages, replying, currentUserId,botName, sendMessage} = this.props;
+        const {messages, replying, currentUserId, botName, sendMessage, onClickOption} = this.props;
         return (
             <div className={styles.chatBot}>
                 <MessagesList
@@ -13,6 +13,7 @@ export default class ChatBot extends React.Component {
                     replying={replying}
                     botName={botName}
                     currentUserId={currentUserId}
+                    onClickOption={onClickOption}
                 />
                 <MessageForm
                     sendMessage={sendMessage}

@@ -18,3 +18,15 @@ export const getMessages = (conversationId) => (dispatch) => {
 
         });
 };
+
+export const setOption = (optionId, messageId, callback) => {
+    return axiosInstance.patch(`/messages/${messageId}`, {
+        selectedOption: optionId
+    })
+        .then(() => {
+            callback()
+        })
+        .catch(error => {
+
+        });
+};

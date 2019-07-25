@@ -1,47 +1,47 @@
 import React from 'react';
 import styles from '../../../themes/components/messages.scss';
-import ImageMedia from "../common/Media/ImagePreview";
-import LinkMedia from "../common/Media/LinkPreview";
 import isPopulatedArray from "../../util/isPopulatedArray";
-import {gif, img, link} from "../../config/media.config";
+import Media from "./Media/Media";
+import Options from "./Options/Options";
 
 export default class Message extends React.PureComponent {
-    returnMedia() {
-        const {media} = this.props;
-        if (isPopulatedArray(media)) {
-            return media.map(({id, type, src, imagePreview, title, description}) => {
-                if (type === gif || type === img) {
-                    return (
-                        <ImageMedia
-                            key={id}
-                            src={src}
-                        />
-                    );
-                }
-                if (type === link) {
-                    return (
-                        <LinkMedia
-                            key={id}
-                            src={src}
-                            image={imagePreview}
-                            title={title}
-                            description={description}
-                        />
-                    );
-                }
-                return null;
-            });
-        }
+    constructor(props) {
+        super(props);
+        this.onClickOption = this.onClickOption.bind(this);
+    }
+
+    onClickOption(optionId) {
+        const {id} = this.props;
+        this.props.onClickOption(optionId, id)
+    }
+
+    showMedia() {
+        return isPopulatedArray(this.props.media);
+    }
+
+    showOptions() {
+        return isPopulatedArray(this.props.options);
     }
 
     render() {
-        const {body, showDateTime, dateTime, onClickBody} = this.props;
+        const {body, showDateTime, dateTime, media, options, onClickBody, selectedOption} = this.props;
         return (
             <div className={styles.messageContent}>
                 <div className={styles.message} onClick={onClickBody}>
-                    {body}
+                    <span className={styles.messageBody}>{body}</span>
+                    {this.showOptions() && (
+                        <Options
+                            selectedOption={selectedOption}
+                            options={options}
+                            onClick={this.onClickOption}
+                        />
+                    )}
                 </div>
-                {this.returnMedia()}
+                {this.showMedia() && (
+                    <Media
+                        media={media}
+                    />
+                )}
                 {showDateTime && <span className={styles.messageCreatedAt}>{dateTime}</span>}
             </div>
         );

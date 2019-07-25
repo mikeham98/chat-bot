@@ -19,9 +19,16 @@ export const conversations = {
         }, {
             body: 'Perfect, when would you like to go?'
         }, {
-            body: 'What airport would you like to fly from?'
+            body: 'What city would you like to fly from?'
         }, {
-            body: 'We have two options available for London'
+            body: 'We have two options available for London',
+            options: [{
+                id: 1,
+                option: 'Gatwick'
+            },{
+                id: 2,
+                option: 'Heathrow'
+            }]
         }, {
             body: 'What time would you like to fly out'
         }, {

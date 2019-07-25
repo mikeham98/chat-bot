@@ -341,6 +341,378 @@
       },
       "conversationId": "3",
       "id": 15
+    },
+    {
+      "content": {
+        "body": "df"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-25T18:17:48.436Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 16
+    },
+    {
+      "content": {
+        "body": "Where would you like to go to?"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-25T18:17:49.474Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 17
+    },
+    {
+      "content": {
+        "body": "dwg"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-25T18:18:18.387Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 18
+    },
+    {
+      "content": {
+        "body": "What a lovely destination, how long would you like to go for?"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-25T18:18:19.430Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 19
+    },
+    {
+      "content": {
+        "body": "sdfgsdfg"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-25T18:18:33.508Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 20
+    },
+    {
+      "content": {
+        "body": "Brilliant, how many people shall I book for?"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-25T18:18:34.536Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 21
+    },
+    {
+      "content": {
+        "body": "dfsgsdfg"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-25T18:18:45.680Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 22
+    },
+    {
+      "content": {
+        "body": "Perfect, when would you like to go?"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-25T18:18:46.709Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 23
+    },
+    {
+      "content": {
+        "body": "shgsdfg"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-25T18:18:56.257Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 24
+    },
+    {
+      "content": {
+        "body": "What city would you like to fly from?"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-25T18:18:57.286Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 25
+    },
+    {
+      "content": {
+        "body": "dfgsdfg"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-25T18:19:07.556Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 26
+    },
+    {
+      "content": {
+        "body": "london"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-25T18:21:41.080Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 27
+    },
+    {
+      "content": {
+        "body": "dsfg"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-25T18:55:49.468Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 28
+    },
+    {
+      "content": {
+        "body": "test"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-25T18:58:08.325Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 29
+    },
+    {
+      "content": {
+        "body": "ah"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-25T19:08:43.226Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 30
+    },
+    {
+      "content": {
+        "body": "We have two options available for London",
+        "options": [
+          {
+            "id": 1,
+            "option": "Gatwick"
+          },
+          {
+            "id": 2,
+            "option": "Heathrow"
+          }
+        ]
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-25T19:08:44.271Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 31,
+      "selectedOption": 2
+    },
+    {
+      "content": {
+        "body": "test"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-25T19:15:21.383Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 32
+    },
+    {
+      "content": {
+        "body": "What time would you like to fly out"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-25T19:15:22.440Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 33
+    },
+    {
+      "content": {
+        "body": "10"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-25T19:17:25.011Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 34
     }
   ]
 }

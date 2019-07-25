@@ -1,14 +1,16 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {currentUser} from '../../../../db/config';
-import {getMessages} from "../../actions/chatBot/messages/index.actions";
+import {getMessages, setOption} from "../../actions/chatBot/messages/index.actions";
 import {sendMessage} from "../../actions/chatBot/toolbar/index.actions";
 import ChatBot from "../../components/ChatBot";
 
 export class ChatBotContainer extends React.Component {
     constructor(props) {
         super(props);
+        this.getMessages = this.getMessages.bind(this);
         this.sendMessage = this.sendMessage.bind(this);
+        this.setOption = this.setOption.bind(this);
     }
 
     componentDidMount() {
@@ -30,6 +32,10 @@ export class ChatBotContainer extends React.Component {
         this.props.sendMessage(currentConversationId, message, callback);
     }
 
+    setOption(optionId, messageId) {
+        setOption(optionId, messageId, this.getMessages)
+    }
+
     render() {
         const {messages, replying, botName, currentUserId} = this.props;
         return (
@@ -39,6 +45,7 @@ export class ChatBotContainer extends React.Component {
                 replying={replying}
                 currentUserId={currentUserId}
                 sendMessage={this.sendMessage}
+                onClickOption={this.setOption}
             />
         )
     }
@@ -64,6 +71,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         sendMessage: (conversationId, message, callback) => {
             dispatch(sendMessage(conversationId, message, callback))
+        },
+        setOption: (optionId, messageId, callback) => {
+            dispatch()
         }
     }
 };

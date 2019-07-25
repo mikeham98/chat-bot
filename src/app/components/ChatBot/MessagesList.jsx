@@ -40,9 +40,8 @@ export default class MessagesList extends React.PureComponent {
     }
 
     returnMessages() {
-        const {messages, currentUserId} = this.props;
+        const {messages, currentUserId, onClickOption} = this.props;
         if (isPopulatedArray(messages)) {
-            console.log(messages);
             return messages.map(message => {
                 const position = currentUserId === message.createdBy.userId ? right : left;
                 // showDateTime is implemented so that only one message at a time can show the date/time
@@ -53,11 +52,15 @@ export default class MessagesList extends React.PureComponent {
                         className={this.returnMessageClassName(position)}
                     >
                         <Message
+                            id={message.id}
                             onClickBody={() => this.setState({clickedMessageId: showDateTime ? null : message.id})}
                             showDateTime={showDateTime}
                             dateTime={formatDateTime(message.createdAt)}
+                            selectedOption={message.selectedOption}
+                            options={message.content.options}
                             body={message.content.body}
                             media={message.content.media}
+                            onClickOption={onClickOption}
                         />
                     </div>
                 );

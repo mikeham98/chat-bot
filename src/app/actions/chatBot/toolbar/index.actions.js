@@ -69,6 +69,7 @@ const handleBackEndBotResponse = (conversationId) => async (dispatch) => {
                 content: {
                     body: nextMessage.body,
                     media: nextMessage.media,
+                    options: nextMessage.options,
                 },
                 read: {
                     status: false,
