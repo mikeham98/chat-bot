@@ -53,12 +53,15 @@ module.exports = {
                     {
                         loader: 'css-loader', // translates CSS into CommonJS
                         options: {
-                            modules: true,
+                            modules: {
+                                mode: 'local',
+                                localIdentName: '[local]',
+                            }
                         },
                     },
                     {
                         loader: 'sass-loader', // compiles Sass to CSS
-                    },
+                    }
                 ],
             },
         ],

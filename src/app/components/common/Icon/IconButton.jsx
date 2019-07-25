@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../../../../themes/components/icon.scss';
 import Icon from "./index";
 
-const IconButton = ({onClick, type, icon, style, color, hoverColor, height, width, disabled}) => {
+const IconButton = ({onClick, type = 'button', icon, style, color, hoverColor, height, width, disabled}) => {
     return (
         <button
             type={type}

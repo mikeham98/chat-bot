@@ -2,7 +2,7 @@ import React from 'react';
 import {Formik} from 'formik';
 import MessageInput from './MessageInput';
 import IconButton from "../../common/Icon/IconButton";
-import sendLogo from '../../../../../assets/icons/right-arrow-1.svg';
+import sendIcon from '../../../../../assets/icons/right-arrow-1.svg';
 import styles from '../../../../themes/components/toolbar.scss';
 
 class MessageForm extends React.Component {
@@ -51,7 +51,7 @@ class MessageForm extends React.Component {
                             />
                             <IconButton
                                 type='submit'
-                                icon={sendLogo}
+                                icon={sendIcon}
                                 style={{margin: '0 10px'}}
                                 color={(values.message && values.message.length) ? '#172B4D' : '#939aab'}
                                 height='30px'

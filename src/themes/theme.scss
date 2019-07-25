@@ -1,0 +1,8 @@
+@import 'colors';
+
+.darkTheme {
+  .messageFormWrapper, .headerLayout, .sideBarMenu {
+    background-color: $flat-black;
+    color: white;
+  }
+}

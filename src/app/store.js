@@ -1,5 +1,6 @@
 import {applyMiddleware, combineReducers, compose, createStore} from 'redux';
 import thunk from 'redux-thunk';
+import staticReducers from './reducers/staticReducers';
 
 const composeEnhancers =
     process.env.NODE_ENV === 'development' &&
@@ -8,9 +9,6 @@ const composeEnhancers =
         : compose;
 
 const enhancer = composeEnhancers(applyMiddleware(thunk));
-
-const staticReducers = {
-};
 
 const createReducer = (asyncReducers) => {
     return combineReducers({
