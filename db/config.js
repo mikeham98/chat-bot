@@ -6,6 +6,7 @@ export const currentUser = {
 export const bots = {
     bot1: {
         userId: 100,
-        userName: "johnSmith100"
+        userName: "johnSmith100",
+        messages: ['hello mike']
     }
 };
