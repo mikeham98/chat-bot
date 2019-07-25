@@ -82,9 +82,9 @@
     border-bottom-color: $light-gray;
     cursor: pointer;
     padding: 5px;
-    transition: color 0.2s ease-in-out;
   }
   .messageOption:hover, .messageOptionSelected {
+    transition: color 0.2s ease-in-out;
     color: $flat-lavender;
   }
   .messageOption:nth-last-of-type(1) {

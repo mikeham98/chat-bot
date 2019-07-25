@@ -1,4 +1,7 @@
 {
+  "settings": {
+    "theme": "dark"
+  },
   "conversation": [
     {
       "id": "1",
@@ -122,8 +125,7 @@
         "userName": "mikeham98"
       },
       "conversationId": "2",
-      "id": 5,
-      "selectedOption": 42
+      "id": 5
     },
     {
       "content": {
@@ -655,8 +657,7 @@
         "userId": "bot1"
       },
       "conversationId": "1",
-      "id": 31,
-      "selectedOption": 2
+      "id": 31
     },
     {
       "content": {

@@ -1,11 +1,11 @@
-import {constants} from "../../actions/conversations/index.actions";
+import {constants} from "../../actions/settings/index.actions";
 import {darkTheme, lightTheme} from "../../config/theme.config";
 
 const initialState = {
-    theme: darkTheme
+    theme: lightTheme
 };
 
-const conversationsReducer = (state = initialState, action) => {
+const settingsReducer = (state = initialState, action) => {
     switch (action.type) {
         case constants.SET_LIGHT_THEME:
             return {
@@ -20,4 +20,4 @@ const conversationsReducer = (state = initialState, action) => {
     }
 };
 
-export default conversationsReducer;
+export default settingsReducer;

@@ -4,8 +4,6 @@ import {connect} from 'react-redux';
 import {darkTheme} from "../../config/theme.config";
 
 const ThemeContainer = ({theme, children}) => {
-    console.log(theme)
-    console.log(darkTheme)
     return (
         <div className={theme === darkTheme ? styles.darkTheme : ''}>
             {children}
@@ -19,4 +17,4 @@ const mapStateToProps = (state) => {
     }
 };
 
-export default connect(mapStateToProps)(React.memo(ThemeContainer))
+export default connect(mapStateToProps)(ThemeContainer)
