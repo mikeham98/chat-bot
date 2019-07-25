@@ -11,12 +11,12 @@
   color: $blue-ink;
   background-color: transparent;
   flex: 1;
-  border-radius: 1em;
-  font-size: 1em;
-  line-height: 1em;
+  border-radius: 1.6em;
+  font-size: 0.8em;
+  line-height: 0.8em;
   padding: 5px 10px;
 }
 
 .messageInputWrapper::placeholder {
-  color: $gray
+  color: $gray;
 }
