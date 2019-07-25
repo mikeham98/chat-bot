@@ -1,3 +1,5 @@
+@import '../colors';
+
 .chatBotContainer {
   box-sizing: border-box;
   display: flex;
@@ -8,6 +10,25 @@
   height: 100vh;
   display: flex;
   flex: 1 1 auto;
+}
+
+.messageSection {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.headerLayout {
+  height: 50px;
+  background-color: white;
+  border-bottom: 1px solid $light-gray;
+  h2 {
+    font-size: 0.9em;
+    font-weight: 500;
+    line-height: 50px;
+    text-align: center;
+    margin: 0;
+  }
 }
 
 .chatBotLayoutWrapper {

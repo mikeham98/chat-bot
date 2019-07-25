@@ -6,10 +6,10 @@ import styles from '../themes/components/layout.scss';
 export default class App extends React.Component {
     render() {
         return (
-            <div>
-                <div className={styles.chatBotContainer}>
-                    <div className={styles.chatBotWrapper}>
-                        <ConversationPanelLayout/>
+            <div className={styles.chatBotContainer}>
+                <div className={styles.chatBotWrapper}>
+                    <ConversationPanelLayout/>
+                    <div className={styles.messageSection}>
                         <ChatBotLayout/>
                     </div>
                 </div>
