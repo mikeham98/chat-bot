@@ -148,7 +148,7 @@ exports[`MessagesList render should return a list of messages 1`] = `
                 className="messageOptionWrapper"
               >
                 <Option
-                  disabled={1}
+                  disabled={true}
                   key="1"
                   onClick={[Function]}
                   option="Back To The Future"
@@ -162,7 +162,7 @@ exports[`MessagesList render should return a list of messages 1`] = `
                   </div>
                 </Option>
                 <Option
-                  disabled={1}
+                  disabled={true}
                   key="2"
                   onClick={[Function]}
                   option="Stranger Things"

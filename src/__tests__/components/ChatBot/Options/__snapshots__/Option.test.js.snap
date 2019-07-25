@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Option render should return a div with a className of messageOption 1`] = `
+<div
+  className="messageOption"
+  onClick={[Function]}
+>
+  Option name
+</div>
+`;
+
+exports[`Option render should return a div with a className of messageOption and messageOptionDisabled 1`] = `
+<div
+  className="messageOption"
+  onClick={[Function]}
+>
+  Option name
+</div>
+`;
+
+exports[`Option render should return a div with a className of messageOption and messageOptionSelected 1`] = `
+<div
+  className="messageOption"
+  onClick={[Function]}
+>
+  Option name
+</div>
+`;

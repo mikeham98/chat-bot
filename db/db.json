@@ -122,7 +122,8 @@
         "userName": "mikeham98"
       },
       "conversationId": "2",
-      "id": 5
+      "id": 5,
+      "selectedOption": 42
     },
     {
       "content": {

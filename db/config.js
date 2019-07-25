@@ -49,6 +49,7 @@ export const conversations = {
         }, {
             body: 'We will get working on it right away',
             media: [{
+                id: 1,
                 type: gif,
                 src: 'https://media.giphy.com/media/1108D2tVaUN3eo/giphy.gif'
             }]

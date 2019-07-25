@@ -12,6 +12,7 @@ exports[`ChatBotContainer render should return ChatBot component 1`] = `
       5,
     ]
   }
+  onClickOption={[Function]}
   replying={true}
   sendMessage={[Function]}
 />
