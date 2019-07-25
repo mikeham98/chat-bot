@@ -713,6 +713,25 @@
       },
       "conversationId": "1",
       "id": 34
+    },
+    {
+      "content": {
+        "body": "When would you like your return flight to be at"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-25T19:17:26.055Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 35
     }
   ]
 }

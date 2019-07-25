@@ -11,7 +11,7 @@ export default class Options extends React.PureComponent {
                 return (
                     <Option
                         key={option.id}
-                        disabled={selectedOption}
+                        disabled={!!selectedOption}
                         selected={selectedOption === option.id}
                         option={option.option}
                         onClick={() => this.props.onClick(option.id)}

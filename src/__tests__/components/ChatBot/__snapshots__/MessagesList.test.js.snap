@@ -6,7 +6,9 @@ exports[`MessagesList render should return a list of messages 1`] = `
   messages={
     Array [
       Object {
-        "body": "Hello Mike",
+        "content": Object {
+          "body": "Hello bot, what should I watch today",
+        },
         "createdAt": "2019-07-23T12:00:00+00:00",
         "createdBy": Object {
           "userId": 100,
@@ -23,7 +25,19 @@ exports[`MessagesList render should return a list of messages 1`] = `
         },
       },
       Object {
-        "body": "Hello John, how are you?",
+        "content": Object {
+          "body": "Hello Mike, I have a few suggestions...",
+          "options": Array [
+            Object {
+              "id": 1,
+              "option": "Back To The Future",
+            },
+            Object {
+              "id": 2,
+              "option": "Stranger Things",
+            },
+          ],
+        },
         "createdAt": "2019-07-23T12:01:30+00:00",
         "createdBy": Object {
           "userId": 1,
@@ -38,10 +52,13 @@ exports[`MessagesList render should return a list of messages 1`] = `
           "userId": 100,
           "userName": "johnSmith100",
         },
+        "selectedOption": 1,
       },
     ]
   }
+  onClickOption={[MockFunction]}
   replying={false}
+  selectedOption={2}
 >
   <div
     className="messageContainer"
@@ -49,11 +66,13 @@ exports[`MessagesList render should return a list of messages 1`] = `
     <div
       className="messageWrapper leftMessage"
       key="0"
-      onClick={[Function]}
     >
-      <Memo(Message)
-        body="Hello Mike"
+      <Message
+        body="Hello bot, what should I watch today"
         dateTime="10:30 am"
+        id={0}
+        onClickBody={[Function]}
+        onClickOption={[MockFunction]}
         showDateTime={false}
       >
         <div
@@ -61,20 +80,40 @@ exports[`MessagesList render should return a list of messages 1`] = `
         >
           <div
             className="message"
+            onClick={[Function]}
           >
-            Hello Mike
+            <span
+              className="messageBody"
+            >
+              Hello bot, what should I watch today
+            </span>
           </div>
         </div>
-      </Memo(Message)>
+      </Message>
     </div>
     <div
       className="messageWrapper rightMessage"
       key="1"
-      onClick={[Function]}
     >
-      <Memo(Message)
-        body="Hello John, how are you?"
+      <Message
+        body="Hello Mike, I have a few suggestions..."
         dateTime="10:30 am"
+        id={1}
+        onClickBody={[Function]}
+        onClickOption={[MockFunction]}
+        options={
+          Array [
+            Object {
+              "id": 1,
+              "option": "Back To The Future",
+            },
+            Object {
+              "id": 2,
+              "option": "Stranger Things",
+            },
+          ]
+        }
+        selectedOption={1}
         showDateTime={false}
       >
         <div
@@ -82,11 +121,65 @@ exports[`MessagesList render should return a list of messages 1`] = `
         >
           <div
             className="message"
+            onClick={[Function]}
           >
-            Hello John, how are you?
+            <span
+              className="messageBody"
+            >
+              Hello Mike, I have a few suggestions...
+            </span>
+            <Options
+              onClick={[Function]}
+              options={
+                Array [
+                  Object {
+                    "id": 1,
+                    "option": "Back To The Future",
+                  },
+                  Object {
+                    "id": 2,
+                    "option": "Stranger Things",
+                  },
+                ]
+              }
+              selectedOption={1}
+            >
+              <div
+                className="messageOptionWrapper"
+              >
+                <Option
+                  disabled={1}
+                  key="1"
+                  onClick={[Function]}
+                  option="Back To The Future"
+                  selected={true}
+                >
+                  <div
+                    className="messageOption messageOptionSelected"
+                    onClick={[Function]}
+                  >
+                    Back To The Future
+                  </div>
+                </Option>
+                <Option
+                  disabled={1}
+                  key="2"
+                  onClick={[Function]}
+                  option="Stranger Things"
+                  selected={false}
+                >
+                  <div
+                    className="messageOption messageOptionDisabled"
+                    onClick={[Function]}
+                  >
+                    Stranger Things
+                  </div>
+                </Option>
+              </div>
+            </Options>
           </div>
         </div>
-      </Memo(Message)>
+      </Message>
     </div>
   </div>
 </MessagesList>
@@ -96,7 +189,9 @@ exports[`MessagesList render should return no messages 1`] = `
 <MessagesList
   currentUserId={1}
   messages={Array []}
+  onClickOption={[MockFunction]}
   replying={false}
+  selectedOption={2}
 >
   <div
     className="messageContainer"

@@ -23,7 +23,9 @@ describe('MessagesList', () => {
         props = {
             messages,
             replying: false,
-            currentUserId: 1
+            currentUserId: 1,
+            selectedOption: 2,
+            onClickOption: jest.fn()
         };
         shallowedWrapper = undefined;
     });
@@ -102,7 +104,9 @@ describe('MessagesList', () => {
                         ...messages,
                         {
                             "id": 3,
-                            "body": "I am good thanks, how are you?",
+                            "content": {
+                                "body": "I am good thanks, how are you?"
+                            },
                             "read": {
                                 "status": false,
                                 "timestamp": null
@@ -122,19 +126,26 @@ describe('MessagesList', () => {
                 expect(MessagesList.prototype.scrollToBottom).toHaveBeenCalledTimes(1);
             });
         });
+        describe('onClickOption', () => {
+            it('should be called when calling onClickOption on Message', () => {
+                expect(props.onClickOption).not.toHaveBeenCalled();
+                wrapper().find(Message).at(0).props().onClickOption();
+                expect(props.onClickOption).toHaveBeenCalledTimes(1);
+            });
+        });
         describe('showDateTime', () => {
             it('should be set to true for the first message', () => {
                 expect(wrapper().find(Message).at(0).props().showDateTime).toBeFalsy();
-                wrapper().find(Message).at(0).parent().props().onClick();
+                wrapper().find(Message).at(0).props().onClickBody();
                 wrapper().update();
                 expect(wrapper().find(Message).at(0).props().showDateTime).toBeTruthy();
             });
             it('should be set to true for the first message and then false on re-clicking', () => {
                 expect(wrapper().find(Message).at(0).props().showDateTime).toBeFalsy();
-                wrapper().find(Message).at(0).parent().props().onClick();
+                wrapper().find(Message).at(0).props().onClickBody();
                 wrapper().update();
                 expect(wrapper().find(Message).at(0).props().showDateTime).toBeTruthy();
-                wrapper().find(Message).at(0).parent().props().onClick();
+                wrapper().find(Message).at(0).props().onClickBody();
                 wrapper().update();
                 expect(wrapper().find(Message).at(0).props().showDateTime).toBeFalsy();
             });
@@ -142,11 +153,11 @@ describe('MessagesList', () => {
                 ' message which now has showDateTime set to true', () => {
                 expect(wrapper().find(Message).at(0).props().showDateTime).toBeFalsy();
                 expect(wrapper().find(Message).at(1).props().showDateTime).toBeFalsy();
-                wrapper().find(Message).at(0).parent().props().onClick();
+                wrapper().find(Message).at(0).props().onClickBody();
                 wrapper().update();
                 expect(wrapper().find(Message).at(0).props().showDateTime).toBeTruthy();
                 expect(wrapper().find(Message).at(1).props().showDateTime).toBeFalsy();
-                wrapper().find(Message).at(1).parent().props().onClick();
+                wrapper().find(Message).at(1).props().onClickBody();
                 wrapper().update();
                 expect(wrapper().find(Message).at(0).props().showDateTime).toBeFalsy();
                 expect(wrapper().find(Message).at(1).props().showDateTime).toBeTruthy();
@@ -157,7 +168,9 @@ describe('MessagesList', () => {
 
 const messages = [{
     "id": 0,
-    "body": "Hello Mike",
+    "content": {
+        "body": "Hello bot, what should I watch today",
+    },
     "read": {
         "status": true,
         "timestamp": "2019-07-23T12:00:15+00:00"
@@ -173,7 +186,19 @@ const messages = [{
     }
 }, {
     "id": 1,
-    "body": "Hello John, how are you?",
+    "content": {
+        "body": "Hello Mike, I have a few suggestions...",
+        "options": [
+            {
+                "id": 1,
+                "option": "Back To The Future"
+            },
+            {
+                "id": 2,
+                "option": "Stranger Things"
+            }
+        ]
+    },
     "read": {
         "status": false,
         "timestamp": null
@@ -186,5 +211,6 @@ const messages = [{
     "createdBy": {
         "userId": 1,
         "userName": "mikeham98"
-    }
+    },
+    "selectedOption": 1
 }];
