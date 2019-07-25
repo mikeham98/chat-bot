@@ -1,5 +1,4 @@
 import React from 'react';
-import moment from 'moment';
 import classnames from 'classnames';
 import styles from '../../../themes/components/messages.scss';
 import isPopulatedArray from "../../util/isPopulatedArray";
@@ -48,7 +47,9 @@ export default class MessagesList extends React.PureComponent {
                 // showDateTime is implemented so that only one message at a time can show the date/time
                 const showDateTime = message.id === this.state.clickedMessageId;
                 return (
-                    <div key={message.id} onClick={() => this.setState({clickedMessageId: showDateTime ? null : message.id})} className={this.returnMessageClassName(position)}>
+                    <div key={message.id}
+                         onClick={() => this.setState({clickedMessageId: showDateTime ? null : message.id})}
+                         className={this.returnMessageClassName(position)}>
                         <Message
                             showDateTime={showDateTime}
                             dateTime={formatDateTime(message.createdAt)}
@@ -65,14 +66,14 @@ export default class MessagesList extends React.PureComponent {
     }
 
     render() {
-        const {replying} = this.props;
+        const {replying, botName} = this.props;
         return (
             <div
                 ref={this.messageContainerRef}
                 className={styles.messageContainer}
             >
                 {this.returnMessages()}
-                {replying && <span className={styles.replyInProgress}>ChatBot is replying...</span>}
+                {replying && <span className={styles.replyInProgress}>{botName} is replying...</span>}
             </div>
         )
     }

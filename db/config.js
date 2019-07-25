@@ -3,12 +3,12 @@ export const currentUser = {
     userName: "mikeham98"
 };
 
-// conversation id is the key for each object
+// the conversation id is the key for each object
 export const conversations = {
     "1": {
         userId: "bot1",
         userName: "travel_bot",
-        messages: ['Where would you like to go to?', 'We can definitely arrange it for you. When would you like to go?', 'What airport would you like to fly from?', 'We have two options available for London']
+        messages: ['Where would you like to go to?', 'What a lovely destination, how many people am I booking for?', 'Perfect, when would you like to go?', 'What airport would you like to fly from?', 'We have two options available for London', 'What time would you like to fly out', 'When would you like your return flight to be at', 'So just to confirm, you want to go to Florida for 2 weeks from August 12th (fly out 10am) August 26 (return flight 2pm) with 3 people', 'Brilliant, that is all booked for you, have an amazing holiday!']
     },
     "2": {
         userId: "bot2",

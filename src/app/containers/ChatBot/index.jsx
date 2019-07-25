@@ -31,10 +31,11 @@ export class ChatBotContainer extends React.Component {
     }
 
     render() {
-        const {messages, replying, currentUserId} = this.props;
+        const {messages, replying, botName, currentUserId} = this.props;
         return (
             <ChatBot
                 messages={messages}
+                botName={botName}
                 replying={replying}
                 currentUserId={currentUserId}
                 sendMessage={this.sendMessage}
@@ -44,11 +45,15 @@ export class ChatBotContainer extends React.Component {
 }
 
 const mapStateToProps = (state) => {
+    const currentConversationId = state.conversations.currentConversationId;
+
+    const currentConversation = state.conversations.conversations.find(e => e.id === currentConversationId);
     return {
         currentUserId: currentUser.userId,
         replying: state.messages.replying,
         messages: state.messages.messages,
-        currentConversationId: state.conversations.currentConversationId
+        currentConversationId,
+        botName: currentConversation && currentConversation.profile.name
     }
 };
 

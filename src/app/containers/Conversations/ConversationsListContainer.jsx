@@ -31,8 +31,17 @@ class ConversationsListContainer extends React.PureComponent {
 }
 
 const mapStateToProps = (state, ownProps) => {
+    // add in selector
+    let conversations = state.conversations.conversations;
+    conversations = conversations.map(conversation => {
+       return {
+           ...conversation,
+           selected: conversation.id === state.conversations.currentConversationId
+       }
+    });
+
     return {
-        conversations: state.conversations.conversations,
+        conversations,
         currentConversationId: state.conversations.currentConversationId
     }
 };

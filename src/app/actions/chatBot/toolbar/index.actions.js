@@ -27,7 +27,7 @@ export const sendMessage = (conversationId, message, callback) => (dispatch) => 
             // the below setTimeout is a made up time for the bot to read (open) the message
             setTimeout(() => {
                 dispatch(handleBackEndBotResponse(conversationId));
-            }, 2000);
+            }, 1000);
         })
         .catch(error => {
 
@@ -51,13 +51,12 @@ const handleBackEndBotResponse = (conversationId) => async (dispatch) => {
         return e.createdBy.userId === bot.userId
     });
 
-    dispatch({
-        type: constants.START_BOT_TYPING
-    });
-
     const nextMessage = bot.messages[messagesFromBot.length];
 
     if (nextMessage) {
+        dispatch({
+            type: constants.START_BOT_TYPING
+        });
         // the average person types 190-200 characters per minute, this will determine the speed at which the bot should reply.
 
         const secondsPerCharacter = 60 / 200;
