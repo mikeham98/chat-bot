@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from '../../../themes/components/header.scss';
-import {getTheme, setDarkTheme, setLightTheme} from '../../actions/settings/index.actions';
+import {getTheme, setTheme} from '../../actions/settings/index.actions';
 import IconButton from '../../components/common/Icon/IconButton';
 import moonIcon from '../../../../assets/icons/moon.svg';
 import sunIcon from '../../../../assets/icons/sun.svg';
 import {connect} from 'react-redux';
-import {lightTheme} from "../../config/theme.config";
+import {lightTheme, oppositeTheme} from "../../config/theme.config";
 
 export class HeaderContainer extends React.PureComponent {
     constructor(props) {
@@ -22,11 +22,8 @@ export class HeaderContainer extends React.PureComponent {
     }
 
     handleChangeTheme() {
-        if (this.isLightTheme()) {
-            this.props.setDarkTheme();
-        } else {
-            this.props.setLightTheme();
-        }
+        const newTheme = oppositeTheme(this.props.theme);
+        this.props.setTheme(newTheme);
     }
 
     render() {
@@ -57,12 +54,4 @@ const mapStateToProps = (state) => {
     }
 };
 
-const mapDispatchToProps = dispatch => {
-    return {
-        getTheme: () => dispatch(getTheme()),
-        setLightTheme: () => dispatch(setLightTheme),
-        setDarkTheme: () => dispatch(setDarkTheme),
-    };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(HeaderContainer)
+export default connect(mapStateToProps, {getTheme, setTheme})(HeaderContainer)
