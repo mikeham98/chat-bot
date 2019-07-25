@@ -42,6 +42,7 @@ export default class MessagesList extends React.PureComponent {
     returnMessages() {
         const {messages, currentUserId} = this.props;
         if (isPopulatedArray(messages)) {
+            console.log(messages);
             return messages.map(message => {
                 const position = currentUserId === message.createdBy.userId ? right : left;
                 // showDateTime is implemented so that only one message at a time can show the date/time
@@ -53,7 +54,7 @@ export default class MessagesList extends React.PureComponent {
                         <Message
                             showDateTime={showDateTime}
                             dateTime={formatDateTime(message.createdAt)}
-                            body={message.body}
+                            body={message.content.body}
                         />
                     </div>
                 );

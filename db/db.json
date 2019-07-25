@@ -28,5 +28,233 @@
       }
     }
   ],
-  "messages": []
+  "messages": [
+    {
+      "content": {
+        "body": "hello"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": "bot2"
+      },
+      "createdAt": "2019-07-25T16:40:42.627Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "2",
+      "id": 1
+    },
+    {
+      "content": {
+        "body": "Sure thing! what size pizza would you like?"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-25T16:40:43.668Z",
+      "createdBy": {
+        "userId": "bot2"
+      },
+      "conversationId": "2",
+      "id": 2
+    },
+    {
+      "content": {
+        "body": "ah"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": "bot2"
+      },
+      "createdAt": "2019-07-25T16:40:55.652Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "2",
+      "id": 3
+    },
+    {
+      "content": {
+        "body": "Would you like any toppings?"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-25T16:40:56.687Z",
+      "createdBy": {
+        "userId": "bot2"
+      },
+      "conversationId": "2",
+      "id": 4
+    },
+    {
+      "content": {
+        "body": "none"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": "bot2"
+      },
+      "createdAt": "2019-07-25T16:41:05.127Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "2",
+      "id": 5
+    },
+    {
+      "content": {
+        "body": "We will get working on it right away",
+        "media": [
+          {
+            "type": "gif",
+            "source": "https://media.giphy.com/media/1108D2tVaUN3eo/giphy.gif"
+          }
+        ]
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-25T16:41:06.159Z",
+      "createdBy": {
+        "userId": "bot2"
+      },
+      "conversationId": "2",
+      "id": 6
+    },
+    {
+      "content": {
+        "body": "thanks"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": "bot2"
+      },
+      "createdAt": "2019-07-25T16:43:11.739Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "2",
+      "id": 7
+    },
+    {
+      "content": {
+        "body": "We will get working on it right away",
+        "media": [
+          {
+            "type": "gif",
+            "source": "https://media.giphy.com/media/1108D2tVaUN3eo/giphy.gif"
+          }
+        ]
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-25T16:43:12.778Z",
+      "createdBy": {
+        "userId": "bot2"
+      },
+      "conversationId": "2",
+      "id": 8
+    },
+    {
+      "content": {
+        "body": "test"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": "bot2"
+      },
+      "createdAt": "2019-07-25T16:43:48.932Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "2",
+      "id": 9
+    },
+    {
+      "content": {
+        "body": "test"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": "bot2"
+      },
+      "createdAt": "2019-07-25T16:44:07.526Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "2",
+      "id": 10
+    },
+    {
+      "content": {
+        "body": "Voila, your pizza has been made and is out for delivery",
+        "media": [
+          {
+            "type": "gif",
+            "source": "https://media.giphy.com/media/QtoVsU8wdqbAs/giphy.gif"
+          }
+        ]
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-25T16:44:18.570Z",
+      "createdBy": {
+        "userId": "bot2"
+      },
+      "conversationId": "2",
+      "id": 11
+    }
+  ]
 }
