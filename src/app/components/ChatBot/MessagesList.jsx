@@ -48,13 +48,16 @@ export default class MessagesList extends React.PureComponent {
                 // showDateTime is implemented so that only one message at a time can show the date/time
                 const showDateTime = message.id === this.state.clickedMessageId;
                 return (
-                    <div key={message.id}
-                         onClick={() => this.setState({clickedMessageId: showDateTime ? null : message.id})}
-                         className={this.returnMessageClassName(position)}>
+                    <div
+                        key={message.id}
+                        className={this.returnMessageClassName(position)}
+                    >
                         <Message
+                            onClickBody={() => this.setState({clickedMessageId: showDateTime ? null : message.id})}
                             showDateTime={showDateTime}
                             dateTime={formatDateTime(message.createdAt)}
                             body={message.content.body}
+                            media={message.content.media}
                         />
                     </div>
                 );

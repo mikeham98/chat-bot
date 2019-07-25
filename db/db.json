@@ -130,7 +130,7 @@
         "media": [
           {
             "type": "gif",
-            "source": "https://media.giphy.com/media/1108D2tVaUN3eo/giphy.gif"
+            "src": "https://media.giphy.com/media/1108D2tVaUN3eo/giphy.gif"
           }
         ]
       },
@@ -174,7 +174,7 @@
         "media": [
           {
             "type": "gif",
-            "source": "https://media.giphy.com/media/1108D2tVaUN3eo/giphy.gif"
+            "src": "https://media.giphy.com/media/1108D2tVaUN3eo/giphy.gif"
           }
         ]
       },
@@ -237,7 +237,7 @@
         "media": [
           {
             "type": "gif",
-            "source": "https://media.giphy.com/media/QtoVsU8wdqbAs/giphy.gif"
+            "src": "https://media.giphy.com/media/QtoVsU8wdqbAs/giphy.gif"
           }
         ]
       },
@@ -255,6 +255,92 @@
       },
       "conversationId": "2",
       "id": 11
+    },
+    {
+      "content": {
+        "body": "d"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-25T17:16:28.405Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 12
+    },
+    {
+      "content": {
+        "body": "Sure thing, what can I help you with"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-25T17:16:29.444Z",
+      "createdBy": {
+        "userId": "bot3"
+      },
+      "conversationId": "3",
+      "id": 13
+    },
+    {
+      "content": {
+        "body": "gdfg"
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-25T17:16:38.990Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 14
+    },
+    {
+      "content": {
+        "body": "I have found a good article for you, hope this helps",
+        "media": [
+          {
+            "id": 1,
+            "type": "link",
+            "imagePreview": "https://images8.alphacoders.com/374/374852.jpg",
+            "title": "How (and Why) SpaceX Will Colonize Mars",
+            "description": "A brief insight to how and why SpaceX will Colonize Mars",
+            "src": "https://waitbutwhy.com/2015/08/how-and-why-spacex-will-colonize-mars.html"
+          }
+        ]
+      },
+      "read": {
+        "status": false,
+        "timestamp": null
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-25T17:16:40.023Z",
+      "createdBy": {
+        "userId": "bot3"
+      },
+      "conversationId": "3",
+      "id": 15
     }
   ]
 }

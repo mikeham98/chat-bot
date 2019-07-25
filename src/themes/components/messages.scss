@@ -42,6 +42,8 @@
 
 .messageContent {
   transition: 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
 }
 
 .messageCreatedAt {

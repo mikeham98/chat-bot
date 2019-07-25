@@ -1,3 +1,5 @@
+import {gif, img, link} from "../src/app/config/media.config";
+
 export const currentUser = {
     userId: 1,
     userName: "mikeham98"
@@ -40,21 +42,16 @@ export const conversations = {
         }, {
             body: 'We will get working on it right away',
             media: [{
-                type: 'gif',
-                source: 'https://media.giphy.com/media/1108D2tVaUN3eo/giphy.gif'
-            }]
-        }, {
-            body: 'We will get working on it right away',
-            media: [{
-                type: 'gif',
-                source: 'https://media.giphy.com/media/1108D2tVaUN3eo/giphy.gif'
+                type: gif,
+                src: 'https://media.giphy.com/media/1108D2tVaUN3eo/giphy.gif'
             }]
         }, {
             delay: 10 * 1000,
             body: 'Voila, your pizza has been made and is out for delivery',
             media: [{
-                type: 'gif',
-                source: 'https://media.giphy.com/media/QtoVsU8wdqbAs/giphy.gif'
+                id: 2,
+                type: gif,
+                src: 'https://media.giphy.com/media/QtoVsU8wdqbAs/giphy.gif'
             }]
         }]
     },
@@ -66,8 +63,12 @@ export const conversations = {
         }, {
             body: 'I have found a good article for you, hope this helps',
             media: [{
-                type: 'link',
-                source: 'https://waitbutwhy.com/2015/08/how-and-why-spacex-will-colonize-mars.html'
+                id: 1,
+                type: link,
+                imagePreview: 'https://images8.alphacoders.com/374/374852.jpg',
+                title: 'How (and Why) SpaceX Will Colonize Mars',
+                description: 'A brief insight to how and why SpaceX will Colonize Mars',
+                src: 'https://waitbutwhy.com/2015/08/how-and-why-spacex-will-colonize-mars.html'
             }]
         }, {
             body: 'You`re welcome, is there anything else I can help you with?'
