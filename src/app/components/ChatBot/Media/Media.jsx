@@ -1,9 +1,9 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import ImagePreview from "./ImagePreview";
 import LinkPreview from "./LinkPreview";
 import isPopulatedArray from "../../../util/isPopulatedArray";
 import {gif, img, link} from "../../../config/media.config";
-import PropTypes from "prop-types";
 
 export default class Media extends React.PureComponent {
     returnMedia() {

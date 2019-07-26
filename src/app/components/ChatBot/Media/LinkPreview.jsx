@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from '../../../../themes/components/media.scss';
 import PropTypes from "prop-types";
+import styles from '../../../../themes/components/media.scss';
 
 const LinkPreview = ({src, image, title, description}) => {
     return (

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import styles from '../../../../themes/components/messages.scss';
 import Option from './Option';
 import isPopulatedArray from "../../../util/isPopulatedArray";
@@ -29,3 +30,12 @@ export default class Options extends React.PureComponent {
         );
     }
 }
+
+Options.propTypes = {
+    options: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        option: PropTypes.string.isRequired,
+    }),
+    selectedOption: PropTypes.string,
+    onClick: PropTypes.func,
+};
