@@ -28,6 +28,6 @@ export default class ColorPicker extends React.PureComponent {
 }
 
 ColorPicker.propTypes = {
-    flatColours: PropTypes.arrayOf(PropTypes.string),
+    color: '#1ccb9e',
     onChange: PropTypes.func.isRequired,
 };

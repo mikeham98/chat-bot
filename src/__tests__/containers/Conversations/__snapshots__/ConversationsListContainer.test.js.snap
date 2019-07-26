@@ -4,9 +4,9 @@ exports[`ConversationsListContainer render should return ConversationsList compo
 <ConversationsList
   conversations={
     Array [
-      1,
-      2,
-      3,
+      "1",
+      "2",
+      "3",
     ]
   }
   onClickConversation={[Function]}

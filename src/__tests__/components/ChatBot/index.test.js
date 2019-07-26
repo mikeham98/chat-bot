@@ -18,6 +18,7 @@ describe('ChatBot', () => {
             messages: [1,2,3,4,5],
             replying: true,
             currentUserId: 1,
+            color: '#1ccb9e',
             botName: 'bot1',
             sendMessage: jest.fn(),
             onClickOption: jest.fn()

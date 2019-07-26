@@ -41,7 +41,7 @@ describe('MessageForm', () => {
                     }
                 });
                 wrapper().update();
-                expect(wrapper().find(IconButton).first().props().color).toBe('#172B4D');
+                expect(wrapper().find(IconButton).first().props().color).toBe('#6872FF');
             });
         });
     });

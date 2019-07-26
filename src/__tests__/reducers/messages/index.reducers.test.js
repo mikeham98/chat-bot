@@ -5,8 +5,9 @@ describe('messagesReducer', () => {
         describe('RANDOM', () => {
             it('should return current state', () => {
                 const state = {
-                    messages: [1,2,3],
-                    replying: true
+                    messages: ['apple', 'orange', 'banana'],
+                    replying: ['banana'],
+                    botInProgress: ['banana']
                 };
                 const action = {
                     type: 'RANDOM',
@@ -22,7 +23,8 @@ describe('messagesReducer', () => {
                 };
                 const initialState = {
                     messages: [],
-                    replying: false
+                    replying: [],
+                    botInProgress: []
                 };
                 expect(messagesReducer(undefined, action)).toEqual(initialState);
             })
@@ -31,15 +33,15 @@ describe('messagesReducer', () => {
             it('should return current state with a new messages array', () => {
                 const state = {
                     messages: ['apple', 'orange', 'banana'],
-                    replying: true
+                    replying: ['banana']
                 };
                 const action = {
                     type: 'GET_CONVERSATION_MESSAGES',
-                    payload: [1, 2, 3, 4, 5]
+                    payload: ['banana', 'pear']
                 };
                 const expectedState = {
-                    messages: [1, 2, 3, 4, 5],
-                    replying: true
+                    messages: ['banana', 'pear'],
+                    replying: ['banana']
                 };
                 expect(messagesReducer(state, action)).toEqual(expectedState);
             });
@@ -48,14 +50,17 @@ describe('messagesReducer', () => {
             it('should return current state and set replying to true', () => {
                 const state = {
                     messages: ['apple', 'orange', 'banana'],
-                    replying: false
+                    replying: [],
+                    botInProgress: []
                 };
                 const action = {
-                    type: 'START_BOT_TYPING'
+                    type: 'START_BOT_TYPING',
+                    payload: 'apple'
                 };
                 const expectedState = {
                     messages: ['apple', 'orange', 'banana'],
-                    replying: true
+                    replying: ['apple'],
+                    botInProgress: []
                 };
                 expect(messagesReducer(state, action)).toEqual(expectedState);
             });
@@ -64,14 +69,17 @@ describe('messagesReducer', () => {
             it('should return current state and set replying from true to false', () => {
                 const state = {
                     messages: ['apple', 'orange', 'banana'],
-                    replying: true
+                    replying: ['apple','banana'],
+                    botInProgress: []
                 };
                 const action = {
-                    type: 'STOP_BOT_TYPING'
+                    type: 'STOP_BOT_TYPING',
+                    payload: 'apple'
                 };
                 const expectedState = {
                     messages: ['apple', 'orange', 'banana'],
-                    replying: false
+                    replying: ['banana'],
+                    botInProgress: []
                 };
                 expect(messagesReducer(state, action)).toEqual(expectedState);
             });

@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ChatBotContainer render should return ChatBot component 1`] = `
-<ChatBot
+<Memo(ChatBot)
+  botName="TravelBot"
+  color="#9A58B9"
   currentUserId={1}
   messages={
     Array [

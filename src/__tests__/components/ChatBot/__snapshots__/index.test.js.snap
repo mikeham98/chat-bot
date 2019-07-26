@@ -6,6 +6,7 @@ exports[`ChatBot render should return MessageList and MessageForm 1`] = `
 >
   <MessagesList
     botName="bot1"
+    color="#1ccb9e"
     currentUserId={1}
     messages={
       Array [
