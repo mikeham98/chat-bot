@@ -4,8 +4,7 @@ import styles from '../../../themes/components/messages.scss';
 import isPopulatedArray from "../../util/isPopulatedArray";
 import Media from "./Media/Media";
 import Options from "./Options/Options";
-import {gif, img, link} from "../../config/media.config";
-import {MediaPropTypes, OptionsPropTypes} from "../../config/propTypes";
+import {MediaObjectPropTypes, OptionsPropTypes} from "../../config/propTypes";
 
 export default class Message extends React.PureComponent {
     constructor(props) {
@@ -61,7 +60,7 @@ Message.propTypes = {
     body: PropTypes.string,
     showDateTime: PropTypes.bool,
     dateTime: PropTypes.string,
-    media: MediaPropTypes,
+    media: MediaObjectPropTypes,
     options: OptionsPropTypes,
     onClickBody: PropTypes.func.isRequired,
     selectedOption: PropTypes.number,

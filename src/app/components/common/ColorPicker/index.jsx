@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import styles from '../../../../themes/components/colorPicker.scss';
 import {flatColours} from '../../../config/colours.config';
 import ColourIcon from "./ColorIcon";
@@ -25,3 +26,8 @@ export default class ColorPicker extends React.PureComponent {
         )
     }
 }
+
+ColorPicker.propTypes = {
+    flatColours: PropTypes.arrayOf(PropTypes.string),
+    onChange: PropTypes.func.isRequired,
+};

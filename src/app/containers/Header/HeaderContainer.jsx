@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import styles from '../../../themes/components/header.scss';
 import {getTheme, setTheme} from '../../actions/settings/index.actions';
 import {setColor} from '../../actions/conversations/index.actions';
@@ -78,6 +79,14 @@ export class HeaderContainer extends React.PureComponent {
         )
     }
 }
+
+// TODO: webpack issue currentConversation: ConversationPropTypes,
+HeaderContainer.propTypes = {
+    theme: PropTypes.string.isRequired,
+    getTheme: PropTypes.func.isRequired,
+    setTheme: PropTypes.func.isRequired,
+    setColor: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = (state) => {
     return {

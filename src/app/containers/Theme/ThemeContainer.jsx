@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from '../../../themes/theme.scss';
 import {connect} from 'react-redux';
 import {darkTheme} from "../../config/theme.config";
@@ -10,6 +11,11 @@ const ThemeContainer = ({theme, children}) => {
             {children}
         </div>
     )
+};
+
+ThemeContainer.propTypes = {
+    theme: PropTypes.string,
+    children: PropTypes.node,
 };
 
 const mapStateToProps = (state) => ({

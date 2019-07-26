@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {currentUser} from '../../../../db/config';
 import {getMessages, setOption} from "../../actions/chatBot/messages/index.actions";
 import {sendMessage} from "../../actions/chatBot/toolbar/index.actions";
 import ChatBot from "../../components/ChatBot";
 import {chatBotSelector} from "../../selectors/chatBotSelector";
+import {ConversationPropTypes, MessagesPropTypes} from "../../config/propTypes";
 
 export class ChatBotContainer extends React.Component {
     constructor(props) {
@@ -54,6 +55,16 @@ export class ChatBotContainer extends React.Component {
         )
     }
 }
+
+ChatBotContainer.propTypes = {
+    getMessages: PropTypes.func.isRequired,
+    sendMessage: PropTypes.func.isRequired,
+    setOption: PropTypes.func.isRequired,
+    messages: MessagesPropTypes,
+    replying: PropTypes.bool,
+    currentUserId: PropTypes.number,
+    currentConversation: ConversationPropTypes,
+};
 
 const mapStateToProps = (state) => chatBotSelector(state);
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class Icon extends React.PureComponent {
     constructor(props) {
@@ -32,6 +33,14 @@ export default class Icon extends React.PureComponent {
         );
     }
 }
+
+Icon.propTypes = {
+    IconComponent: PropTypes.any,
+    color: PropTypes.string,
+    hoverColor: PropTypes.string,
+    height: PropTypes.string,
+    width: PropTypes.string,
+};
 
 Icon.defaultProps = {
     height: '40px',
