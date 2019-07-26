@@ -1,5 +1,4 @@
 import axiosInstance from '../axiosInstance';
-import isPopulatedArray from "../../util/isPopulatedArray";
 
 export const constants = {
     GET_CONVERSATION_LIST: 'GET_CONVERSATION_LIST',
@@ -13,16 +12,23 @@ export const getConversationList = () => (dispatch) => {
                 type: constants.GET_CONVERSATION_LIST,
                 payload: data
             });
-            if (isPopulatedArray(data)) {
-                const firstConversation = data[0];
-                dispatch(setCurrentConversation(firstConversation.id))
-            }
         })
-        .catch(error => {
-
-        });
 };
-export const setCurrentConversation = (currentConversationId) => ({
-    type: constants.SET_CURRENT_CONVERSATION,
-    payload: currentConversationId
-});
+
+export const setColor = (color, conversationId) => (dispatch) => {
+    return axiosInstance.patch(`/conversation/${conversationId}`, {color})
+        .then(() => {
+            dispatch(getConversationList());
+        })
+};
+
+export const setCurrentConversation = (conversationId) => (dispatch) => {
+    dispatch({
+        type: constants.SET_CURRENT_CONVERSATION,
+        payload: conversationId
+    });
+    axiosInstance.patch(`/conversation/${conversationId}`, {read: true})
+        .then(() => {
+            dispatch(getConversationList());
+        })
+};

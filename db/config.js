@@ -21,7 +21,7 @@ export const conversations = {
         }, {
             body: 'What city would you like to fly from?'
         }, {
-            body: 'We have two options available for London',
+            body: 'We have two options available for London.',
             options: [{
                 id: 1,
                 option: 'Gatwick'
@@ -30,11 +30,11 @@ export const conversations = {
                 option: 'Heathrow'
             }]
         }, {
-            body: 'What time would you like to fly out'
+            body: 'What time would you like to fly out?'
         }, {
-            body: 'When would you like your return flight to be at'
+            body: 'When would you like your return flight to be at?'
         }, {
-            body: 'So just to confirm, you want to go to Florida for 2 weeks from August 12th (fly out 10am) August 26 (return flight 2pm) with 3 people'
+            body: 'So just to confirm, you want to go to Florida for 2 weeks from August 12th (fly out 10am) August 26 (return flight 2pm) with 3 people.'
         }, {
             body: 'Brilliant, that is all booked for you, have an amazing holiday!'
         }]
@@ -67,9 +67,9 @@ export const conversations = {
         userId: "bot3",
         userName: "web_search_bot",
         messages: [{
-            body: 'Sure thing, what can I help you with',
+            body: 'Sure thing, what can I help you with.',
         }, {
-            body: 'I have found a good article for you, hope this helps',
+            body: 'I have found a good article for you, hope this helps!',
             media: [{
                 id: 1,
                 type: link,
@@ -81,7 +81,7 @@ export const conversations = {
         }, {
             body: 'You`re welcome, is there anything else I can help you with?'
         }, {
-            body: 'Okay, feel free to ask for any help in the future, have a good day'
+            body: 'Okay, feel free to ask for any help in the future, have a good day.'
         }]
     }
 };

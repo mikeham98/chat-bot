@@ -1,6 +1,4 @@
 import React from 'react';
-// import babel-polyfill to allow async/await
-import 'babel-polyfill';
 import {shallow} from 'enzyme';
 import {ChatBotContainer} from '../../../app/containers/ChatBot/index';
 import {setOption} from '../../../app/actions/chatBot/messages/index.actions';

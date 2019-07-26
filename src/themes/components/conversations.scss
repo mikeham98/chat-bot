@@ -22,7 +22,7 @@
     border-radius: 20px;
   }
   span {
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: 500;
   }
 }
@@ -30,4 +30,8 @@
 .conversationSelected {
   background-color: $flat-lavender;
   color: white;
+}
+
+.conversationUnread {
+  background-color: #d9d9d9;
 }

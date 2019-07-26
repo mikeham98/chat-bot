@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from '../../../themes/components/sideBar.scss';
 
 const maxWidth = '300px';
@@ -100,3 +101,8 @@ export default class SideBar extends React.PureComponent {
         )
     }
 }
+
+SideBar.propTypes = {
+    title: PropTypes.string.isRequired,
+    children: PropTypes.any,
+};

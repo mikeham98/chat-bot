@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import styles from '../../../../themes/components/messages.scss';
 import Option from './Option';
 import isPopulatedArray from "../../../util/isPopulatedArray";
+import {OptionsPropTypes} from "../../../config/propTypes";
 
 export default class Options extends React.PureComponent {
     returnOptions() {
@@ -29,3 +31,9 @@ export default class Options extends React.PureComponent {
         );
     }
 }
+
+Options.propTypes = {
+    options: OptionsPropTypes,
+    selectedOption: PropTypes.number,
+    onClick: PropTypes.func,
+};

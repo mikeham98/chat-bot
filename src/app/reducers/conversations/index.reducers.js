@@ -2,7 +2,7 @@ import {constants} from "../../actions/conversations/index.actions";
 
 const initialState = {
     conversations: [],
-    currentConversationId: null
+    currentConversationId: "1"
 };
 
 const conversationsReducer = (state = initialState, action) => {

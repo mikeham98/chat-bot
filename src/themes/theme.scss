@@ -13,6 +13,9 @@
   .mediaLinkPreviewWrapper .mediaLinkPreviewMeta .mediaLinkPreviewDescription, .leftMessage .message {
     color: white;
   }
+  .conversationUnread {
+    background-color: $dark-gray;
+  }
   .conversationWrapper,
   .sideBarMenu,
   .mediaLinkPreviewWrapper,

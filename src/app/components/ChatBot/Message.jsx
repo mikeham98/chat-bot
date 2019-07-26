@@ -1,8 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from '../../../themes/components/messages.scss';
 import isPopulatedArray from "../../util/isPopulatedArray";
 import Media from "./Media/Media";
 import Options from "./Options/Options";
+import {MediaPropTypes, OptionsPropTypes} from "../../config/propTypes";
 
 export default class Message extends React.PureComponent {
     constructor(props) {
@@ -24,10 +26,10 @@ export default class Message extends React.PureComponent {
     }
 
     render() {
-        const {body, showDateTime, dateTime, media, options, onClickBody, selectedOption} = this.props;
+        const {body, showDateTime, dateTime, media, options, onClickBody, selectedOption, color} = this.props;
         return (
             <div className={styles.messageContent}>
-                <div className={styles.message} onClick={onClickBody}>
+                <div className={styles.message} style={{backgroundColor: color}} onClick={onClickBody}>
                     <span className={styles.messageBody}>{body}</span>
                     {this.showOptions() && (
                         <Options
@@ -47,3 +49,20 @@ export default class Message extends React.PureComponent {
         );
     }
 }
+
+Message.defaultProps = {
+    color: ''
+};
+
+Message.propTypes = {
+    onClickOption: PropTypes.func.isRequired,
+    id: PropTypes.number,
+    body: PropTypes.string,
+    showDateTime: PropTypes.bool,
+    dateTime: PropTypes.string,
+    media: MediaPropTypes,
+    options: OptionsPropTypes,
+    onClickBody: PropTypes.func.isRequired,
+    selectedOption: PropTypes.number,
+    color: PropTypes.string,
+};
