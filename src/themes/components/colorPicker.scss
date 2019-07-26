@@ -23,6 +23,7 @@ $colorIconSize: 26px;
 .colourIconWrapper {
   box-sizing: border-box;
   display: inline-block;
+  cursor: pointer;
   height: $colorIconSize;
   width: $colorIconSize;
   border-radius: 10px;
