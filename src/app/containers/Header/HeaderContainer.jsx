@@ -9,6 +9,8 @@ import {connect} from 'react-redux';
 import {lightTheme, oppositeTheme} from "../../config/theme.config";
 import ColorPicker from "../../components/common/ColorPicker";
 import ColourIcon from "../../components/common/ColorPicker/ColorIcon";
+import {conversationSelector} from "../../selectors/conversationSelector";
+import {getThemeSelector} from "../../selectors/settingsSelector";
 
 export class HeaderContainer extends React.PureComponent {
     constructor(props) {
@@ -44,14 +46,14 @@ export class HeaderContainer extends React.PureComponent {
         this.setState({
             showColorPicker: false
         });
-        this.props.setColor(color, this.props.currentConversationId);
+        this.props.setColor(color, this.props.currentConversation.id);
     }
 
     render() {
-        const {name} = this.props;
+        const {profile, color} = this.props.currentConversation;
         return (
             <div className={styles.headerWrapper}>
-                <h2>{name}</h2>
+                <h2>{(profile && profile.name) || ''}</h2>
                 <div className={styles.headerThemeToggle}>
                     <IconButton
                         icon={this.isLightTheme() ? moonIcon : sunIcon}
@@ -63,7 +65,7 @@ export class HeaderContainer extends React.PureComponent {
                 </div>
                 <div className={styles.headerColorPicker}>
                     <ColourIcon
-                        color={this.props.color}
+                        color={color}
                         onClick={this.showColorPicker}
                     />
                 </div>
@@ -78,13 +80,9 @@ export class HeaderContainer extends React.PureComponent {
 }
 
 const mapStateToProps = (state) => {
-    let conversations = state.conversations.conversations;
-    const currentConversation = conversations.find(conversation => conversation.id === state.conversations.currentConversationId);
     return {
-        currentConversationId: state.conversations.currentConversationId,
-        color: currentConversation && currentConversation.color,
-        name: currentConversation && currentConversation.profile.name,
-        theme: state.settings.theme
+        ...conversationSelector(state),
+        theme: getThemeSelector(state)
     }
 };
 
