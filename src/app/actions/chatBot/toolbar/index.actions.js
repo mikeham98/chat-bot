@@ -23,17 +23,13 @@ export const sendMessage = (conversationId, message, callback) => (dispatch) => 
         .then((response) => {
             callback();
             dispatch(getMessages(conversationId));
-
             dispatch(handleBackEndUpdateLatestConversation(conversationId, {
                 latest: {
                     message: response.data.content.body,
                     createdAt: response.data.createdAt,
                 }
             }));
-            // the below setTimeout is a made up time for the bot to read (open) the message
-            setTimeout(() => {
-                dispatch(handleBackEndBotResponse(conversationId));
-            }, 1000);
+            dispatch(handleBackEndBotResponse(conversationId));
         })
 };
 
@@ -53,59 +49,75 @@ export const handleBackEndGetMessages = async (conversationId) => {
         });
 
 };
-export const handleBackEndBotResponse = (conversationId) => async (dispatch) => {
-    // get bot from conversation config based on conversationId
-    const bot = conversations[conversationId];
-    const messages = await handleBackEndGetMessages(conversationId);
+export const handleBackEndBotResponse = (conversationId) => (dispatch) => {
+    const botInProgressState = store.getState().messages.botInProgress;
+    const isInProgress = botInProgressState.find(e => e === conversationId);
+    if (typeof isInProgress !== 'string') {
+        dispatch({
+            type: constants.BOT_IN_PROGRESS,
+            payload: conversationId,
+        });
+        // the below setTimeout is a made up time for the bot to read (open) the message
+        setTimeout(async () => {
+            // get bot from conversation config based on conversationId
+            const bot = conversations[conversationId];
+            const messages = await handleBackEndGetMessages(conversationId);
 
-    const messagesFromBot = isPopulatedArray(messages) && messages.filter(e => {
-        return e.createdBy.userId === bot.userId
-    });
-
-    const nextMessage = bot.messages[messagesFromBot.length];
-
-    if (nextMessage) {
-        let delayInResponse = nextMessage.delay || 0;
-        setTimeout(() => {
-            dispatch({
-                type: constants.START_BOT_TYPING,
-                payload: conversationId
+            const messagesFromBot = isPopulatedArray(messages) && messages.filter(e => {
+                return e.createdBy.userId === bot.userId
             });
-            const secondsPerCharacter = 1 / 5;
-            const speedInMilliseconds = (secondsPerCharacter * nextMessage.body.length) * 1000;
 
-            const objectToSend = {
-                content: {
-                    body: nextMessage.body,
-                    media: nextMessage.media,
-                    options: nextMessage.options,
-                },
-                recipient: currentUser,
-                createdAt: new Date(),
-                createdBy: {
-                    userId: bot.userId,
-                    userName: bot.name,
-                }
-            };
+            const nextMessage = bot.messages[messagesFromBot.length];
 
-            setTimeout(() => {
-                axiosInstance.post(`/conversation/${conversationId}/messages`, objectToSend)
-                    .then((response) => {
-                        const currentConversationId = store.getState().conversations.currentConversationId;
-                        dispatch(handleBackEndUpdateLatestConversation(conversationId, {
-                            latest: {
-                                message: response.data.content.body,
-                                createdAt: response.data.createdAt,
-                            },
-                            read: currentConversationId === conversationId
-                        }));
-                        dispatch({
-                            type: constants.STOP_BOT_TYPING,
-                            payload: conversationId
-                        });
-                        dispatch(getMessages(currentConversationId));
+            if (nextMessage) {
+                let delayInResponse = nextMessage.delay || 0;
+                setTimeout(() => {
+                    dispatch({
+                        type: constants.START_BOT_TYPING,
+                        payload: conversationId
                     });
-            }, speedInMilliseconds);
-        }, delayInResponse)
+                    const secondsPerCharacter = 1 / 5;
+                    const speedInMilliseconds = (secondsPerCharacter * nextMessage.body.length) * 1000;
+
+                    const objectToSend = {
+                        content: {
+                            body: nextMessage.body,
+                            media: nextMessage.media,
+                            options: nextMessage.options,
+                        },
+                        recipient: currentUser,
+                        createdAt: new Date(),
+                        createdBy: {
+                            userId: bot.userId,
+                            userName: bot.name,
+                        }
+                    };
+
+                    setTimeout(() => {
+                        axiosInstance.post(`/conversation/${conversationId}/messages`, objectToSend)
+                            .then((response) => {
+                                const currentConversationId = store.getState().conversations.currentConversationId;
+                                dispatch(handleBackEndUpdateLatestConversation(conversationId, {
+                                    latest: {
+                                        message: response.data.content.body,
+                                        createdAt: response.data.createdAt,
+                                    },
+                                    read: currentConversationId === conversationId
+                                }));
+                                dispatch({
+                                    type: constants.STOP_BOT_TYPING,
+                                    payload: conversationId
+                                });
+                                dispatch({
+                                    type: constants.BOT_NOT_IN_PROGRESS,
+                                    payload: conversationId
+                                });
+                                dispatch(getMessages(currentConversationId));
+                            });
+                    }, speedInMilliseconds);
+                }, delayInResponse)
+            }
+        }, 1000);
     }
+
 };

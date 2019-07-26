@@ -2,16 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from '../../../themes/components/sideBar.scss';
 
-const maxWidth = '300px';
-const minWidth = '1px';
+const maxWidth = 300;
+const minWidth = 60;
 
 export default class SideBar extends React.PureComponent {
     constructor(props) {
         super(props);
-        this.minSideBarWidth = minWidth;
         this.addTransition = this.addTransition.bind(this);
         this.removeTransition = this.removeTransition.bind(this);
-        this.handleResize = this.handleResize.bind(this);
+        this.onMouseMove = this.onMouseMove.bind(this);
         this.handleBounce = this.handleBounce.bind(this);
         this.onMouseUp = this.onMouseUp.bind(this);
         this.onMouseDownDraggableHandle = this.onMouseDownDraggableHandle.bind(this);
@@ -29,25 +28,40 @@ export default class SideBar extends React.PureComponent {
         // clean up event listeners
         this.sideBarDraggableHandle.removeEventListener("mousedown", this.onMouseDownDraggableHandle);
         document.removeEventListener("mouseup", this.onMouseUp);
-        document.removeEventListener("mousemove", this.handleResize);
+        document.removeEventListener("mousemove", this.onMouseMove);
         document.removeEventListener('selectstart', this.disableSelect);
     }
 
-    onMouseUp() {
-        this.handleBounce();
-        document.removeEventListener("mousemove", this.handleResize);
+    onMouseUp(event) {
+        const sideBarWidth = parseInt(this.sideBarWrapper.style.width, 10);
+        if (event.target === this.sideBarDraggableHandle && sideBarWidth >= minWidth) {
+            this.handleBounce();
+        }
+        document.removeEventListener("mousemove", this.onMouseMove);
         document.removeEventListener('selectstart', this.disableSelect);
     }
 
     onMouseDownDraggableHandle() {
-        this.minSideBarWidth = this.sideBarWrapper.style.width;
         this.removeTransition();
-        document.addEventListener("mousemove", this.handleResize);
+        document.addEventListener("mousemove", this.onMouseMove);
         document.addEventListener('selectstart', this.disableSelect);
     }
 
-    handleResize(event) {
-        this.sideBarWrapper.style.width = `${event.x}px`;
+    onMouseMove(event) {
+        console.log('hi')
+        this.sideBarMenuTitle.style.height = '150px';
+        this.handleResize(event.x);
+    }
+
+    handleResize(newWidth) {
+        if (newWidth >= minWidth) {
+            this.sideBarWrapper.style.width = `${newWidth}px`;
+        }
+        if (newWidth < maxWidth) {
+            this.sideBarMenuTitle.style.height = 0;
+        }else {
+            this.sideBarMenuTitle.style.height = '150px';
+        }
     }
 
     disableSelect(event) {
@@ -55,14 +69,18 @@ export default class SideBar extends React.PureComponent {
     }
 
     handleBounce() {
-        const sideBarWidth = this.sideBarWrapper.style.width;
+        const sideBarWidth = parseInt(this.sideBarWrapper.style.width, 10);
         if (sideBarWidth !== maxWidth) {
             this.addTransition();
-            if (sideBarWidth < maxWidth && sideBarWidth !== minWidth) {
-                this.sideBarWrapper.style.width = minWidth;
-                return;
+            if (sideBarWidth === minWidth) {
+                this.handleResize(maxWidth);
+            } else {
+                if (sideBarWidth < maxWidth) {
+                    this.handleResize(minWidth);
+                } else {
+                    this.handleResize(maxWidth);
+                }
             }
-            this.sideBarWrapper.style.width = maxWidth;
         }
     }
 
@@ -77,17 +95,15 @@ export default class SideBar extends React.PureComponent {
     render() {
         return (
             <div className={styles.sideBarContainer}>
-                <div ref={ref => this.sideBarWrapper = ref} style={{width: 300}}>
-                    <div className={styles.sideBarMenuWrapper}>
+                <div ref={ref => this.sideBarWrapper = ref} id='sideBarWrapper' style={{width: 300}}>
+                    <div className={styles.sideBarMenuWrapper} id='sideBarMenuWrapper'>
                         <div className={styles.sideBarMenu}>
-                            <div style={{
-                                width: '100%',
-                                display: 'flex',
-                                flexDirection: 'column'
-                            }}>
-                                <h1 className={styles.sideBarMenuTitle}>
-                                    {this.props.title}
-                                </h1>
+                            <div className={styles.sideBarContent}>
+                                <div ref={ref => this.sideBarMenuTitle = ref} className={styles.sideBarMenuTitle}>
+                                    <h1>
+                                        {this.props.title}
+                                    </h1>
+                                </div>
                                 <div className={styles.sideBarMenuChildren}>
                                     {this.props.children}
                                 </div>
