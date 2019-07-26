@@ -3,7 +3,7 @@ import ImagePreview from "./ImagePreview";
 import LinkPreview from "./LinkPreview";
 import isPopulatedArray from "../../../util/isPopulatedArray";
 import {gif, img, link} from "../../../config/media.config";
-import {MediaObjectPropTypes} from "../../../config/propTypes";
+import {MediaPropTypes} from "../../../config/propTypes";
 
 export default class Media extends React.PureComponent {
     returnMedia() {
@@ -44,5 +44,5 @@ export default class Media extends React.PureComponent {
 }
 
 Media.propTypes = {
-    media: MediaObjectPropTypes
+    media: MediaPropTypes
 };
