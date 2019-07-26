@@ -7,13 +7,14 @@
       "id": "1",
       "userId": "bot1",
       "userName": "travel_bot",
+      "color": "#30CB71",
       "profile": {
         "name": "Travel bot",
         "img": "https://images.unsplash.com/photo-1496046744122-2328018d60b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1664&q=80"
       },
       "latest": {
-        "message": "What city would you like to fly from?",
-        "createdAt": "2019-07-26T00:05:20.775Z"
+        "message": "What a lovely destination, how long would you like to go for?",
+        "createdAt": "2019-07-26T01:01:05.385Z"
       },
       "read": true
     },
@@ -21,30 +22,138 @@
       "id": "2",
       "userId": "bot2",
       "userName": "pizza_bot",
+      "color": "#9A58B9",
       "profile": {
         "name": "Pizza Bot",
         "img": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1655&q=80"
       },
       "read": true,
       "latest": {
-        "message": "Would you like any toppings?",
-        "createdAt": "2019-07-26T00:05:00.777Z"
+        "message": "Sure thing! what size pizza would you like?",
+        "createdAt": "2019-07-26T00:59:18.134Z"
       }
     },
     {
       "id": "3",
       "userId": "bot3",
       "userName": "web_search_bot",
+      "color": "#6872FF",
       "profile": {
         "name": "Web search bot",
         "img": "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80"
       },
       "latest": {
-        "message": "I have found a good article for you, hope this helps",
-        "createdAt": "2019-07-26T00:09:19.635Z"
+        "message": "hi",
+        "createdAt": "2019-07-26T01:01:29.889Z"
       },
       "read": true
     }
   ],
-  "messages": []
+  "messages": [
+    {
+      "content": {
+        "body": "test"
+      },
+      "recipient": {
+        "userId": "bot2"
+      },
+      "createdAt": "2019-07-26T00:59:17.097Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "2",
+      "id": 1
+    },
+    {
+      "content": {
+        "body": "test"
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-26T00:59:21.842Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 2
+    },
+    {
+      "content": {
+        "body": "Sure thing! what size pizza would you like?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T00:59:18.134Z",
+      "createdBy": {
+        "userId": "bot2"
+      },
+      "conversationId": "2",
+      "id": 3
+    },
+    {
+      "content": {
+        "body": "Where would you like to go to?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T00:59:22.878Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 4
+    },
+    {
+      "content": {
+        "body": "dsfgsdfg"
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-26T01:01:04.349Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 5
+    },
+    {
+      "content": {
+        "body": "What a lovely destination, how long would you like to go for?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T01:01:05.385Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 6
+    },
+    {
+      "content": {
+        "body": "hi"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T01:01:29.889Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 7
+    }
+  ]
 }

@@ -24,10 +24,10 @@ export default class Message extends React.PureComponent {
     }
 
     render() {
-        const {body, showDateTime, dateTime, media, options, onClickBody, selectedOption} = this.props;
+        const {body, showDateTime, dateTime, media, options, onClickBody, selectedOption, color} = this.props;
         return (
             <div className={styles.messageContent}>
-                <div className={styles.message} onClick={onClickBody}>
+                <div className={styles.message} style={{backgroundColor: color}} onClick={onClickBody}>
                     <span className={styles.messageBody}>{body}</span>
                     {this.showOptions() && (
                         <Options
@@ -47,3 +47,7 @@ export default class Message extends React.PureComponent {
         );
     }
 }
+
+Message.defaultProps = {
+    color: ''
+};

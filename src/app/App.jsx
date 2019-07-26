@@ -4,8 +4,6 @@ import ChatBotLayout from "./layout/ChatBotLayout";
 import ConversationPanelLayout from "./layout/ConversationPanelLayout";
 import styles from '../themes/components/layout.scss';
 
-
-
 export default class App extends React.Component {
     render() {
         return (

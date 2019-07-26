@@ -37,10 +37,11 @@ export class ChatBotContainer extends React.Component {
     }
 
     render() {
-        const {messages, replying, botName, currentUserId} = this.props;
+        const {messages, replying, botName, currentUserId, color} = this.props;
         return (
             <ChatBot
                 messages={messages}
+                color={color}
                 botName={botName}
                 replying={replying}
                 currentUserId={currentUserId}
@@ -62,6 +63,7 @@ const mapStateToProps = (state) => {
         replying,
         messages: state.messages.messages,
         currentConversationId,
+        color: currentConversation && currentConversation.color,
         botName: currentConversation && currentConversation.profile.name
     }
 };

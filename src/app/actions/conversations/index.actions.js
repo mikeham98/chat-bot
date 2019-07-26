@@ -1,6 +1,4 @@
 import axiosInstance from '../axiosInstance';
-import store from '../../store';
-import isPopulatedArray from "../../util/isPopulatedArray";
 
 export const constants = {
     GET_CONVERSATION_LIST: 'GET_CONVERSATION_LIST',
@@ -16,6 +14,14 @@ export const getConversationList = () => (dispatch) => {
             });
         })
 };
+
+export const setColor = (color, conversationId) => (dispatch) => {
+    return axiosInstance.patch(`/conversation/${conversationId}`, {color})
+        .then(() => {
+            dispatch(getConversationList());
+        })
+};
+
 export const setCurrentConversation = (conversationId) => (dispatch) => {
     dispatch({
         type: constants.SET_CURRENT_CONVERSATION,

@@ -40,7 +40,7 @@ export default class MessagesList extends React.PureComponent {
     }
 
     returnMessages() {
-        const {messages, currentUserId, onClickOption} = this.props;
+        const {messages, currentUserId, onClickOption, color} = this.props;
         if (isPopulatedArray(messages)) {
             return messages.map(message => {
                 const position = currentUserId === message.createdBy.userId ? right : left;
@@ -53,6 +53,7 @@ export default class MessagesList extends React.PureComponent {
                     >
                         <Message
                             id={message.id}
+                            color={position === right && color}
                             onClickBody={() => this.setState({clickedMessageId: showDateTime ? null : message.id})}
                             showDateTime={showDateTime}
                             dateTime={formatDateTime(message.createdAt)}
