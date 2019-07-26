@@ -7,14 +7,14 @@
       "id": "1",
       "userId": "bot1",
       "userName": "travel_bot",
-      "color": "#30CB71",
+      "color": "#f4244e",
       "profile": {
         "name": "Travel bot",
         "img": "https://images.unsplash.com/photo-1496046744122-2328018d60b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1664&q=80"
       },
       "latest": {
-        "message": "What time would you like to fly out?",
-        "createdAt": "2019-07-26T07:22:50.720Z"
+        "message": "So just to confirm, you want to go to Florida for 2 weeks from August 12th (fly out 10am) August 26 (return flight 2pm) with 3 people.",
+        "createdAt": "2019-07-26T07:50:24.417Z"
       },
       "read": true
     },
@@ -30,7 +30,7 @@
       "read": true,
       "latest": {
         "message": "Sure thing! what size pizza would you like?",
-        "createdAt": "2019-07-26T00:59:18.134Z"
+        "createdAt": "2019-07-26T07:51:59.267Z"
       }
     },
     {
@@ -46,7 +46,7 @@
         "message": "Sure thing, what can I help you with.",
         "createdAt": "2019-07-26T07:22:44.396Z"
       },
-      "read": false
+      "read": true
     }
   ],
   "messages": [
@@ -285,6 +285,96 @@
       },
       "conversationId": "1",
       "id": 15
+    },
+    {
+      "content": {
+        "body": "jknkjn"
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-26T07:49:42.024Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 16
+    },
+    {
+      "content": {
+        "body": "When would you like your return flight to be at?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T07:49:43.069Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 17
+    },
+    {
+      "content": {
+        "body": "adfgsdfg"
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-26T07:50:23.369Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 18
+    },
+    {
+      "content": {
+        "body": "So just to confirm, you want to go to Florida for 2 weeks from August 12th (fly out 10am) August 26 (return flight 2pm) with 3 people."
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T07:50:24.417Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 19
+    },
+    {
+      "content": {
+        "body": "zcvgsdfg"
+      },
+      "recipient": {
+        "userId": "bot2"
+      },
+      "createdAt": "2019-07-26T07:51:58.234Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "2",
+      "id": 20
+    },
+    {
+      "content": {
+        "body": "Sure thing! what size pizza would you like?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T07:51:59.267Z",
+      "createdBy": {
+        "userId": "bot2"
+      },
+      "conversationId": "2",
+      "id": 21
     }
   ]
 }
