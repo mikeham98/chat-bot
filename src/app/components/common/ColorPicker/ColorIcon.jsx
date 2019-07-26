@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styles from '../../../../themes/components/colorPicker.scss';
 
-export default class ColourIcon extends React.PureComponent {
+export default class ColorIcon extends React.PureComponent {
     returnClassName() {
-        let className = [styles.colourIconWrapper];
+        let className = [styles.colorIconWrapper];
         if(this.props.selected) {
-            className.push(styles.colourIconSelected)
+            className.push(styles.colorIconSelected)
         }
         return classnames(className);
     }
@@ -23,7 +23,7 @@ export default class ColourIcon extends React.PureComponent {
     }
 }
 
-ColourIcon.propTypes = {
+ColorIcon.propTypes = {
     color: PropTypes.string,
     selected: PropTypes.bool,
     onClick: PropTypes.func.isRequired,

@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ColourIcon render should return a div with a className of colourIconWrapper 1`] = `
+exports[`ColorIcon render should return a div with a className of colorIconWrapper 1`] = `
 <div
-  className="colourIconWrapper"
+  className="colorIconWrapper"
   onClick={[MockFunction]}
   style={
     Object {
@@ -12,9 +12,9 @@ exports[`ColourIcon render should return a div with a className of colourIconWra
 />
 `;
 
-exports[`ColourIcon render should return a div with a className of colourIconWrapper and colourIconSelected 1`] = `
+exports[`ColorIcon render should return a div with a className of colorIconWrapper and colorIconSelected 1`] = `
 <div
-  className="colourIconWrapper colourIconSelected"
+  className="colorIconWrapper colorIconSelected"
   onClick={[MockFunction]}
   style={
     Object {

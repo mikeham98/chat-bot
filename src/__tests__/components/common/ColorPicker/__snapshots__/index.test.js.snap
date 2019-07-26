@@ -4,25 +4,25 @@ exports[`ColorPicker render should return four ColorIcon components with the ora
 <div
   className="colorPickerWrapper"
 >
-  <ColourIcon
+  <ColorIcon
     color="red"
     key="red"
     onClick={[Function]}
     selected={false}
   />
-  <ColourIcon
+  <ColorIcon
     color="orange"
     key="orange"
     onClick={[Function]}
     selected={true}
   />
-  <ColourIcon
+  <ColorIcon
     color="yellow"
     key="yellow"
     onClick={[Function]}
     selected={false}
   />
-  <ColourIcon
+  <ColorIcon
     color="green"
     key="green"
     onClick={[Function]}

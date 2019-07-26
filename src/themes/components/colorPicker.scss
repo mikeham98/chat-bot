@@ -10,17 +10,17 @@ $colorIconSize: 26px;
   background-color: white;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  .colourIconWrapper {
+  .colorIconWrapper {
     margin: 5px 5px 0 5px;
   }
-  .colourIconWrapper:nth-last-of-type(1) {
+  .colorIconWrapper:nth-last-of-type(1) {
     margin: 5px;
   }
 }
 
-.colourIconWrapper:focus { outline: none; }
+.colorIconWrapper:focus { outline: none; }
 
-.colourIconWrapper {
+.colorIconWrapper {
   box-sizing: border-box;
   display: inline-block;
   cursor: pointer;
@@ -31,16 +31,16 @@ $colorIconSize: 26px;
   transition: transform 0.1s ease-in-out;
 }
 
-.colourIconWrapper:hover {
+.colorIconWrapper:hover {
   transform: scale(1.05);
   z-index: 1;
 }
 
-.colourIconWrapper:active {
+.colorIconWrapper:active {
   transform: scale(0.95);
   z-index: 1;
 }
 
-.colourIconSelected {
+.colorIconSelected {
   border: 3px solid #393939;
 }

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`index should return a Provider with App 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      <Provider
+        store={
+          Object {
+            "common": [Function],
+          }
+        }
+      >
+        <App />
+      </Provider>,
+      null,
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;

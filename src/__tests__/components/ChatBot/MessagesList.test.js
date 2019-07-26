@@ -33,7 +33,7 @@ describe('MessagesList', () => {
     });
 
     describe('render', () => {
-        it('should return a list of messages', () => {
+        it('should return a list of 2 messages', () => {
             expect(wrapper()).toMatchSnapshot();
         });
         it('should return no messages', () => {

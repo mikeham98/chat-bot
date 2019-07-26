@@ -46,7 +46,7 @@ export class ChatBotContainer extends React.Component {
             <ChatBot
                 messages={messages}
                 color={color}
-                botName={profile && profile.name || ""}
+                botName={profile && profile.name}
                 replying={replying}
                 currentUserId={currentUserId}
                 sendMessage={this.sendMessage}
@@ -66,8 +66,10 @@ ChatBotContainer.propTypes = {
     currentConversation: ConversationPropTypes,
 };
 
+/* istanbul ignore next */
 const mapStateToProps = (state) => chatBotSelector(state);
 
+/* istanbul ignore next */
 const mapDispatchToProps = (dispatch) => {
     return {
         getMessages: (conversationId) => {

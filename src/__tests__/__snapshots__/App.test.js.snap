@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App render should return a ThemeContainer, ConversationPanelLayout and ChatBotLayout 1`] = `
+<Connect(ThemeContainer)>
+  <div
+    className="chatBotContainer"
+  >
+    <div
+      className="chatBotWrapper"
+    >
+      <ConversationPanelLayout />
+      <div
+        className="messageSection"
+      >
+        <ChatBotLayout />
+      </div>
+    </div>
+  </div>
+</Connect(ThemeContainer)>
+`;

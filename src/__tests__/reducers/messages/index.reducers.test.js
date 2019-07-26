@@ -1,4 +1,5 @@
 import messagesReducer from '../../../app/reducers/messages/index.reducers';
+import {constants} from "../../../app/actions/chatBot/messages/index.actions";
 
 describe('messagesReducer', () => {
     describe('with action type', () => {
@@ -80,6 +81,44 @@ describe('messagesReducer', () => {
                     messages: ['apple', 'orange', 'banana'],
                     replying: ['banana'],
                     botInProgress: []
+                };
+                expect(messagesReducer(state, action)).toEqual(expectedState);
+            });
+        });
+        describe('BOT_IN_PROGRESS', () => {
+            it('should return current state and set replying to true', () => {
+                const state = {
+                    messages: ['apple', 'orange', 'banana'],
+                    replying: [],
+                    botInProgress: ['apple']
+                };
+                const action = {
+                    type: 'BOT_IN_PROGRESS',
+                    payload: 'orange'
+                };
+                const expectedState = {
+                    messages: ['apple', 'orange', 'banana'],
+                    replying: [],
+                    botInProgress: ['apple', 'orange']
+                };
+                expect(messagesReducer(state, action)).toEqual(expectedState);
+            });
+        });
+        describe('BOT_NOT_IN_PROGRESS', () => {
+            it('should return current state and set replying from true to false', () => {
+                const state = {
+                    messages: ['apple', 'orange', 'banana'],
+                    replying: [],
+                    botInProgress: ['apple','banana']
+                };
+                const action = {
+                    type: 'BOT_NOT_IN_PROGRESS',
+                    payload: 'apple'
+                };
+                const expectedState = {
+                    messages: ['apple', 'orange', 'banana'],
+                    replying: [],
+                    botInProgress: ['banana']
                 };
                 expect(messagesReducer(state, action)).toEqual(expectedState);
             });

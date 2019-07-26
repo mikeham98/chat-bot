@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import {darkTheme} from "../../config/theme.config";
 import {getThemeSelector} from "../../selectors/settingsSelector";
 
-const ThemeContainer = ({theme, children}) => {
+export const ThemeContainer = ({theme, children}) => {
     return (
         <div className={theme === darkTheme ? styles.darkTheme : ''}>
             {children}
@@ -18,6 +18,7 @@ ThemeContainer.propTypes = {
     children: PropTypes.node,
 };
 
+/* istanbul ignore next */
 const mapStateToProps = (state) => ({
     theme: getThemeSelector(state)
 });

@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import ColorPicker from '../../../../app/components/common/ColorPicker/index';
 import ColorIcon from '../../../../app/components/common/ColorPicker/ColorIcon';
 
-jest.mock('../../../../app/config/colours.config', () => ({
+jest.mock('../../../../app/config/colors.config', () => ({
     flatColours: ['red', 'orange', 'yellow','green']
 }));
 

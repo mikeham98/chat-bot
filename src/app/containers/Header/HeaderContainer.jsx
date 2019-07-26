@@ -7,9 +7,10 @@ import IconButton from '../../components/common/Icon/IconButton';
 import moonIcon from '../../../../assets/icons/moon.svg';
 import sunIcon from '../../../../assets/icons/sun.svg';
 import {connect} from 'react-redux';
-import {lightTheme, oppositeTheme} from "../../config/theme.config";
+import {lightTheme} from "../../config/theme.config";
+import {oppositeTheme} from "../../util/theme";
 import ColorPicker from "../../components/common/ColorPicker";
-import ColourIcon from "../../components/common/ColorPicker/ColorIcon";
+import ColorIcon from "../../components/common/ColorPicker/ColorIcon";
 import {conversationSelector} from "../../selectors/conversationSelector";
 import {getThemeSelector} from "../../selectors/settingsSelector";
 import {ConversationPropTypes} from "../../config/propTypes";
@@ -66,7 +67,7 @@ export class HeaderContainer extends React.PureComponent {
                     />
                 </div>
                 <div className={styles.headerColorPicker}>
-                    <ColourIcon
+                    <ColorIcon
                         color={color}
                         onClick={this.showColorPicker}
                     />
@@ -89,6 +90,7 @@ HeaderContainer.propTypes = {
     setColor: PropTypes.func.isRequired,
 };
 
+/* istanbul ignore next */
 const mapStateToProps = (state) => {
     return {
         ...conversationSelector(state),
