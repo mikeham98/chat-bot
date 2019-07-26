@@ -18,7 +18,7 @@ export class ChatBotContainer extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        if(this.props.currentConversationId !== prevProps.currentConversationId) {
+        if (this.props.currentConversationId !== prevProps.currentConversationId) {
             this.getMessages();
         }
     }
@@ -33,7 +33,7 @@ export class ChatBotContainer extends React.Component {
     }
 
     setOption(optionId, messageId) {
-        setOption(optionId, messageId, this.getMessages)
+        setOption(optionId, messageId, this.getMessages, this.props.currentConversationId)
     }
 
     render() {
@@ -55,9 +55,11 @@ const mapStateToProps = (state) => {
     const currentConversationId = state.conversations.currentConversationId;
 
     const currentConversation = state.conversations.conversations.find(e => e.id === currentConversationId);
+    const replying = !!state.messages.replying.find(e => e === currentConversationId);
+
     return {
         currentUserId: currentUser.userId,
-        replying: state.messages.replying,
+        replying,
         messages: state.messages.messages,
         currentConversationId,
         botName: currentConversation && currentConversation.profile.name
@@ -72,8 +74,9 @@ const mapDispatchToProps = (dispatch) => {
         sendMessage: (conversationId, message, callback) => {
             dispatch(sendMessage(conversationId, message, callback))
         },
-        setOption: (optionId, messageId, callback) => {
-            dispatch()
+        setOption: (optionId, messageId, callback, conversationId) => {
+            // conversation id is passed in so that the application can get the next message
+            dispatch(setOption(optionId, messageId, callback, conversationId));
         }
     }
 };

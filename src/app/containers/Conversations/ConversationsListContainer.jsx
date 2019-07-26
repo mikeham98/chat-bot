@@ -11,6 +11,9 @@ export class ConversationsListContainer extends React.PureComponent {
 
     componentDidMount() {
         this.props.getConversationList();
+        // update backend to so that read is true on the initial load
+        // (because the conversation selected by default is the first one)
+        this.props.setCurrentConversation('1');
     }
 
     onClickConversation(conversationId) {

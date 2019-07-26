@@ -8,6 +8,9 @@ const Conversation = (props) => {
         if(props.selected) {
             classNames.push(styles.conversationSelected);
         }
+        if(props.unread) {
+            classNames.push(styles.conversationUnread);
+        }
         return classnames(classNames);
     };
     return (

@@ -1,6 +1,4 @@
 import axiosInstance from '../../../../app/actions/axiosInstance';
-// import babel-polyfill to allow async/await
-import 'babel-polyfill';
 import {constants, sendMessage} from '../../../../app/actions/chatBot/toolbar/index.actions';
 import MockAdapter from 'axios-mock-adapter';
 import {getMessages} from '../../../../app/actions/chatBot/messages/index.actions';

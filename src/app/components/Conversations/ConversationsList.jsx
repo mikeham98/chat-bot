@@ -11,6 +11,7 @@ export default class ConversationsList extends React.PureComponent {
                 return (
                     <Conversation
                         key={conversation.id}
+                        unread={!conversation.read}
                         selected={conversation.selected}
                         name={conversation.profile.name}
                         image={conversation.profile.img}

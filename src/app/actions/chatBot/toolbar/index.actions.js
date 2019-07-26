@@ -1,7 +1,9 @@
 import axiosInstance from '../../axiosInstance';
 import {conversations, currentUser} from '../../../../../db/config';
 import {constants, getMessages} from '../messages/index.actions'
+import {getConversationList} from '../../conversations/index.actions'
 import isPopulatedArray from "../../../util/isPopulatedArray";
+import store from '../../../store';
 
 export const sendMessage = (conversationId, message, callback) => (dispatch) => {
     // get bot from conversation config based on conversationId
@@ -9,10 +11,6 @@ export const sendMessage = (conversationId, message, callback) => (dispatch) => 
     const objectToSend = {
         content: {
             body: message
-        },
-        read: {
-            status: false,
-            timestamp: null
         },
         recipient: {
             userId: bot.userId,
@@ -22,29 +20,40 @@ export const sendMessage = (conversationId, message, callback) => (dispatch) => 
         createdBy: currentUser
     };
     return axiosInstance.post(`/conversation/${conversationId}/messages`, objectToSend)
-        .then(() => {
+        .then((response) => {
             callback();
             dispatch(getMessages(conversationId));
 
+            dispatch(handleBackEndUpdateLatestConversation(conversationId, {
+                latest: {
+                    message: response.data.content.body,
+                    createdAt: response.data.createdAt,
+                }
+            }));
             // the below setTimeout is a made up time for the bot to read (open) the message
             setTimeout(() => {
                 dispatch(handleBackEndBotResponse(conversationId));
             }, 1000);
         })
-        .catch(error => {
-
-        })
 };
 
 // the below functions would exist on a backend, it is just here for demo purposes
-const handleBackEndGetMessages = async (conversationId) => {
+
+export const handleBackEndUpdateLatestConversation = (conversationId, latest) => (dispatch) => {
+    axiosInstance.patch(`/conversation/${conversationId}`, latest)
+        .then(() => {
+            dispatch(getConversationList());
+        });
+};
+
+export const handleBackEndGetMessages = async (conversationId) => {
     return axiosInstance.get(`/conversation/${conversationId}/messages`)
         .then(response => {
             return response.data;
         });
 
 };
-const handleBackEndBotResponse = (conversationId) => async (dispatch) => {
+export const handleBackEndBotResponse = (conversationId) => async (dispatch) => {
     // get bot from conversation config based on conversationId
     const bot = conversations[conversationId];
     const messages = await handleBackEndGetMessages(conversationId);
@@ -57,10 +66,10 @@ const handleBackEndBotResponse = (conversationId) => async (dispatch) => {
 
     if (nextMessage) {
         let delayInResponse = nextMessage.delay || 0;
-        console.log(delayInResponse);
         setTimeout(() => {
             dispatch({
-                type: constants.START_BOT_TYPING
+                type: constants.START_BOT_TYPING,
+                payload: conversationId
             });
             const secondsPerCharacter = 1 / 5;
             const speedInMilliseconds = (secondsPerCharacter * nextMessage.body.length) * 1000;
@@ -70,10 +79,6 @@ const handleBackEndBotResponse = (conversationId) => async (dispatch) => {
                     body: nextMessage.body,
                     media: nextMessage.media,
                     options: nextMessage.options,
-                },
-                read: {
-                    status: false,
-                    timestamp: null
                 },
                 recipient: currentUser,
                 createdAt: new Date(),
@@ -85,13 +90,22 @@ const handleBackEndBotResponse = (conversationId) => async (dispatch) => {
 
             setTimeout(() => {
                 axiosInstance.post(`/conversation/${conversationId}/messages`, objectToSend)
-                    .then(() => {
+                    .then((response) => {
+                        const currentConversationId = store.getState().conversations.currentConversationId;
+                        dispatch(handleBackEndUpdateLatestConversation(conversationId, {
+                            latest: {
+                                message: response.data.content.body,
+                                createdAt: response.data.createdAt,
+                            },
+                            read: currentConversationId === conversationId
+                        }));
                         dispatch({
-                            type: constants.STOP_BOT_TYPING
+                            type: constants.STOP_BOT_TYPING,
+                            payload: conversationId
                         });
-                        dispatch(getMessages(conversationId));
+                        dispatch(getMessages(currentConversationId));
                     });
             }, speedInMilliseconds);
-        },delayInResponse)
+        }, delayInResponse)
     }
 };

@@ -2,7 +2,7 @@ import {constants} from "../../actions/chatBot/messages/index.actions";
 
 const initialState = {
     messages: [],
-    replying: false
+    replying: []
 };
 
 const messagesReducer = (state = initialState, action) => {
@@ -15,12 +15,13 @@ const messagesReducer = (state = initialState, action) => {
         case constants.START_BOT_TYPING:
             return {
                 ...state,
-                replying: true
+                replying: [...state.replying, action.payload]
             };
         case constants.STOP_BOT_TYPING:
+            const replying = state.replying.filter(e => e !== action.payload);
             return {
                 ...state,
-                replying: false
+                replying
             };
         default:
             return state

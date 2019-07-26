@@ -1,4 +1,5 @@
 import axiosInstance from '../axiosInstance';
+import store from '../../store';
 import isPopulatedArray from "../../util/isPopulatedArray";
 
 export const constants = {
@@ -13,16 +14,15 @@ export const getConversationList = () => (dispatch) => {
                 type: constants.GET_CONVERSATION_LIST,
                 payload: data
             });
-            if (isPopulatedArray(data)) {
-                const firstConversation = data[0];
-                dispatch(setCurrentConversation(firstConversation.id))
-            }
         })
-        .catch(error => {
-
-        });
 };
-export const setCurrentConversation = (currentConversationId) => ({
-    type: constants.SET_CURRENT_CONVERSATION,
-    payload: currentConversationId
-});
+export const setCurrentConversation = (conversationId) => (dispatch) => {
+    dispatch({
+        type: constants.SET_CURRENT_CONVERSATION,
+        payload: conversationId
+    });
+    axiosInstance.patch(`/conversation/${conversationId}`, {read: true})
+        .then(() => {
+            dispatch(getConversationList());
+        })
+};
