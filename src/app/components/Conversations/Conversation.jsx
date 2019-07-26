@@ -3,27 +3,32 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styles from '../../../themes/components/conversations.scss';
 
-const Conversation = (props) => {
-    const returnClassNames = () => {
+export default class Conversation extends React.PureComponent {
+    returnClassNames() {
+        const {selected, unread} = this.props;
         const classNames = [styles.conversationWrapper];
-        if (props.selected) {
+        if (selected) {
             classNames.push(styles.conversationSelected);
         }
-        if (props.unread) {
+        if (unread) {
             classNames.push(styles.conversationUnread);
         }
         return classnames(classNames);
-    };
-    return (
-        <div onClick={props.onClick} className={returnClassNames()}>
-            <img src={props.image}/>
-            <div className={styles.conversationPreview}>
-                <span className={styles.conversationPreviewName}>{props.name}</span>
-                {props.previewMessage &&
-                <span className={styles.conversationPreviewMessage}>{props.previewMessage}</span>}
+    }
+
+    render() {
+        const {onClick, image, name, previewMessage} = this.props;
+        return (
+            <div onClick={onClick} className={this.returnClassNames()}>
+                <img src={image}/>
+                <div className={styles.conversationPreview}>
+                    <span className={styles.conversationPreviewName}>{name}</span>
+                    {previewMessage &&
+                    <span className={styles.conversationPreviewMessage}>{previewMessage}</span>}
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
 };
 
 Conversation.propTypes = {
@@ -34,5 +39,3 @@ Conversation.propTypes = {
     image: PropTypes.string,
     name: PropTypes.string,
 };
-
-export default React.memo(Conversation);
