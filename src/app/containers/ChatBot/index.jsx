@@ -4,6 +4,7 @@ import {currentUser} from '../../../../db/config';
 import {getMessages, setOption} from "../../actions/chatBot/messages/index.actions";
 import {sendMessage} from "../../actions/chatBot/toolbar/index.actions";
 import ChatBot from "../../components/ChatBot";
+import {chatBotSelector} from "../../selectors/chatBotSelector";
 
 export class ChatBotContainer extends React.Component {
     constructor(props) {
@@ -18,31 +19,33 @@ export class ChatBotContainer extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (this.props.currentConversationId !== prevProps.currentConversationId) {
+        if (this.props.currentConversation.id !== prevProps.currentConversation.id) {
             this.getMessages();
         }
     }
 
     getMessages() {
-        this.props.getMessages(this.props.currentConversationId);
+        this.props.getMessages(this.props.currentConversation.id);
     }
 
     sendMessage(message, callback) {
-        const {currentConversationId} = this.props;
-        this.props.sendMessage(currentConversationId, message, callback);
+        const {id} = this.props.currentConversation;
+        this.props.sendMessage(id, message, callback);
     }
 
     setOption(optionId, messageId) {
-        this.props.setOption(optionId, messageId, this.getMessages, this.props.currentConversationId)
+        const {id} = this.props.currentConversation;
+        this.props.setOption(optionId, messageId, this.getMessages, id)
     }
 
     render() {
-        const {messages, replying, botName, currentUserId, color} = this.props;
+        const {messages, replying, currentUserId} = this.props;
+        const {profile, color} = this.props.currentConversation;
         return (
             <ChatBot
                 messages={messages}
                 color={color}
-                botName={botName}
+                botName={profile.name}
                 replying={replying}
                 currentUserId={currentUserId}
                 sendMessage={this.sendMessage}
@@ -52,21 +55,7 @@ export class ChatBotContainer extends React.Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    const currentConversationId = state.conversations.currentConversationId;
-
-    const currentConversation = state.conversations.conversations.find(e => e.id === currentConversationId);
-    const replying = !!state.messages.replying.find(e => e === currentConversationId);
-
-    return {
-        currentUserId: currentUser.userId,
-        replying,
-        messages: state.messages.messages,
-        currentConversationId,
-        color: currentConversation && currentConversation.color,
-        botName: currentConversation && currentConversation.profile.name
-    }
-};
+const mapStateToProps = (state) => chatBotSelector(state);
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -77,7 +66,7 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(sendMessage(conversationId, message, callback))
         },
         setOption: (optionId, messageId, callback, conversationId) => {
-            // conversation id is passed in so that the application can get the next message
+            // conversation id is passed in so that the application can get the next message on select of the option
             dispatch(setOption(optionId, messageId, callback, conversationId));
         }
     }

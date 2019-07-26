@@ -13,8 +13,8 @@
         "img": "https://images.unsplash.com/photo-1496046744122-2328018d60b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1664&q=80"
       },
       "latest": {
-        "message": "What time would you like to fly out",
-        "createdAt": "2019-07-26T01:12:23.501Z"
+        "message": "What time would you like to fly out?",
+        "createdAt": "2019-07-26T07:22:50.720Z"
       },
       "read": true
     },
@@ -37,17 +37,254 @@
       "id": "3",
       "userId": "bot3",
       "userName": "web_search_bot",
-      "color": "#6872FF",
+      "color": "#f4244e",
       "profile": {
         "name": "Web search bot",
         "img": "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80"
       },
       "latest": {
-        "message": "hi",
-        "createdAt": "2019-07-26T01:01:29.889Z"
+        "message": "Sure thing, what can I help you with.",
+        "createdAt": "2019-07-26T07:22:44.396Z"
       },
-      "read": true
+      "read": false
     }
   ],
-  "messages": []
+  "messages": [
+    {
+      "content": {
+        "body": "test"
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-26T01:41:34.522Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 1
+    },
+    {
+      "content": {
+        "body": "Where would you like to go to?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T01:41:35.556Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 2
+    },
+    {
+      "content": {
+        "body": "test"
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-26T01:43:18.818Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 3
+    },
+    {
+      "content": {
+        "body": "What a lovely destination, how long would you like to go for?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T01:43:19.855Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 4
+    },
+    {
+      "content": {
+        "body": "hi"
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-26T01:44:56.635Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 5
+    },
+    {
+      "content": {
+        "body": "Brilliant, how many people shall I book for?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T01:44:57.671Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 6
+    },
+    {
+      "content": {
+        "body": "dsgfsdfg"
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-26T07:09:09.243Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 7
+    },
+    {
+      "content": {
+        "body": "Perfect, when would you like to go?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T07:09:10.307Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 8
+    },
+    {
+      "content": {
+        "body": "mklnmkn"
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-26T07:22:03.398Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 9
+    },
+    {
+      "content": {
+        "body": "What city would you like to fly from?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T07:22:04.436Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 10
+    },
+    {
+      "content": {
+        "body": "gsdgadfg"
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-26T07:22:33.062Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 11
+    },
+    {
+      "content": {
+        "body": "We have two options available for London.",
+        "options": [
+          {
+            "id": 1,
+            "option": "Gatwick"
+          },
+          {
+            "id": 2,
+            "option": "Heathrow"
+          }
+        ]
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T07:22:34.102Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 12,
+      "selectedOption": 1
+    },
+    {
+      "content": {
+        "body": "hello"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T07:22:43.364Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 13
+    },
+    {
+      "content": {
+        "body": "Sure thing, what can I help you with."
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T07:22:44.396Z",
+      "createdBy": {
+        "userId": "bot3"
+      },
+      "conversationId": "3",
+      "id": 14
+    },
+    {
+      "content": {
+        "body": "What time would you like to fly out?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T07:22:50.720Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 15
+    }
+  ]
 }

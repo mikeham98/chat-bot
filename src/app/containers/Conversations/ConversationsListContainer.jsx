@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import ConversationsList from '../../components/Conversations/ConversationsList';
 import {getConversationList, setCurrentConversation} from '../../actions/conversations/index.actions';
+import {conversationSelector} from '../../selectors/conversationSelector';
 
 export class ConversationsListContainer extends React.PureComponent {
     constructor(props) {
@@ -17,8 +18,8 @@ export class ConversationsListContainer extends React.PureComponent {
     }
 
     onClickConversation(conversationId) {
-        const {currentConversationId} = this.props;
-        if(currentConversationId !== conversationId) {
+        const {id} = this.props.currentConversation;
+        if (id !== conversationId) {
             this.props.setCurrentConversation(conversationId);
         }
     }
@@ -33,20 +34,8 @@ export class ConversationsListContainer extends React.PureComponent {
     }
 }
 
-const mapStateToProps = (state, ownProps) => {
-    // add in selector
-    let conversations = state.conversations.conversations;
-    conversations = conversations.map(conversation => {
-       return {
-           ...conversation,
-           selected: conversation.id === state.conversations.currentConversationId
-       }
-    });
-
-    return {
-        conversations,
-        currentConversationId: state.conversations.currentConversationId
-    }
+const mapStateToProps = (state) => {
+    return conversationSelector(state);
 };
 
 export default connect(mapStateToProps, {getConversationList, setCurrentConversation})(ConversationsListContainer)
