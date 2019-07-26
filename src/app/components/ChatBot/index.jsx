@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styles from '../../../themes/components/chatBot.scss'
 import MessagesList from "./MessagesList";
 import MessageForm from "./Toolbar/MessageForm";
+import {MessagesPropTypes} from "../../config/propTypes";
 
 const ChatBot = ({messages, replying, currentUserId, color, botName, sendMessage, onClickOption}) => {
     return (
@@ -23,9 +24,9 @@ const ChatBot = ({messages, replying, currentUserId, color, botName, sendMessage
 };
 
 ChatBot.propTypes = {
-    messages: PropTypes.array,
+    messages: MessagesPropTypes,
     replying: PropTypes.bool,
-    currentUserId: PropTypes.string,
+    currentUserId: PropTypes.number,
     color: PropTypes.string,
     botName: PropTypes.string,
     sendMessage: PropTypes.func.isRequired,

@@ -1,8 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from '../../../themes/components/messages.scss';
 import isPopulatedArray from "../../util/isPopulatedArray";
 import Media from "./Media/Media";
 import Options from "./Options/Options";
+import {gif, img, link} from "../../config/media.config";
+import {MediaPropTypes, OptionsPropTypes} from "../../config/propTypes";
 
 export default class Message extends React.PureComponent {
     constructor(props) {
@@ -50,4 +53,17 @@ export default class Message extends React.PureComponent {
 
 Message.defaultProps = {
     color: ''
+};
+
+Message.propTypes = {
+    onClickOption: PropTypes.func.isRequired,
+    id: PropTypes.number,
+    body: PropTypes.string,
+    showDateTime: PropTypes.bool,
+    dateTime: PropTypes.string,
+    media: MediaPropTypes,
+    options: OptionsPropTypes,
+    onClickBody: PropTypes.func.isRequired,
+    selectedOption: PropTypes.number,
+    color: PropTypes.string,
 };

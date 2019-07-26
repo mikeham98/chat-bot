@@ -5,6 +5,8 @@ import isPopulatedArray from "../../util/isPopulatedArray";
 import Message from "./Message";
 import {left, right} from "../../config/messages.config";
 import formatDateTime from "../../util/formatDateTime";
+import PropTypes from "prop-types";
+import {MessagesPropTypes} from "../../config/propTypes";
 
 export default class MessagesList extends React.PureComponent {
     constructor(props) {
@@ -53,7 +55,7 @@ export default class MessagesList extends React.PureComponent {
                     >
                         <Message
                             id={message.id}
-                            color={position === right && color}
+                            color={(position === right && color) || ''}
                             onClickBody={() => this.setState({clickedMessageId: showDateTime ? null : message.id})}
                             showDateTime={showDateTime}
                             dateTime={formatDateTime(message.createdAt)}
@@ -86,3 +88,13 @@ export default class MessagesList extends React.PureComponent {
         )
     }
 }
+
+MessagesList.propType = {
+    onClickOption: PropTypes.func.isRequired,
+    id: PropTypes.number,
+    replying: PropTypes.bool,
+    currentUserId: PropTypes.string,
+    color: PropTypes.string,
+    botName: PropTypes.string,
+    messages: MessagesPropTypes,
+};

@@ -1,9 +1,9 @@
 import React from 'react';
-import PropTypes from "prop-types";
 import ImagePreview from "./ImagePreview";
 import LinkPreview from "./LinkPreview";
 import isPopulatedArray from "../../../util/isPopulatedArray";
 import {gif, img, link} from "../../../config/media.config";
+import {MediaObjectPropTypes} from "../../../config/propTypes";
 
 export default class Media extends React.PureComponent {
     returnMedia() {
@@ -44,12 +44,5 @@ export default class Media extends React.PureComponent {
 }
 
 Media.propTypes = {
-    media: PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        src: PropTypes.string.isRequired,
-        type: PropTypes.string.isRequired,
-        imagePreview: PropTypes.string,
-        title: PropTypes.string,
-        description: PropTypes.string
-    })
+    media: MediaObjectPropTypes
 };

@@ -45,7 +45,7 @@ export class ChatBotContainer extends React.Component {
             <ChatBot
                 messages={messages}
                 color={color}
-                botName={profile.name}
+                botName={profile && profile.name || ""}
                 replying={replying}
                 currentUserId={currentUserId}
                 sendMessage={this.sendMessage}
