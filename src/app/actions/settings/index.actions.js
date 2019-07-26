@@ -1,5 +1,5 @@
 import axiosInstance from '../axiosInstance';
-import {darkTheme, lightTheme} from "../../config/theme.config";
+import {darkTheme} from "../../config/theme.config";
 
 export const constants = {
     SET_LIGHT_THEME: 'SET_LIGHT_THEME',

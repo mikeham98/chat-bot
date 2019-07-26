@@ -1,5 +1,5 @@
 import axiosInstance from '../../../app/actions/axiosInstance';
-import {constants, getConversationList, setCurrentConversation} from '../../../app/actions/conversations/index.actions';
+import {constants, getConversationList, setColor, setCurrentConversation} from '../../../app/actions/conversations/index.actions';
 import MockAdapter from 'axios-mock-adapter';
 
 const mockAxios = new MockAdapter(axiosInstance);
@@ -15,7 +15,7 @@ describe('conversation actions', () => {
 
     describe('getConversationList', () => {
         describe('success', () => {
-            it('should call dispatch twice with an action of type GET_CONVERSATION_LIST and a payload of conversations', () => {
+            it('should call mockDispatch twice with an action of type GET_CONVERSATION_LIST and a payload of conversations', () => {
                 mockAxios.onGet('http://localhost:3000/conversation/').reply(200, conversations);
                 expect(mockDispatch).not.toHaveBeenCalled();
 
@@ -29,8 +29,21 @@ describe('conversation actions', () => {
             });
         });
     });
+    describe('setColor', () => {
+        it('should call mockDispatch', () => {
+            const color = 'red';
+            mockAxios.onPatch('http://localhost:3000/conversation/10', {color}).reply(200);
+            const conversationId = '10';
+            expect(mockDispatch).not.toHaveBeenCalled();
+            return dispatch(setColor(color, conversationId)).then(() => {
+                expect(mockDispatch).toHaveBeenCalledTimes(1);
+                expect(mockDispatch).toHaveBeenCalledWith(expect.any(Function));
+            });
+        });
+    });
     describe('setCurrentConversation', () => {
-        it('should equal an object with a payload of SET_CURRENT_CONVERSATION and a payload of 42', () => {
+        it('should call mockDispatch twice, firstly with a action of type SET_CURRENT_CONVERSATION and ' +
+            'a payload of 42, and secondly with a function', () => {
             mockAxios.onPatch('http://localhost:3000/conversation/42').reply(200);
             expect(mockDispatch).not.toHaveBeenCalled();
 

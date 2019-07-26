@@ -35,6 +35,7 @@ export const sendMessage = (conversationId, message, callback) => (dispatch) => 
 
 // the below functions would exist on a backend, it is just here for demo purposes
 
+/* istanbul ignore next */
 export const handleBackEndUpdateLatestConversation = (conversationId, latest) => (dispatch) => {
     axiosInstance.patch(`/conversation/${conversationId}`, latest)
         .then(() => {
@@ -42,6 +43,7 @@ export const handleBackEndUpdateLatestConversation = (conversationId, latest) =>
         });
 };
 
+/* istanbul ignore next */
 export const handleBackEndGetMessages = async (conversationId) => {
     return axiosInstance.get(`/conversation/${conversationId}/messages`)
         .then(response => {
@@ -49,6 +51,8 @@ export const handleBackEndGetMessages = async (conversationId) => {
         });
 
 };
+
+/* istanbul ignore next */
 export const handleBackEndBotResponse = (conversationId) => (dispatch) => {
     const botInProgressState = store.getState().messages.botInProgress;
     const isInProgress = botInProgressState.find(e => e === conversationId);

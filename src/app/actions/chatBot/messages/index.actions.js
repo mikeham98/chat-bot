@@ -29,6 +29,7 @@ export const setOption = (optionId, messageId, callback, conversationId) => (dis
         .then(() => {
             callback();
             // the below setTimeout is a made up time for the bot to read (open) the message
+            /* istanbul ignore next */
             setTimeout(() => {
                 dispatch(handleBackEndBotResponse(conversationId));
             }, 1000);

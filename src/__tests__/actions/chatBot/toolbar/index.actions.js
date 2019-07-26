@@ -42,14 +42,14 @@ describe('toolbar actions', () => {
                     createdBy: 'mikeham98'
                 });
             });
-            it('should call dispatch with an action of type GET_CONVERSATION_MESSAGES and a payload of messages', () => {
+            it('should call mockDispatch 3 times and the callback passed in', () => {
                 expect(callback).not.toHaveBeenCalled();
                 expect(getMessages).not.toHaveBeenCalled();
                 expect(dispatch).not.toHaveBeenCalled();
 
                 return dispatch(sendMessage(1, 'this is a message', callback)).then(() => {
                     expect(callback).toHaveBeenCalledTimes(1);
-                    expect(dispatch).toHaveBeenCalledTimes(1);
+                    expect(mockDispatch).toHaveBeenCalledTimes(3);
                     expect(getMessages).toHaveBeenCalledTimes(1);
                     expect(getMessages).toHaveBeenCalledWith(1);
                 });
