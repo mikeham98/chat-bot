@@ -14,6 +14,7 @@ export default class ConversationsList extends React.PureComponent {
                     <Conversation
                         key={conversation.id}
                         unread={!conversation.read}
+                        previewMessage={conversation.latest ? conversation.latest.message : ''}
                         selected={conversation.selected}
                         name={conversation.profile.name}
                         image={conversation.profile.img}
