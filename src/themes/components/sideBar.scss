@@ -32,7 +32,7 @@
   display: flex;
   flex-direction: row;
   position: fixed;
-  left: 0px;
+  left: 0;
   width: inherit;
   z-index: 300;
   transition: height 0.25s ease-in-out 0s;
@@ -49,11 +49,24 @@
   width: 300px;
 }
 
+.sideBarContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .sideBarMenuTitle {
-  flex: 1;
   // min-width is set to 300px so content doesn't overflow onto new line on resize of side bar
   min-width: 300px;
-  padding: 50px 20px 20px 20px;
+  position: relative;
+  height: 150px;
+  transition: height 0.3s ease-in-out;
+  overflow: hidden;
+  h1 {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+  }
 }
 
 .sideBarMenuChildren {
@@ -61,4 +74,11 @@
   // min-width is set to 300px so content doesn't overflow onto new line on resize of side bar
   min-width: 300px;
   overflow: scroll;
+}
+
+.sideBarExpandCloseButton {
+  position: absolute;
+  left: 300px;
+  top: 0;
+  z-index: 1000;
 }

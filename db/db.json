@@ -7,57 +7,57 @@
       "id": "1",
       "userId": "bot1",
       "userName": "travel_bot",
-      "color": "#6872FF",
+      "color": "#9A58B9",
       "profile": {
         "name": "TravelBot",
         "img": "https://images.unsplash.com/photo-1496046744122-2328018d60b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1664&q=80"
       },
+      "read": true,
       "latest": {
-        "message": "Brilliant, that is all booked for you, have an amazing holiday!",
-        "createdAt": "2019-07-26T15:23:36.347Z"
-      },
-      "read": true
+        "message": "So just to confirm, you want to go to Florida for 2 weeks from August 12th (fly out 10am) August 26 (return flight 2pm) with 3 people.",
+        "createdAt": "2019-07-26T20:36:26.725Z"
+      }
     },
     {
       "id": "2",
       "userId": "bot2",
       "userName": "pizza_bot",
-      "color": "#9A58B9",
+      "color": "#1ccb9e",
       "profile": {
         "name": "PizzaBot",
         "img": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1655&q=80"
       },
       "read": true,
       "latest": {
-        "message": "Would you like any toppings?",
-        "createdAt": "2019-07-26T12:25:55.003Z"
+        "message": "Voila, your pizza has been made and is out for delivery",
+        "createdAt": "2019-07-26T21:06:10.731Z"
       }
     },
     {
       "id": "3",
       "userId": "bot3",
       "userName": "web_search_bot",
-      "color": "#f4244e",
+      "color": "#F1C40E",
       "profile": {
         "name": "WebSearchBot",
         "img": "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80"
       },
+      "read": true,
       "latest": {
-        "message": "I have found a good article for you, hope this helps!",
-        "createdAt": "2019-07-26T12:00:29.857Z"
-      },
-      "read": true
+        "message": "You`re welcome, is there anything else I can help you with?",
+        "createdAt": "2019-07-26T21:06:29.724Z"
+      }
     }
   ],
   "messages": [
     {
       "content": {
-        "body": "test"
+        "body": "hi"
       },
       "recipient": {
         "userId": "bot1"
       },
-      "createdAt": "2019-07-26T01:41:34.522Z",
+      "createdAt": "2019-07-26T20:32:08.609Z",
       "createdBy": {
         "userId": 1,
         "userName": "mikeham98"
@@ -73,7 +73,7 @@
         "userId": 1,
         "userName": "mikeham98"
       },
-      "createdAt": "2019-07-26T01:41:35.556Z",
+      "createdAt": "2019-07-26T20:32:09.643Z",
       "createdBy": {
         "userId": "bot1"
       },
@@ -82,12 +82,12 @@
     },
     {
       "content": {
-        "body": "test"
+        "body": "hi"
       },
       "recipient": {
         "userId": "bot1"
       },
-      "createdAt": "2019-07-26T01:43:18.818Z",
+      "createdAt": "2019-07-26T20:32:29.640Z",
       "createdBy": {
         "userId": 1,
         "userName": "mikeham98"
@@ -97,43 +97,43 @@
     },
     {
       "content": {
-        "body": "What a lovely destination, how long would you like to go for?"
+        "body": "hi"
       },
       "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-26T20:32:31.704Z",
+      "createdBy": {
         "userId": 1,
         "userName": "mikeham98"
-      },
-      "createdAt": "2019-07-26T01:43:19.855Z",
-      "createdBy": {
-        "userId": "bot1"
       },
       "conversationId": "1",
       "id": 4
     },
     {
       "content": {
-        "body": "hi"
+        "body": "What a lovely destination, how long would you like to go for?"
       },
       "recipient": {
-        "userId": "bot1"
-      },
-      "createdAt": "2019-07-26T01:44:56.635Z",
-      "createdBy": {
         "userId": 1,
         "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T20:32:30.672Z",
+      "createdBy": {
+        "userId": "bot1"
       },
       "conversationId": "1",
       "id": 5
     },
     {
       "content": {
-        "body": "Brilliant, how many people shall I book for?"
+        "body": "What a lovely destination, how long would you like to go for?"
       },
       "recipient": {
         "userId": 1,
         "userName": "mikeham98"
       },
-      "createdAt": "2019-07-26T01:44:57.671Z",
+      "createdAt": "2019-07-26T20:32:32.728Z",
       "createdBy": {
         "userId": "bot1"
       },
@@ -142,12 +142,12 @@
     },
     {
       "content": {
-        "body": "dsgfsdfg"
+        "body": "gsdfga"
       },
       "recipient": {
         "userId": "bot1"
       },
-      "createdAt": "2019-07-26T07:09:09.243Z",
+      "createdAt": "2019-07-26T20:34:46.896Z",
       "createdBy": {
         "userId": 1,
         "userName": "mikeham98"
@@ -157,33 +157,78 @@
     },
     {
       "content": {
-        "body": "Perfect, when would you like to go?"
+        "body": "gdsg"
       },
       "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-26T20:34:51.629Z",
+      "createdBy": {
         "userId": 1,
         "userName": "mikeham98"
-      },
-      "createdAt": "2019-07-26T07:09:10.307Z",
-      "createdBy": {
-        "userId": "bot1"
       },
       "conversationId": "1",
       "id": 8
     },
     {
       "content": {
-        "body": "mklnmkn"
+        "body": "Perfect, when would you like to go?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T20:34:47.944Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 9
+    },
+    {
+      "content": {
+        "body": "fdgsdfg"
       },
       "recipient": {
         "userId": "bot1"
       },
-      "createdAt": "2019-07-26T07:22:03.398Z",
+      "createdAt": "2019-07-26T20:35:03.973Z",
       "createdBy": {
         "userId": 1,
         "userName": "mikeham98"
       },
       "conversationId": "1",
-      "id": 9
+      "id": 10
+    },
+    {
+      "content": {
+        "body": "skdfjgjksdfg"
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-26T20:35:05.871Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 11
+    },
+    {
+      "content": {
+        "body": "sdfjgnskjdfngjksdnfjkg"
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-26T20:35:07.356Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 12
     },
     {
       "content": {
@@ -193,27 +238,27 @@
         "userId": 1,
         "userName": "mikeham98"
       },
-      "createdAt": "2019-07-26T07:22:04.436Z",
+      "createdAt": "2019-07-26T20:35:05.019Z",
       "createdBy": {
         "userId": "bot1"
       },
       "conversationId": "1",
-      "id": 10
+      "id": 13
     },
     {
       "content": {
-        "body": "gsdgadfg"
+        "body": "sdfgskjdfgjksdmnfg"
       },
       "recipient": {
         "userId": "bot1"
       },
-      "createdAt": "2019-07-26T07:22:33.062Z",
+      "createdAt": "2019-07-26T20:35:18.843Z",
       "createdBy": {
         "userId": 1,
         "userName": "mikeham98"
       },
       "conversationId": "1",
-      "id": 11
+      "id": 14
     },
     {
       "content": {
@@ -233,67 +278,22 @@
         "userId": 1,
         "userName": "mikeham98"
       },
-      "createdAt": "2019-07-26T07:22:34.102Z",
+      "createdAt": "2019-07-26T20:35:19.900Z",
       "createdBy": {
         "userId": "bot1"
       },
       "conversationId": "1",
-      "id": 12,
+      "id": 15,
       "selectedOption": 1
     },
     {
       "content": {
-        "body": "hello"
-      },
-      "recipient": {
-        "userId": "bot3"
-      },
-      "createdAt": "2019-07-26T07:22:43.364Z",
-      "createdBy": {
-        "userId": 1,
-        "userName": "mikeham98"
-      },
-      "conversationId": "3",
-      "id": 13
-    },
-    {
-      "content": {
-        "body": "Sure thing, what can I help you with."
-      },
-      "recipient": {
-        "userId": 1,
-        "userName": "mikeham98"
-      },
-      "createdAt": "2019-07-26T07:22:44.396Z",
-      "createdBy": {
-        "userId": "bot3"
-      },
-      "conversationId": "3",
-      "id": 14
-    },
-    {
-      "content": {
-        "body": "What time would you like to fly out?"
-      },
-      "recipient": {
-        "userId": 1,
-        "userName": "mikeham98"
-      },
-      "createdAt": "2019-07-26T07:22:50.720Z",
-      "createdBy": {
-        "userId": "bot1"
-      },
-      "conversationId": "1",
-      "id": 15
-    },
-    {
-      "content": {
-        "body": "jknkjn"
+        "body": "sdfg;klsdfmgkl;sdfg"
       },
       "recipient": {
         "userId": "bot1"
       },
-      "createdAt": "2019-07-26T07:49:42.024Z",
+      "createdAt": "2019-07-26T20:35:56.995Z",
       "createdBy": {
         "userId": 1,
         "userName": "mikeham98"
@@ -303,27 +303,27 @@
     },
     {
       "content": {
-        "body": "When would you like your return flight to be at?"
+        "body": ";djksfgjnsdfkjgn"
       },
       "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-26T20:35:58.235Z",
+      "createdBy": {
         "userId": 1,
         "userName": "mikeham98"
-      },
-      "createdAt": "2019-07-26T07:49:43.069Z",
-      "createdBy": {
-        "userId": "bot1"
       },
       "conversationId": "1",
       "id": 17
     },
     {
       "content": {
-        "body": "adfgsdfg"
+        "body": "sdjfgnkjsdf"
       },
       "recipient": {
         "userId": "bot1"
       },
-      "createdAt": "2019-07-26T07:50:23.369Z",
+      "createdAt": "2019-07-26T20:35:59.089Z",
       "createdBy": {
         "userId": 1,
         "userName": "mikeham98"
@@ -333,33 +333,138 @@
     },
     {
       "content": {
-        "body": "So just to confirm, you want to go to Florida for 2 weeks from August 12th (fly out 10am) August 26 (return flight 2pm) with 3 people."
+        "body": "ghjdfgha"
       },
       "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-26T20:36:00.081Z",
+      "createdBy": {
         "userId": 1,
         "userName": "mikeham98"
-      },
-      "createdAt": "2019-07-26T07:50:24.417Z",
-      "createdBy": {
-        "userId": "bot1"
       },
       "conversationId": "1",
       "id": 19
     },
     {
       "content": {
-        "body": "zcvgsdfg"
+        "body": "What time would you like to fly out?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T20:35:57.386Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 20
+    },
+    {
+      "content": {
+        "body": "jknjkln"
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-26T20:36:06.545Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 21
+    },
+    {
+      "content": {
+        "body": "lkmkl;m"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T20:36:09.562Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 22
+    },
+    {
+      "content": {
+        "body": "nkjk jk kjkjnkj"
       },
       "recipient": {
         "userId": "bot2"
       },
-      "createdAt": "2019-07-26T07:51:58.234Z",
+      "createdAt": "2019-07-26T20:36:14.226Z",
       "createdBy": {
         "userId": 1,
         "userName": "mikeham98"
       },
       "conversationId": "2",
-      "id": 20
+      "id": 23
+    },
+    {
+      "content": {
+        "body": "When would you like your return flight to be at?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T20:36:07.589Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 24
+    },
+    {
+      "content": {
+        "body": "Sure thing, what can I help you with."
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T20:36:10.597Z",
+      "createdBy": {
+        "userId": "bot3"
+      },
+      "conversationId": "3",
+      "id": 25
+    },
+    {
+      "content": {
+        "body": "kjkjk"
+      },
+      "recipient": {
+        "userId": "bot2"
+      },
+      "createdAt": "2019-07-26T20:36:22.298Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "2",
+      "id": 26
+    },
+    {
+      "content": {
+        "body": "kjnjk"
+      },
+      "recipient": {
+        "userId": "bot2"
+      },
+      "createdAt": "2019-07-26T20:36:23.161Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "2",
+      "id": 27
     },
     {
       "content": {
@@ -369,27 +474,102 @@
         "userId": 1,
         "userName": "mikeham98"
       },
-      "createdAt": "2019-07-26T07:51:59.267Z",
+      "createdAt": "2019-07-26T20:36:15.261Z",
       "createdBy": {
         "userId": "bot2"
       },
       "conversationId": "2",
-      "id": 21
+      "id": 28
     },
     {
       "content": {
-        "body": "gdafg"
+        "body": "jnjknj"
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-26T20:36:25.682Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 29
+    },
+    {
+      "content": {
+        "body": ".kmkm"
+      },
+      "recipient": {
+        "userId": "bot2"
+      },
+      "createdAt": "2019-07-26T20:36:30.186Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "2",
+      "id": 30
+    },
+    {
+      "content": {
+        "body": "Would you like any toppings?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T20:36:31.219Z",
+      "createdBy": {
+        "userId": "bot2"
+      },
+      "conversationId": "2",
+      "id": 31
+    },
+    {
+      "content": {
+        "body": "So just to confirm, you want to go to Florida for 2 weeks from August 12th (fly out 10am) August 26 (return flight 2pm) with 3 people."
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T20:36:26.725Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 32
+    },
+    {
+      "content": {
+        "body": "dsfasljdfkasmdkfl"
       },
       "recipient": {
         "userId": "bot3"
       },
-      "createdAt": "2019-07-26T12:00:28.809Z",
+      "createdAt": "2019-07-26T20:39:03.632Z",
       "createdBy": {
         "userId": 1,
         "userName": "mikeham98"
       },
       "conversationId": "3",
-      "id": 22
+      "id": 33
+    },
+    {
+      "content": {
+        "body": "sdfjgnlksdmfgl;kmsdlkfgmsdfg"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T20:39:05.156Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 34
     },
     {
       "content": {
@@ -409,72 +589,131 @@
         "userId": 1,
         "userName": "mikeham98"
       },
-      "createdAt": "2019-07-26T12:00:29.857Z",
+      "createdAt": "2019-07-26T20:39:04.678Z",
       "createdBy": {
         "userId": "bot3"
       },
       "conversationId": "3",
-      "id": 23
+      "id": 35
     },
     {
       "content": {
-        "body": "dfgsdfh"
+        "body": "asdfasdf"
       },
       "recipient": {
         "userId": "bot2"
       },
-      "createdAt": "2019-07-26T12:25:53.957Z",
+      "createdAt": "2019-07-26T21:05:48.423Z",
       "createdBy": {
         "userId": 1,
         "userName": "mikeham98"
       },
       "conversationId": "2",
-      "id": 24
+      "id": 36
     },
     {
       "content": {
-        "body": "Would you like any toppings?"
+        "body": "We will get working on it right away",
+        "media": [
+          {
+            "id": 1,
+            "type": "gif",
+            "src": "https://media.giphy.com/media/1108D2tVaUN3eo/giphy.gif"
+          }
+        ]
       },
       "recipient": {
         "userId": 1,
         "userName": "mikeham98"
       },
-      "createdAt": "2019-07-26T12:25:55.003Z",
+      "createdAt": "2019-07-26T21:05:49.460Z",
       "createdBy": {
         "userId": "bot2"
       },
       "conversationId": "2",
-      "id": 25
+      "id": 37
     },
     {
       "content": {
-        "body": "zxcv"
+        "body": "kmlksmdfklmdklf"
       },
       "recipient": {
-        "userId": "bot1"
+        "userId": "bot2"
       },
-      "createdAt": "2019-07-26T15:23:35.295Z",
+      "createdAt": "2019-07-26T21:05:59.699Z",
       "createdBy": {
         "userId": 1,
         "userName": "mikeham98"
       },
-      "conversationId": "1",
-      "id": 26
+      "conversationId": "2",
+      "id": 38
     },
     {
       "content": {
-        "body": "Brilliant, that is all booked for you, have an amazing holiday!"
+        "body": "jnjknknjk"
+      },
+      "recipient": {
+        "userId": "bot2"
+      },
+      "createdAt": "2019-07-26T21:06:09.361Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "2",
+      "id": 39
+    },
+    {
+      "content": {
+        "body": "Voila, your pizza has been made and is out for delivery",
+        "media": [
+          {
+            "id": 2,
+            "type": "gif",
+            "src": "https://media.giphy.com/media/QtoVsU8wdqbAs/giphy.gif"
+          }
+        ]
       },
       "recipient": {
         "userId": 1,
         "userName": "mikeham98"
       },
-      "createdAt": "2019-07-26T15:23:36.347Z",
+      "createdAt": "2019-07-26T21:06:10.731Z",
       "createdBy": {
-        "userId": "bot1"
+        "userId": "bot2"
       },
-      "conversationId": "1",
-      "id": 27
+      "conversationId": "2",
+      "id": 40
+    },
+    {
+      "content": {
+        "body": "lkjnkljn"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T21:06:28.691Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 41
+    },
+    {
+      "content": {
+        "body": "You`re welcome, is there anything else I can help you with?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T21:06:29.724Z",
+      "createdBy": {
+        "userId": "bot3"
+      },
+      "conversationId": "3",
+      "id": 42
     }
   ]
 }

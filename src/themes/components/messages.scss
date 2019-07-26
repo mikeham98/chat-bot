@@ -22,6 +22,7 @@
   border-radius: 1em;
   flex-direction: column;
   overflow: hidden;
+  cursor: pointer;
   .messageBody {
     padding: 5px 10px;
   }
@@ -41,7 +42,8 @@
 
 .rightMessage {
   align-self: flex-end;
-  text-align: right;
+  text-align: left;
+  overflow-wrap: break-word;
   .message {
     background-color: $hot-pink;
     color: white;

@@ -2,7 +2,8 @@ import {constants} from "../../actions/chatBot/messages/index.actions";
 
 const initialState = {
     messages: [],
-    replying: []
+    replying: [],
+    botInProgress: []
 };
 
 const messagesReducer = (state = initialState, action) => {
@@ -16,6 +17,17 @@ const messagesReducer = (state = initialState, action) => {
             return {
                 ...state,
                 replying: [...state.replying, action.payload]
+            };
+        case constants.BOT_IN_PROGRESS:
+            return {
+                ...state,
+                botInProgress: [...state.botInProgress, action.payload]
+            };
+        case constants.BOT_NOT_IN_PROGRESS:
+            const botInProgress = state.botInProgress.filter(e => e !== action.payload);
+            return {
+                ...state,
+                botInProgress
             };
         case constants.STOP_BOT_TYPING:
             const replying = state.replying.filter(e => e !== action.payload);
