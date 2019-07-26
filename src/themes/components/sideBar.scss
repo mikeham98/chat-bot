@@ -73,7 +73,7 @@
   flex: 10;
   // min-width is set to 300px so content doesn't overflow onto new line on resize of side bar
   min-width: 300px;
-  overflow: scroll;
+  overflow-y: auto;
 }
 
 .sideBarExpandCloseButton {

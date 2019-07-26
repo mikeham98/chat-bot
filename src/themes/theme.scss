@@ -13,7 +13,7 @@
   .mediaLinkPreviewWrapper .mediaLinkPreviewMeta .mediaLinkPreviewDescription, .leftMessage .message {
     color: white;
   }
-  .conversationUnread {
+  ::-webkit-scrollbar-thumb, .conversationUnread {
     background-color: $dark-gray;
   }
   .conversationWrapper,
@@ -23,7 +23,7 @@
   .headerLayout {
     border-color: $dark-gray;
   }
-  .mediaLinkPreviewWrapper .mediaLinkPreviewMeta, .leftMessage .message {
+  ::-webkit-scrollbar-track, .mediaLinkPreviewWrapper .mediaLinkPreviewMeta, .leftMessage .message {
     background-color: $jet-black;
   }
   .messageFormWrapper, .headerLayout, .sideBarMenu, .messageOptionWrapper, .messageContainer {

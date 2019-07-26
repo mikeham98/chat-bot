@@ -1,13 +1,13 @@
 {
   "settings": {
-    "theme": "dark"
+    "theme": "light"
   },
   "conversation": [
     {
       "id": "1",
       "userId": "bot1",
       "userName": "travel_bot",
-      "color": "#9A58B9",
+      "color": "#3598DA",
       "profile": {
         "name": "TravelBot",
         "img": "https://images.unsplash.com/photo-1496046744122-2328018d60b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1664&q=80"
@@ -29,8 +29,8 @@
       },
       "read": true,
       "latest": {
-        "message": "Voila, your pizza has been made and is out for delivery",
-        "createdAt": "2019-07-26T21:06:10.731Z"
+        "message": "sdf",
+        "createdAt": "2019-07-26T23:47:40.498Z"
       }
     },
     {
@@ -44,8 +44,8 @@
       },
       "read": true,
       "latest": {
-        "message": "You`re welcome, is there anything else I can help you with?",
-        "createdAt": "2019-07-26T21:06:29.724Z"
+        "message": "fds",
+        "createdAt": "2019-07-26T23:47:36.616Z"
       }
     }
   ],
@@ -702,7 +702,7 @@
     },
     {
       "content": {
-        "body": "You`re welcome, is there anything else I can help you with?"
+        "body": "You're welcome, is there anything else I can help you with?"
       },
       "recipient": {
         "userId": 1,
@@ -714,6 +714,516 @@
       },
       "conversationId": "3",
       "id": 42
+    },
+    {
+      "content": {
+        "body": "no"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:20.596Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 43
+    },
+    {
+      "content": {
+        "body": "fasdf"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:27.566Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 44
+    },
+    {
+      "content": {
+        "body": "sdafasd"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:29.187Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 45
+    },
+    {
+      "content": {
+        "body": "fa"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:29.392Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 46
+    },
+    {
+      "content": {
+        "body": "df"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:29.583Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 47
+    },
+    {
+      "content": {
+        "body": "asdfa"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:30.218Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 48
+    },
+    {
+      "content": {
+        "body": "sdf"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:30.423Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 49
+    },
+    {
+      "content": {
+        "body": "as"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:30.651Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 50
+    },
+    {
+      "content": {
+        "body": "f"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:30.871Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 51
+    },
+    {
+      "content": {
+        "body": "asdf"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:31.136Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 52
+    },
+    {
+      "content": {
+        "body": "asd"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:31.417Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 53
+    },
+    {
+      "content": {
+        "body": "f"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:31.645Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 54
+    },
+    {
+      "content": {
+        "body": "asdf"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:31.911Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 55
+    },
+    {
+      "content": {
+        "body": "asd"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:32.232Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 56
+    },
+    {
+      "content": {
+        "body": "f"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:32.448Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 57
+    },
+    {
+      "content": {
+        "body": "asdf"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:32.727Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 58
+    },
+    {
+      "content": {
+        "body": "asd"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:33.000Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 59
+    },
+    {
+      "content": {
+        "body": "f"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:33.222Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 60
+    },
+    {
+      "content": {
+        "body": "asdf"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:33.479Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 61
+    },
+    {
+      "content": {
+        "body": "as"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:33.727Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 62
+    },
+    {
+      "content": {
+        "body": "df"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:33.959Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 63
+    },
+    {
+      "content": {
+        "body": "asd"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:34.208Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 64
+    },
+    {
+      "content": {
+        "body": "f"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:34.423Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 65
+    },
+    {
+      "content": {
+        "body": "asdf"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:34.672Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 66
+    },
+    {
+      "content": {
+        "body": "as"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:34.940Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 67
+    },
+    {
+      "content": {
+        "body": "Okay, feel free to ask for any help in the future, have a good day."
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T23:47:21.635Z",
+      "createdBy": {
+        "userId": "bot3"
+      },
+      "conversationId": "3",
+      "id": 68
+    },
+    {
+      "content": {
+        "body": "f"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:35.184Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 69
+    },
+    {
+      "content": {
+        "body": "asd"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:35.448Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 70
+    },
+    {
+      "content": {
+        "body": "a"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:35.690Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 71
+    },
+    {
+      "content": {
+        "body": "sdf"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:35.913Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 72
+    },
+    {
+      "content": {
+        "body": "asd"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:36.160Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 73
+    },
+    {
+      "content": {
+        "body": "fds"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T23:47:36.616Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 74
+    },
+    {
+      "content": {
+        "body": "fasdfa"
+      },
+      "recipient": {
+        "userId": "bot2"
+      },
+      "createdAt": "2019-07-26T23:47:39.592Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "2",
+      "id": 75
+    },
+    {
+      "content": {
+        "body": "sdf"
+      },
+      "recipient": {
+        "userId": "bot2"
+      },
+      "createdAt": "2019-07-26T23:47:40.498Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "2",
+      "id": 76
     }
   ]
 }

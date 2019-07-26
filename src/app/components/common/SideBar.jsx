@@ -48,8 +48,6 @@ export default class SideBar extends React.PureComponent {
     }
 
     onMouseMove(event) {
-        console.log('hi')
-        this.sideBarMenuTitle.style.height = '150px';
         this.handleResize(event.x);
     }
 
