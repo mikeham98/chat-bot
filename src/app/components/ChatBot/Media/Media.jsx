@@ -1,8 +1,9 @@
 import React from 'react';
-import ImageMedia from "./ImagePreview";
-import LinkMedia from "./LinkPreview";
+import ImagePreview from "./ImagePreview";
+import LinkPreview from "./LinkPreview";
 import isPopulatedArray from "../../../util/isPopulatedArray";
 import {gif, img, link} from "../../../config/media.config";
+import PropTypes from "prop-types";
 
 export default class Media extends React.PureComponent {
     returnMedia() {
@@ -11,7 +12,7 @@ export default class Media extends React.PureComponent {
             return media.map(({id, type, src, imagePreview, title, description}) => {
                 if (type === gif || type === img) {
                     return (
-                        <ImageMedia
+                        <ImagePreview
                             key={id}
                             src={src}
                         />
@@ -19,7 +20,7 @@ export default class Media extends React.PureComponent {
                 }
                 if (type === link) {
                     return (
-                        <LinkMedia
+                        <LinkPreview
                             key={id}
                             src={src}
                             image={imagePreview}
@@ -41,3 +42,14 @@ export default class Media extends React.PureComponent {
         );
     }
 }
+
+Media.propTypes = {
+    media: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        src: PropTypes.string.isRequired,
+        type: PropTypes.string.isRequired,
+        imagePreview: PropTypes.string,
+        title: PropTypes.string,
+        description: PropTypes.string
+    })
+};

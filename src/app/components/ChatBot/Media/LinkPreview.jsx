@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../../../../themes/components/media.scss';
+import PropTypes from "prop-types";
 
 const LinkPreview = ({src, image, title, description}) => {
     return (
@@ -11,6 +12,13 @@ const LinkPreview = ({src, image, title, description}) => {
             </div>
         </div>
     );
+};
+
+LinkPreview.propTypes = {
+    src: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired
 };
 
 export default React.memo(LinkPreview);
