@@ -1,8 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import ConversationsList from '../../components/Conversations/ConversationsList';
 import {getConversationList, setCurrentConversation} from '../../actions/conversations/index.actions';
 import {conversationSelector} from '../../selectors/conversationSelector';
+import {ConversationsPropTypes} from "../../config/propTypes";
 
 export class ConversationsListContainer extends React.PureComponent {
     constructor(props) {
@@ -33,6 +35,12 @@ export class ConversationsListContainer extends React.PureComponent {
         )
     }
 }
+
+ConversationsListContainer.propTypes = {
+    conversations: ConversationsPropTypes,
+    getConversationList: PropTypes.func.isRequired,
+    setCurrentConversation: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = (state) => {
     return conversationSelector(state);

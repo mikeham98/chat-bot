@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styles from '../../../../themes/components/colorPicker.scss';
 
@@ -45,3 +46,8 @@ export default class ColourIcon extends React.PureComponent {
         )
     }
 }
+
+ColourIcon.propTypes = {
+    color: PropTypes.string,
+    onClick: PropTypes.func.isRequired,
+};

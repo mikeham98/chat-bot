@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from '../../../../themes/components/messages.scss';
 import classnames from "classnames";
 
@@ -36,3 +37,10 @@ export default class Option extends React.Component {
         );
     }
 }
+
+Option.propTypes = {
+    option: PropTypes.string,
+    selected: PropTypes.bool,
+    disabled: PropTypes.bool,
+    onClick: PropTypes.func,
+};

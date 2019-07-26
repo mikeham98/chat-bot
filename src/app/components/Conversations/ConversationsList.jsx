@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Conversation from "./Conversation";
 import isPopulatedArray from "../../util/isPopulatedArray";
 import styles from "../../../themes/components/conversations.scss";
+import {ConversationsPropTypes} from "../../config/propTypes";
 
 export default class ConversationsList extends React.PureComponent {
     returnConversations() {
@@ -30,3 +32,8 @@ export default class ConversationsList extends React.PureComponent {
         )
     }
 }
+
+ConversationsList.propTypes = {
+    conversations: ConversationsPropTypes,
+    onClickConversation: PropTypes.func.isRequired,
+};

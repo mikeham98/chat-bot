@@ -1,15 +1,15 @@
 {
   "settings": {
-    "theme": "light"
+    "theme": "dark"
   },
   "conversation": [
     {
       "id": "1",
       "userId": "bot1",
       "userName": "travel_bot",
-      "color": "#f4244e",
+      "color": "#1ccb9e",
       "profile": {
-        "name": "Travel bot",
+        "name": "TravelBot",
         "img": "https://images.unsplash.com/photo-1496046744122-2328018d60b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1664&q=80"
       },
       "latest": {
@@ -24,13 +24,13 @@
       "userName": "pizza_bot",
       "color": "#9A58B9",
       "profile": {
-        "name": "Pizza Bot",
+        "name": "PizzaBot",
         "img": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1655&q=80"
       },
       "read": true,
       "latest": {
-        "message": "Sure thing! what size pizza would you like?",
-        "createdAt": "2019-07-26T07:51:59.267Z"
+        "message": "Would you like any toppings?",
+        "createdAt": "2019-07-26T12:25:55.003Z"
       }
     },
     {
@@ -39,12 +39,12 @@
       "userName": "web_search_bot",
       "color": "#f4244e",
       "profile": {
-        "name": "Web search bot",
+        "name": "WebSearchBot",
         "img": "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80"
       },
       "latest": {
-        "message": "Sure thing, what can I help you with.",
-        "createdAt": "2019-07-26T07:22:44.396Z"
+        "message": "I have found a good article for you, hope this helps!",
+        "createdAt": "2019-07-26T12:00:29.857Z"
       },
       "read": true
     }
@@ -375,6 +375,76 @@
       },
       "conversationId": "2",
       "id": 21
+    },
+    {
+      "content": {
+        "body": "gdafg"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-26T12:00:28.809Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 22
+    },
+    {
+      "content": {
+        "body": "I have found a good article for you, hope this helps!",
+        "media": [
+          {
+            "id": 1,
+            "type": "link",
+            "imagePreview": "https://images8.alphacoders.com/374/374852.jpg",
+            "title": "How (and Why) SpaceX Will Colonize Mars",
+            "description": "A brief insight to how and why SpaceX will Colonize Mars",
+            "src": "https://waitbutwhy.com/2015/08/how-and-why-spacex-will-colonize-mars.html"
+          }
+        ]
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T12:00:29.857Z",
+      "createdBy": {
+        "userId": "bot3"
+      },
+      "conversationId": "3",
+      "id": 23
+    },
+    {
+      "content": {
+        "body": "dfgsdfh"
+      },
+      "recipient": {
+        "userId": "bot2"
+      },
+      "createdAt": "2019-07-26T12:25:53.957Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "2",
+      "id": 24
+    },
+    {
+      "content": {
+        "body": "Would you like any toppings?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-26T12:25:55.003Z",
+      "createdBy": {
+        "userId": "bot2"
+      },
+      "conversationId": "2",
+      "id": 25
     }
   ]
 }

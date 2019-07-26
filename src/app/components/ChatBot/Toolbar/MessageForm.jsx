@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import {Formik} from 'formik';
 import MessageInput from './MessageInput';
 import IconButton from "../../common/Icon/IconButton";
@@ -70,6 +71,13 @@ MessageForm.defaultProps = {
     initialValues: {
         message: ''
     }
+};
+
+MessageForm.propTypes = {
+    initialValues: PropTypes.shape({
+        message: PropTypes.string
+    }),
+    sendMessage: PropTypes.func.isRequired
 };
 
 export default MessageForm;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import styles from '../../../themes/components/header.scss';
 import {getTheme, setTheme} from '../../actions/settings/index.actions';
 import {setColor} from '../../actions/conversations/index.actions';
@@ -11,6 +12,7 @@ import ColorPicker from "../../components/common/ColorPicker";
 import ColourIcon from "../../components/common/ColorPicker/ColorIcon";
 import {conversationSelector} from "../../selectors/conversationSelector";
 import {getThemeSelector} from "../../selectors/settingsSelector";
+import {ConversationPropTypes} from "../../config/propTypes";
 
 export class HeaderContainer extends React.PureComponent {
     constructor(props) {
@@ -78,6 +80,14 @@ export class HeaderContainer extends React.PureComponent {
         )
     }
 }
+
+HeaderContainer.propTypes = {
+    currentConversation: ConversationPropTypes,
+    theme: PropTypes.string.isRequired,
+    getTheme: PropTypes.func.isRequired,
+    setTheme: PropTypes.func.isRequired,
+    setColor: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = (state) => {
     return {
