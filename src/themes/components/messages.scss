@@ -70,7 +70,6 @@
   flex: 1;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 20px 0;
 }
 
 .messageOptionWrapper {
@@ -80,6 +79,7 @@
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: $light-gray;
+    font-weight: 600;
     cursor: pointer;
     padding: 5px;
   }

@@ -33,7 +33,7 @@ export class ChatBotContainer extends React.Component {
     }
 
     setOption(optionId, messageId) {
-        setOption(optionId, messageId, this.getMessages, this.props.currentConversationId)
+        this.props.setOption(optionId, messageId, this.getMessages, this.props.currentConversationId)
     }
 
     render() {
