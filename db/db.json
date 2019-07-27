@@ -12,10 +12,10 @@
         "name": "TravelBot",
         "img": "https://images.unsplash.com/photo-1496046744122-2328018d60b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1664&q=80"
       },
-      "read": true,
+      "read": false,
       "latest": {
-        "message": "So just to confirm, you want to go to Florida for 2 weeks from August 12th (fly out 10am) August 26 (return flight 2pm) with 3 people.",
-        "createdAt": "2019-07-26T20:36:26.725Z"
+        "message": "Brilliant, that is all booked for you, have an amazing holiday!",
+        "createdAt": "2019-07-27T00:07:49.548Z"
       }
     },
     {
@@ -1224,6 +1224,36 @@
       },
       "conversationId": "2",
       "id": 76
+    },
+    {
+      "content": {
+        "body": "sdafasdf"
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-27T00:07:48.506Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 77
+    },
+    {
+      "content": {
+        "body": "Brilliant, that is all booked for you, have an amazing holiday!"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-27T00:07:49.548Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 78
     }
   ]
 }

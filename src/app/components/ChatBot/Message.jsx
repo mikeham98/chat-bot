@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import styles from '../../../themes/components/messages.scss';
 import isPopulatedArray from "../../util/isPopulatedArray";
@@ -25,11 +26,20 @@ export default class Message extends React.PureComponent {
         return isPopulatedArray(this.props.options);
     }
 
+    returnMessageClassName() {
+        const {showDateTime} = this.props;
+        const classNames = [styles.message];
+        if(showDateTime) {
+            classNames.push(styles.messageFocused);
+        }
+        return classnames(classNames);
+    }
+
     render() {
         const {body, showDateTime, dateTime, media, options, onClickBody, selectedOption, color} = this.props;
         return (
             <div className={styles.messageContent}>
-                <div className={styles.message} style={{backgroundColor: color}} onClick={onClickBody}>
+                <div className={this.returnMessageClassName()} style={{backgroundColor: color}} onClick={onClickBody}>
                     <span className={styles.messageBody}>{body}</span>
                     {this.showOptions() && (
                         <Options

@@ -29,6 +29,10 @@
   color: $blue-ink;
 }
 
+.messageFocused {
+  box-shadow: inset 0 0 500px 100px rgba(0, 0, 0, 0.2);
+}
+
 .leftMessage {
   align-self: flex-start;
   text-align: left;
