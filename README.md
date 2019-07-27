@@ -71,3 +71,4 @@ component which has performance implications due to creating functions on render
 - There are no hooks in this project because where I would end up implementing them I would also need to add other logic within the
 component. Therefore would essentially be creating functions on render/update like the above comment
 - I have avoided creating lambda functions within render methods where possible and have used bind(this) in the constructor to improve performance
+- I haven't fully tested SideBar.jsx as it would take a very long time due to the nature of the component
