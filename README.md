@@ -1,4 +1,4 @@
-# ChatBot Technical Test
+# 🤖 ChatBot
 
 ## Installation/Setup
 1. Please clone this repository or download as a zip.
@@ -7,6 +7,7 @@
 
 ## Tests
 To run my unit tests please run `npm test`. I have not created integration tests as it would take much longer to do so.
+Test Coverage - 90.59% Statements, 80.99% Branches, 89.66% Functions, 90.18% Lines.
 
 ## ChatBots
 There are three chat bots available: TravelBot, PizzaBot, WebSearchBot. All of which return static data.

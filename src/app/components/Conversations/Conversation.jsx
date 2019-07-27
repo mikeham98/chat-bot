@@ -31,6 +31,10 @@ export default class Conversation extends React.PureComponent {
     }
 };
 
+Conversation.defaultProps = {
+    previewMessage: ''
+};
+
 Conversation.propTypes = {
     selected: PropTypes.bool,
     unread: PropTypes.bool,

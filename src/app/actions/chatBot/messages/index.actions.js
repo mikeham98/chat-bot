@@ -17,9 +17,6 @@ export const getMessages = (conversationId) => (dispatch) => {
                 payload: response.data
             })
         })
-        .catch(error => {
-
-        });
 };
 
 export const setOption = (optionId, messageId, callback, conversationId) => (dispatch) => {
@@ -34,7 +31,4 @@ export const setOption = (optionId, messageId, callback, conversationId) => (dis
                 dispatch(handleBackEndBotResponse(conversationId));
             }, 1000);
         })
-        .catch(error => {
-
-        });
 };

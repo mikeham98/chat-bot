@@ -56,27 +56,48 @@ describe('ChatBotContainer', () => {
                     expect(props.getMessages).toHaveBeenCalledTimes(1);
                     expect(props.getMessages).toHaveBeenCalledWith("100");
                 });
-                it('should be called on update only when props have changes', () => {
+                it('should be called on update due to different current conversation id', () => {
                     expect(props.getMessages).not.toHaveBeenCalled();
                     wrapper();
                     expect(props.getMessages).toHaveBeenCalledTimes(1);
                     wrapper().update();
-                    // should still only have called getMessages once because currentConversationId is still 100
+                    // should still only have called getMessages once because currentConversation.id is still 100
                     expect(props.getMessages).toHaveBeenCalledTimes(1);
+                    // should now call getMessages because currentConversation.id has changed
                     wrapper().setProps({
                         currentConversation: {
                             ...props.currentConversation,
                             id: "50"
                         }
                     });
-                    // should now call getMessages because currentConversationId has changed
+                    expect(props.getMessages).toHaveBeenCalledTimes(2);
+                    expect(props.getMessages).toHaveBeenNthCalledWith(1, "100");
+                    expect(props.getMessages).toHaveBeenNthCalledWith(2, "50");
+                });
+                it('should be called on update only when props have changed', () => {
+                    expect(props.getMessages).not.toHaveBeenCalled();
+                    wrapper();
+                    expect(props.getMessages).toHaveBeenCalledTimes(1);
+                    wrapper().update();
+                    // should still only have called getMessages once because currentConversation.id is still 100
+                    expect(props.getMessages).toHaveBeenCalledTimes(1);
+                    // should now call getMessages because currentConversation.id has changed
+                    wrapper().setProps({
+                        currentConversation: {
+                            ...props.currentConversation,
+                            id: "50"
+                        }
+                    });
+                    expect(props.getMessages).toHaveBeenCalledTimes(2);
+                    // should not call getMessages on update due to currentConversation.id not changing
+                    wrapper().update();
                     expect(props.getMessages).toHaveBeenCalledTimes(2);
                     expect(props.getMessages).toHaveBeenNthCalledWith(1, "100");
                     expect(props.getMessages).toHaveBeenNthCalledWith(2, "50");
                 });
             });
             describe('sendMessage', () => {
-                it('should be called with currentConversationId of 100 on call of ChatBot prop sendMessage', () => {
+                it('should be called with currentConversation.id (100) on call of ChatBot prop sendMessage', () => {
                     const message = 'this is a message';
                     const callback = jest.fn();
                     expect(props.sendMessage).not.toHaveBeenCalled();

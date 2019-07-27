@@ -41,7 +41,7 @@ exports[`MessageForm render should return a form component with a MessageInput a
           value=""
         />
       </Memo(MessageInput)>
-      <Memo(IconButton)
+      <IconButton
         color="#939aab"
         disabled={false}
         height="30px"
@@ -89,7 +89,7 @@ exports[`MessageForm render should return a form component with a MessageInput a
             </div>
           </Component>
         </button>
-      </Memo(IconButton)>
+      </IconButton>
     </form>
   </Formik>
 </MessageForm>

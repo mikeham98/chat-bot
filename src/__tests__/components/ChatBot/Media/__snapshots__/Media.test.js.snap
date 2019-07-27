@@ -1,5 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Media render should return 3 media components even though a 4th has been added but with a unknown type 1`] = `
+<div>
+  <Memo(LinkPreview)
+    description="A brief insight to how and why SpaceX will Colonize Mars"
+    image="https://images8.alphacoders.com/374/374852.jpg"
+    key="1"
+    src="https://waitbutwhy.com/2015/08/how-and-why-spacex-will-colonize-mars.html"
+    title="How (and Why) SpaceX Will Colonize Mars"
+  />
+  <Memo(ImagePreview)
+    key="2"
+    src="https://media.giphy.com/media/1108D2tVaUN3eo/giphy.gif"
+  />
+  <Memo(ImagePreview)
+    key="3"
+    src="https://images.unsplash.com/photo-1564053489984-317bbd824340?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1028&q=80"
+  />
+</div>
+`;
+
 exports[`Media render should return an empty div when there is no media 1`] = `<div />`;
 
 exports[`Media render should return two ImagePreview components (gif and img) and a LinkPreview component 1`] = `
