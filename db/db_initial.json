@@ -11,11 +11,6 @@
       "profile": {
         "name": "TravelBot",
         "img": "https://images.unsplash.com/photo-1496046744122-2328018d60b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1664&q=80"
-      },
-      "read": false,
-      "latest": {
-        "message": "Brilliant, that is all booked for you, have an amazing holiday!",
-        "createdAt": "2019-07-27T00:07:49.548Z"
       }
     },
     {
@@ -26,11 +21,6 @@
       "profile": {
         "name": "PizzaBot",
         "img": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1655&q=80"
-      },
-      "read": true,
-      "latest": {
-        "message": "sdf",
-        "createdAt": "2019-07-26T23:47:40.498Z"
       }
     },
     {
@@ -41,11 +31,6 @@
       "profile": {
         "name": "WebSearchBot",
         "img": "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80"
-      },
-      "read": true,
-      "latest": {
-        "message": "fds",
-        "createdAt": "2019-07-26T23:47:36.616Z"
       }
     }
   ],

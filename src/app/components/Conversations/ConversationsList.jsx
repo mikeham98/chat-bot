@@ -8,12 +8,12 @@ import {ConversationsPropTypes} from "../../config/propTypes";
 export default class ConversationsList extends React.PureComponent {
     returnConversations() {
         const {conversations} = this.props;
-        if(isPopulatedArray(conversations)) {
+        if (isPopulatedArray(conversations)) {
             return conversations.map(conversation => {
                 return (
                     <Conversation
                         key={conversation.id}
-                        unread={!conversation.read}
+                        unread={typeof conversation.read === 'boolean' && !conversation.read}
                         previewMessage={conversation.latest ? conversation.latest.message : ''}
                         selected={conversation.selected}
                         name={conversation.profile.name}
