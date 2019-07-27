@@ -69,7 +69,7 @@ Due to the bot returning static responses, I have included a suitable conversati
 - **user** - *No that is it thanks.*
 - **bot** - *Okay, feel free to ask for any help in the future, have a good day.*
 
-## Notes to reviewer
+## Notes
 - I am using json-server to act as a REST api for the application (the database is reset on running `npm run dev`)
 - If messages do not appear it is most likely due to json-server not responding therefore please refresh the page
 - I have used a mixture of both PureComponents and memos where I feel suitable, I tend to create memos for very simple
