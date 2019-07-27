@@ -7,7 +7,7 @@
 
 ## Example
 <div>
-<img src="https://raw.githubusercontent.com/mikeham98/chat-bot/master/assets/chatBot.gif" height="400">
+<img src="https://github.com/mikeham98/chat-bot/raw/master/assets/chatBot.gif" height="400">
 </div>
 
 ## Tests
@@ -21,7 +21,7 @@ This could easily be swapped for a real backend which could provide dynamic resp
 ### TravelBot
 The TravelBot allows the user to book a holiday
 #### Responses:
-Due to the bot returning static responses, I have included a typical conversation below.
+Due to the bot returning static responses, I have included a suitable conversation between the bot and the user below.
 - (user) Hello, I would like to book a holiday please.
 - (bot) Where would you like to go to?
 - (user) Florida
@@ -46,7 +46,7 @@ Due to the bot returning static responses, I have included a typical conversatio
 ### PizzaBot
 The PizzaBot allows the user to order a Pizza and has the following responses after messaging the bot:
 #### Responses:
-Due to the bot returning static responses, I have included a typical conversation below.
+Due to the bot returning static responses, I have included a suitable conversation between the bot and the user below.
 - (user) Hi can I order a pizza please?
 - (bot) Sure thing! what size pizza would you like?
 - (user) Can I have a large pizza please
@@ -59,7 +59,7 @@ Due to the bot returning static responses, I have included a typical conversatio
 ### WebSearchBot
 The WebSearchBot allows the user to ask for help to find relevant articles to their questions.
 #### Responses:
-Due to the bot returning static responses, I have included a typical conversation below.
+Due to the bot returning static responses, I have included a suitable conversation between the bot and the user below.
 - (user) Hi would you be able to help me with some research?
 - (bot) Sure thing, what can I help you with.
 - (user) I would like to know more about SpaceX and their plans on travelling to mars.

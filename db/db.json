@@ -1,0 +1,457 @@
+{
+  "settings": {
+    "theme": "dark"
+  },
+  "conversation": [
+    {
+      "id": "1",
+      "userId": "bot1",
+      "userName": "travel_bot",
+      "color": "#6872FF",
+      "profile": {
+        "name": "TravelBot",
+        "img": "https://images.unsplash.com/photo-1496046744122-2328018d60b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1664&q=80"
+      },
+      "read": true,
+      "latest": {
+        "message": "What time would you like to fly out?",
+        "createdAt": "2019-07-27T01:58:31.082Z"
+      }
+    },
+    {
+      "id": "2",
+      "userId": "bot2",
+      "userName": "pizza_bot",
+      "color": "#f4244e",
+      "profile": {
+        "name": "PizzaBot",
+        "img": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1655&q=80"
+      },
+      "read": true,
+      "latest": {
+        "message": "We will get working on it right away",
+        "createdAt": "2019-07-27T01:58:16.445Z"
+      }
+    },
+    {
+      "id": "3",
+      "userId": "bot3",
+      "userName": "web_search_bot",
+      "color": "#1ccb9e",
+      "profile": {
+        "name": "WebSearchBot",
+        "img": "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80"
+      },
+      "read": true,
+      "latest": {
+        "message": "You're welcome, is there anything else I can help you with?",
+        "createdAt": "2019-07-27T01:58:35.464Z"
+      }
+    }
+  ],
+  "messages": [
+    {
+      "content": {
+        "body": "Hello, I would like to book a holiday please."
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-27T01:43:46.564Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 1
+    },
+    {
+      "content": {
+        "body": "Where would you like to go to?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-27T01:43:47.609Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 2
+    },
+    {
+      "content": {
+        "body": "Florida"
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-27T01:43:58.921Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 3
+    },
+    {
+      "content": {
+        "body": "What a lovely destination, how long would you like to go for?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-27T01:43:59.955Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 4
+    },
+    {
+      "content": {
+        "body": "2 weeks"
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-27T01:44:13.289Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 5
+    },
+    {
+      "content": {
+        "body": "Brilliant, how many people shall I book for?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-27T01:44:14.317Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 6
+    },
+    {
+      "content": {
+        "body": "Can you book for 3 people please."
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-27T01:45:12.082Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 7
+    },
+    {
+      "content": {
+        "body": "Perfect, when would you like to go?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-27T01:45:13.121Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 8
+    },
+    {
+      "content": {
+        "body": "I was planning on going on the August 12th."
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-27T01:45:21.569Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 9
+    },
+    {
+      "content": {
+        "body": "What city would you like to fly from?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-27T01:45:22.600Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 10
+    },
+    {
+      "content": {
+        "body": "Hi would you be able to help me with some research?"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-27T01:45:41.512Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 11
+    },
+    {
+      "content": {
+        "body": "Sure thing, what can I help you with."
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-27T01:45:42.543Z",
+      "createdBy": {
+        "userId": "bot3"
+      },
+      "conversationId": "3",
+      "id": 12
+    },
+    {
+      "content": {
+        "body": "I would like to know more about SpaceX and their plans on travelling to mars."
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-27T01:46:00.153Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 13
+    },
+    {
+      "content": {
+        "body": "I have found a good article for you, hope this helps!",
+        "media": [
+          {
+            "id": 1,
+            "type": "link",
+            "imagePreview": "https://images8.alphacoders.com/374/374852.jpg",
+            "title": "How (and Why) SpaceX Will Colonize Mars",
+            "description": "A brief insight to how and why SpaceX will Colonize Mars",
+            "src": "https://waitbutwhy.com/2015/08/how-and-why-spacex-will-colonize-mars.html"
+          }
+        ]
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-27T01:46:01.182Z",
+      "createdBy": {
+        "userId": "bot3"
+      },
+      "conversationId": "3",
+      "id": 14
+    },
+    {
+      "content": {
+        "body": "Hi can I order a pizza please?"
+      },
+      "recipient": {
+        "userId": "bot2"
+      },
+      "createdAt": "2019-07-27T01:46:16.601Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "2",
+      "id": 15
+    },
+    {
+      "content": {
+        "body": "Sure thing! what size pizza would you like?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-27T01:46:17.630Z",
+      "createdBy": {
+        "userId": "bot2"
+      },
+      "conversationId": "2",
+      "id": 16
+    },
+    {
+      "content": {
+        "body": "Can I have a large pizza please"
+      },
+      "recipient": {
+        "userId": "bot2"
+      },
+      "createdAt": "2019-07-27T01:46:50.890Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "2",
+      "id": 17
+    },
+    {
+      "content": {
+        "body": "Would you like any toppings?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-27T01:46:51.920Z",
+      "createdBy": {
+        "userId": "bot2"
+      },
+      "conversationId": "2",
+      "id": 18
+    },
+    {
+      "content": {
+        "body": "London"
+      },
+      "recipient": {
+        "userId": "bot1"
+      },
+      "createdAt": "2019-07-27T01:58:09.134Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "1",
+      "id": 19
+    },
+    {
+      "content": {
+        "body": "Pepperoni"
+      },
+      "recipient": {
+        "userId": "bot2"
+      },
+      "createdAt": "2019-07-27T01:58:15.404Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "2",
+      "id": 20
+    },
+    {
+      "content": {
+        "body": "We have two options available for London.",
+        "options": [
+          {
+            "id": 1,
+            "option": "Gatwick"
+          },
+          {
+            "id": 2,
+            "option": "Heathrow"
+          }
+        ]
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-27T01:58:10.180Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 21,
+      "selectedOption": 2
+    },
+    {
+      "content": {
+        "body": "We will get working on it right away",
+        "media": [
+          {
+            "id": 1,
+            "type": "gif",
+            "src": "https://media.giphy.com/media/1108D2tVaUN3eo/giphy.gif"
+          }
+        ]
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-27T01:58:16.445Z",
+      "createdBy": {
+        "userId": "bot2"
+      },
+      "conversationId": "2",
+      "id": 22
+    },
+    {
+      "content": {
+        "body": "Thank you"
+      },
+      "recipient": {
+        "userId": "bot3"
+      },
+      "createdAt": "2019-07-27T01:58:34.428Z",
+      "createdBy": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "conversationId": "3",
+      "id": 23
+    },
+    {
+      "content": {
+        "body": "What time would you like to fly out?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-27T01:58:31.082Z",
+      "createdBy": {
+        "userId": "bot1"
+      },
+      "conversationId": "1",
+      "id": 24
+    },
+    {
+      "content": {
+        "body": "You're welcome, is there anything else I can help you with?"
+      },
+      "recipient": {
+        "userId": 1,
+        "userName": "mikeham98"
+      },
+      "createdAt": "2019-07-27T01:58:35.464Z",
+      "createdBy": {
+        "userId": "bot3"
+      },
+      "conversationId": "3",
+      "id": 25
+    }
+  ]
+}
