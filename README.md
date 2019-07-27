@@ -71,6 +71,7 @@ Due to the bot returning static responses, I have included a typical conversatio
 
 ## Notes to reviewer
 - I am using json-server to act as a REST api for the application (the database is clear on running `npm run dev`)
+- If messages do not appear it is most likely due to json-server therefore please refresh the page
 - I have used a mixture of both PureComponents and memos where I feel suitable, I tend to create memos for very simple
 components which do not need internal logic. The reason for this is so that I do not need to create function within a functional
 component which has performance implications due to creating functions on render/update.
