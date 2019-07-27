@@ -11,7 +11,7 @@
 </div>
 
 ## Tests
-To run my unit tests please run `npm test`. I have not created integration tests as it would take much longer to do so.
+To run my unit tests please run `npm test`. I have not created integration tests as it would take much longer to do so.<br/>
 Test Coverage - 90.59% Statements, 80.99% Branches, 89.66% Functions, 90.18% Lines.
 
 ## ChatBots
@@ -19,7 +19,7 @@ There are three chat bots available: TravelBot, PizzaBot, WebSearchBot. All of w
 This could easily be swapped for a real backend which could provide dynamic responses.
 
 ### TravelBot
-The TravelBot allows the user to book a holiday
+The TravelBot allows the user to book a holiday.
 #### Responses:
 Due to the bot returning static responses, I have included a suitable conversation between the bot and the user below.
 - **user** - *Hello, I would like to book a holiday please.*
@@ -66,16 +66,16 @@ Due to the bot returning static responses, I have included a suitable conversati
 - **bot - returns link** - *I have found a good article for you, hope this helps!*
 - **user** - *That was brilliant thank you for sharing that.*
 - **bot** - *You're welcome, is there anything else I can help you with?*
-- **user** - *No that is it thanks*
+- **user** - *No that is it thanks.*
 - **bot** - *Okay, feel free to ask for any help in the future, have a good day.*
 
 ## Notes to reviewer
-- I am using json-server to act as a REST api for the application (the database is clear on running `npm run dev`)
-- If messages do not appear it is most likely due to json-server therefore please refresh the page
+- I am using json-server to act as a REST api for the application (the database is reset on running `npm run dev`)
+- If messages do not appear it is most likely due to json-server not responding therefore please refresh the page
 - I have used a mixture of both PureComponents and memos where I feel suitable, I tend to create memos for very simple
-components which do not need internal logic. The reason for this is so that I do not need to create function within a functional
-component which has performance implications due to creating functions on render/update.
+components which do not need internal logic. The reason for this is so that I don't create a function within a functional
+component as this has performance implications due to the creation functions on render/update.
 - There are no hooks in this project because where I would end up implementing them I would also need to add other logic within the
-component. Therefore would essentially be creating functions on render/update like the above comment
+component. Therefore would essentially be creating functions on render/update like the above comment.
 - I have avoided creating lambda functions within render methods where possible and have used bind(this) in the constructor to improve performance
-- I haven't fully tested SideBar.jsx as it would take a very long time due to the nature of the component
+- I haven't fully tested SideBar.jsx as it would take a very long time due to the nature of the component.
