@@ -12,7 +12,7 @@ exports[`HeaderContainer render should return a dark theme with a h2 with the na
   >
     <Memo(IconButton)
       color="white"
-      height="30px"
+      height="22px"
       icon={
         Object {
           "canInstrument": true,
@@ -22,7 +22,7 @@ exports[`HeaderContainer render should return a dark theme with a h2 with the na
         }
       }
       onClick={[Function]}
-      width="30px"
+      width="22px"
     />
   </div>
   <div
@@ -48,7 +48,7 @@ exports[`HeaderContainer render should return a light theme with a h2 with the n
   >
     <Memo(IconButton)
       color="#172B4D"
-      height="30px"
+      height="22px"
       icon={
         Object {
           "canInstrument": true,
@@ -58,7 +58,7 @@ exports[`HeaderContainer render should return a light theme with a h2 with the n
         }
       }
       onClick={[Function]}
-      width="30px"
+      width="22px"
     />
   </div>
   <div
@@ -84,7 +84,7 @@ exports[`HeaderContainer render should return a light theme with a h2 with the n
   >
     <Memo(IconButton)
       color="#172B4D"
-      height="30px"
+      height="22px"
       icon={
         Object {
           "canInstrument": true,
@@ -94,7 +94,7 @@ exports[`HeaderContainer render should return a light theme with a h2 with the n
         }
       }
       onClick={[Function]}
-      width="30px"
+      width="22px"
     />
   </div>
   <div

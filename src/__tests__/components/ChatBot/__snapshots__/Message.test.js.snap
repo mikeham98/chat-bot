@@ -48,7 +48,7 @@ exports[`Message render should return a message body with media and options alon
   className="messageContent"
 >
   <div
-    className="message"
+    className="message messageFocused"
     onClick={[MockFunction]}
     style={
       Object {

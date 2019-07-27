@@ -1,0 +1,79 @@
+Merge branch 'update-tests' into develop
+
+# Conflicts:
+#	db/db.json
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch develop
+# Your branch is ahead of 'origin/develop' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	modified:   db/db.json
+#	new file:   src/__tests__/App.test.js
+#	new file:   src/__tests__/__snapshots__/App.test.js.snap
+#	new file:   src/__tests__/__snapshots__/index.test.js.snap
+#	modified:   src/__tests__/actions/chatBot/messages/index.actions.js
+#	modified:   src/__tests__/actions/chatBot/toolbar/index.actions.js
+#	modified:   src/__tests__/actions/conversations/index.actions.js
+#	new file:   src/__tests__/actions/settings/index.actions.js
+#	modified:   src/__tests__/components/ChatBot/MessagesList.test.js
+#	modified:   src/__tests__/components/ChatBot/Toolbar/MessageForm.test.js
+#	modified:   src/__tests__/components/ChatBot/__snapshots__/Message.test.js.snap
+#	modified:   src/__tests__/components/ChatBot/__snapshots__/MessagesList.test.js.snap
+#	modified:   src/__tests__/components/ChatBot/__snapshots__/index.test.js.snap
+#	modified:   src/__tests__/components/ChatBot/index.test.js
+#	modified:   src/__tests__/components/Conversations/Conversation.test.js
+#	modified:   src/__tests__/components/Conversations/ConversationsList.test.js
+#	modified:   src/__tests__/components/Conversations/__snapshots__/Conversation.test.js.snap
+#	modified:   src/__tests__/components/Conversations/__snapshots__/ConversationsList.test.js.snap
+#	new file:   src/__tests__/components/common/ColorPicker/ColorIcon.test.js
+#	new file:   src/__tests__/components/common/ColorPicker/__snapshots__/ColorIcon.test.js.snap
+#	new file:   src/__tests__/components/common/ColorPicker/__snapshots__/index.test.js.snap
+#	new file:   src/__tests__/components/common/ColorPicker/index.test.js
+#	modified:   src/__tests__/components/common/__snapshots__/SideBar.test.js.snap
+#	modified:   src/__tests__/containers/ChatBot/__snapshots__/index.test.js.snap
+#	modified:   src/__tests__/containers/ChatBot/index.test.js
+#	renamed:    src/__tests__/containers/Conversations/ConversationsListContainer.js -> src/__tests__/containers/Conversations/ConversationsListContainer.test.js
+#	renamed:    src/__tests__/containers/Conversations/__snapshots__/ConversationsListContainer.js.snap -> src/__tests__/containers/Conversations/__snapshots__/ConversationsListContainer.test.js.snap
+#	new file:   src/__tests__/containers/Header/HeaderContainer.test.js
+#	new file:   src/__tests__/containers/Header/__snapshots__/HeaderContainer.test.js.snap
+#	new file:   src/__tests__/containers/Theme/ThemeContainer.jsx
+#	new file:   src/__tests__/containers/Theme/__snapshots__/ThemeContainer.jsx.snap
+#	new file:   src/__tests__/index.test.js
+#	new file:   src/__tests__/layout/ChatBotLayout.test.js
+#	new file:   src/__tests__/layout/ConversationPanelLayout.test.js
+#	new file:   src/__tests__/layout/__snapshots__/ChatBotLayout.test.js.snap
+#	new file:   src/__tests__/layout/__snapshots__/ConversationPanelLayout.test.js.snap
+#	modified:   src/__tests__/reducers/conversation/index.reducers.test.js
+#	modified:   src/__tests__/reducers/messages/index.reducers.test.js
+#	new file:   src/__tests__/reducers/settings/index.reducers.test.js
+#	new file:   src/__tests__/util/theme.test.js
+#	modified:   src/app/actions/chatBot/messages/index.actions.js
+#	modified:   src/app/actions/chatBot/toolbar/index.actions.js
+#	modified:   src/app/actions/conversations/index.actions.js
+#	modified:   src/app/actions/settings/index.actions.js
+#	modified:   src/app/components/ChatBot/index.jsx
+#	modified:   src/app/components/common/ColorPicker/ColorIcon.jsx
+#	modified:   src/app/components/common/ColorPicker/index.jsx
+#	modified:   src/app/components/common/Spinner.jsx
+#	renamed:    src/app/config/colours.config.js -> src/app/config/colors.config.js
+#	modified:   src/app/config/theme.config.js
+#	modified:   src/app/containers/ChatBot/index.jsx
+#	modified:   src/app/containers/Conversations/ConversationsListContainer.jsx
+#	modified:   src/app/containers/Header/HeaderContainer.jsx
+#	modified:   src/app/containers/Theme/ThemeContainer.jsx
+#	modified:   src/app/reducers/messages/index.reducers.js
+#	new file:   src/app/util/theme.js
+#	modified:   src/themes/components/colorPicker.scss
+#
