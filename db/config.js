@@ -32,7 +32,7 @@ export const conversations = {
         }, {
             body: 'What time would you like to fly out?'
         }, {
-            body: 'When would you like your return flight to be at?'
+            body: 'What time would you like to fly back?'
         }, {
             body: 'So just to confirm, you want to go to Florida for 2 weeks from August 12th (fly out 10am) August 26 (return flight 2pm) with 3 people.'
         }, {
@@ -79,7 +79,7 @@ export const conversations = {
                 src: 'https://waitbutwhy.com/2015/08/how-and-why-spacex-will-colonize-mars.html'
             }]
         }, {
-            body: 'You`re welcome, is there anything else I can help you with?'
+            body: 'You\'re welcome, is there anything else I can help you with?'
         }, {
             body: 'Okay, feel free to ask for any help in the future, have a good day.'
         }]
