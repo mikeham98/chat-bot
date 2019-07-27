@@ -1,6 +1,6 @@
 {
   "name": "chat-bot",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --watch",
     "json-server": "json-server --watch ./db/db.json --port 3000",
