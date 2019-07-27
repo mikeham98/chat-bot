@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Options render should return 2 Option component with the second Option selected 1`] = `
+<div
+  className="messageOptionWrapper"
+>
+  <Option
+    disabled={true}
+    key="1"
+    onClick={[Function]}
+    option="Back To The Future"
+    selected={false}
+  />
+  <Option
+    disabled={true}
+    key="2"
+    onClick={[Function]}
+    option="Stranger Things"
+    selected={true}
+  />
+</div>
+`;
+
+exports[`Options render should set disabled to false when there is not a selected option 1`] = `
+<div
+  className="messageOptionWrapper"
+>
+  <Option
+    disabled={false}
+    key="1"
+    onClick={[Function]}
+    option="Back To The Future"
+    selected={false}
+  />
+  <Option
+    disabled={false}
+    key="2"
+    onClick={[Function]}
+    option="Stranger Things"
+    selected={false}
+  />
+</div>
+`;

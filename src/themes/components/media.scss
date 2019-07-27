@@ -1,0 +1,54 @@
+@import '../colors';
+
+.mediaLinkPreviewWrapper, .mediaImagePreviewImage {
+  margin: 10px 0 5px 0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $light-gray;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.mediaLinkPreviewWrapper > img, .mediaImagePreviewImage {
+  object-fit: cover;
+}
+
+.mediaImagePreviewImage {
+  margin: 10px 0 5px 0;
+  height: 150px;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 1em;
+}
+
+.mediaLinkPreviewWrapper {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  img {
+    height: 150px;
+  }
+  width: 300px;
+  .mediaLinkPreviewMeta {
+    padding: 10px;
+    background-color: white;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+    .mediaLinkPreviewTitle {
+      margin: 5px 0;
+      color: $flat-lavender;
+      font-weight: 600;
+    }
+    .mediaLinkPreviewDescription {
+      color: $gray;
+      font-size: 0.8em;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .mediaLinkPreviewMeta {
+    max-width: 100%;
+  }
+}

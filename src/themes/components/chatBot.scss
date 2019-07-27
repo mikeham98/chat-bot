@@ -1,0 +1,9 @@
+.chatBot {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  flex: 1;
+  min-width: 0;
+  padding: 0 10px 0 20px;
+}

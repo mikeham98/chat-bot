@@ -1,0 +1,46 @@
+@import '../colors';
+
+$colorIconSize: 22px;
+
+.colorPickerWrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  .colorIconWrapper {
+    margin: 5px 5px 0 5px;
+  }
+  .colorIconWrapper:nth-last-of-type(1) {
+    margin: 5px;
+  }
+}
+
+.colorIconWrapper:focus { outline: none; }
+
+.colorIconWrapper {
+  box-sizing: border-box;
+  display: inline-block;
+  cursor: pointer;
+  height: $colorIconSize;
+  width: $colorIconSize;
+  border-radius: $colorIconSize / 2;
+  z-index: 0;
+  transition: transform 0.1s ease-in-out;
+}
+
+.colorIconWrapper:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.colorIconWrapper:active {
+  transform: scale(0.95);
+  z-index: 1;
+}
+
+.colorIconSelected {
+  border: 3px solid #393939;
+}

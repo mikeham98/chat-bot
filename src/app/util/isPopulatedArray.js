@@ -1,0 +1,1 @@
+export default (source) => Array.isArray(source) && source.length > 0;

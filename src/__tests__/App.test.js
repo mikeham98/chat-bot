@@ -3,23 +3,24 @@ import {shallow} from 'enzyme';
 import App from '../app/App';
 
 describe('App', () => {
-    let props = {};
+
     let shallowedWrapper;
-    let wrapper = () => {
-        if(!shallowedWrapper) {
+    let props = {};
+    const wrapper = () => {
+        if (!shallowedWrapper) {
             shallowedWrapper = shallow(<App {...props}/>);
         }
         return shallowedWrapper;
     };
 
     beforeEach(() => {
-        props = {
-            
-        };
+        props = {};
         shallowedWrapper = undefined;
     });
-    
-    it('should render app', () => {
-        expect(wrapper()).toMatchSnapshot();
+
+    describe('render', () => {
+        it('should return a ThemeContainer, ConversationPanelLayout and ChatBotLayout', () => {
+            expect(wrapper()).toMatchSnapshot();
+        });
     });
 });

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChatBot render should return MessageList and MessageForm 1`] = `
+<div
+  className="chatBot"
+>
+  <MessagesList
+    botName="bot1"
+    color="#1ccb9e"
+    currentUserId={1}
+    messages={
+      Array [
+        1,
+        2,
+        3,
+        4,
+        5,
+      ]
+    }
+    onClickOption={[MockFunction]}
+    replying={true}
+  />
+  <MessageForm
+    initialValues={
+      Object {
+        "message": "",
+      }
+    }
+    sendMessage={[MockFunction]}
+  />
+</div>
+`;

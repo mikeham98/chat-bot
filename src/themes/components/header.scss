@@ -1,0 +1,31 @@
+@import '../colors';
+
+.headerWrapper {
+  position: relative;
+  h2 {
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 50px;
+    margin: 0;
+  }
+  .colorPickerWrapper {
+    position: absolute;
+    right: 65px;
+    top: 60px;
+  }
+}
+
+.headerThemeToggle {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.headerColorPicker {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 70px;
+}

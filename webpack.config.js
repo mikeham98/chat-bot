@@ -19,9 +19,6 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                 },
-                resolve: {
-                    extensions: ['.js', '.jsx'],
-                },
             },
             {
                 test: /\.html$/,
@@ -33,7 +30,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(ttf|woff|woff2|eot|png|jpg|gif|svg|base64|mp4)$/,
+                test: /\.(ttf|woff|woff2|eot|png|jpg|gif|base64|mp4)$/,
                 use: [
                     {
                         loader: 'url-loader',
@@ -44,6 +41,10 @@ module.exports = {
                 ],
             },
             {
+                test: /\.svg$/,
+                use: ['@svgr/webpack'],
+            },
+            {
                 test: /\.scss|css$/,
                 use: [
                     {
@@ -52,12 +53,15 @@ module.exports = {
                     {
                         loader: 'css-loader', // translates CSS into CommonJS
                         options: {
-                            modules: true,
+                            modules: {
+                                mode: 'local',
+                                localIdentName: '[local]',
+                            }
                         },
                     },
                     {
                         loader: 'sass-loader', // compiles Sass to CSS
-                    },
+                    }
                 ],
             },
         ],
@@ -77,6 +81,6 @@ module.exports = {
         })
     ],
     resolve: {
-        extensions: [".js", ".jsx"],
+        extensions: [".js", ".jsx", ".json"],
     },
 };

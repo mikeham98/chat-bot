@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageForm render should return a form component with a MessageInput and an IconButton 1`] = `
+<MessageForm
+  initialValues={
+    Object {
+      "message": "",
+    }
+  }
+  sendMessage={[MockFunction]}
+>
+  <Formik
+    enableReinitialize={false}
+    initialValues={
+      Object {
+        "message": "",
+      }
+    }
+    isInitialValid={false}
+    onSubmit={[Function]}
+    validate={[Function]}
+    validateOnBlur={true}
+    validateOnChange={true}
+  >
+    <form
+      className="messageFormWrapper"
+      onSubmit={[Function]}
+    >
+      <Memo(MessageInput)
+        onBlur={[Function]}
+        onChange={[Function]}
+        value=""
+      >
+        <input
+          className="messageInputWrapper"
+          name="message"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="Type a message..."
+          type="text"
+          value=""
+        />
+      </Memo(MessageInput)>
+      <IconButton
+        color="#939aab"
+        disabled={false}
+        height="30px"
+        icon={
+          Object {
+            "canInstrument": true,
+            "createTransformer": [Function],
+            "getCacheKey": [Function],
+            "process": [Function],
+          }
+        }
+        style={
+          Object {
+            "margin": "0 10px",
+          }
+        }
+        type="submit"
+        width="30px"
+      >
+        <button
+          className="iconButton"
+          disabled={false}
+          style={
+            Object {
+              "margin": "0 10px",
+            }
+          }
+          type="submit"
+        >
+          <Component
+            IconComponent={
+              Object {
+                "canInstrument": true,
+                "createTransformer": [Function],
+                "getCacheKey": [Function],
+                "process": [Function],
+              }
+            }
+            color="#939aab"
+            height="30px"
+            width="30px"
+          >
+            <div>
+              Icon
+            </div>
+          </Component>
+        </button>
+      </IconButton>
+    </form>
+  </Formik>
+</MessageForm>
+`;

@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideBar render should return a title of This is a side bar and a div with the text Children inside 1`] = `
+<SideBar
+  title="This is a side bar"
+>
+  <div
+    className="sideBarContainer"
+  >
+    <div
+      id="sideBarWrapper"
+      style={
+        Object {
+          "width": 300,
+        }
+      }
+    >
+      <div
+        className="sideBarMenuWrapper"
+        id="sideBarMenuWrapper"
+      >
+        <div
+          className="sideBarMenu"
+        >
+          <div
+            className="sideBarContent"
+          >
+            <div
+              className="sideBarMenuTitle"
+            >
+              <h1>
+                This is a side bar
+              </h1>
+            </div>
+            <div
+              className="sideBarMenuChildren"
+            >
+              <div>
+                Children
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="sideBarDraggableHandle"
+        />
+      </div>
+    </div>
+  </div>
+</SideBar>
+`;

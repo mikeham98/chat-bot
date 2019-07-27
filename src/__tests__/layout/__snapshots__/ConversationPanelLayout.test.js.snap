@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConversationPanelLayout render should return a lazy component 1`] = `
+<SideBar
+  title="Messages"
+>
+  <Suspense
+    fallback={<Memo(Spinner) />}
+  >
+    <lazy />
+  </Suspense>
+</SideBar>
+`;
