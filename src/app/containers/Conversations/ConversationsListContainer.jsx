@@ -42,6 +42,7 @@ ConversationsListContainer.propTypes = {
     setCurrentConversation: PropTypes.func.isRequired,
 };
 
+/* istanbul ignore next */
 const mapStateToProps = (state) => {
     return conversationSelector(state);
 };

@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderContainer render should return a dark theme with a h2 with the name and a ColorIcon 1`] = `
+<div
+  className="headerWrapper"
+>
+  <h2>
+    TravelBot
+  </h2>
+  <div
+    className="headerThemeToggle"
+  >
+    <Memo(IconButton)
+      color="white"
+      height="30px"
+      icon={
+        Object {
+          "canInstrument": true,
+          "createTransformer": [Function],
+          "getCacheKey": [Function],
+          "process": [Function],
+        }
+      }
+      onClick={[Function]}
+      width="30px"
+    />
+  </div>
+  <div
+    className="headerColorPicker"
+  >
+    <ColorIcon
+      color="#9A58B9"
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`HeaderContainer render should return a light theme with a h2 with the name and a ColorIcon 1`] = `
+<div
+  className="headerWrapper"
+>
+  <h2>
+    TravelBot
+  </h2>
+  <div
+    className="headerThemeToggle"
+  >
+    <Memo(IconButton)
+      color="#172B4D"
+      height="30px"
+      icon={
+        Object {
+          "canInstrument": true,
+          "createTransformer": [Function],
+          "getCacheKey": [Function],
+          "process": [Function],
+        }
+      }
+      onClick={[Function]}
+      width="30px"
+    />
+  </div>
+  <div
+    className="headerColorPicker"
+  >
+    <ColorIcon
+      color="#9A58B9"
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`HeaderContainer render should return a light theme with a h2 with the name and a ColorIcon with ColorPicker component 1`] = `
+<div
+  className="headerWrapper"
+>
+  <h2>
+    TravelBot
+  </h2>
+  <div
+    className="headerThemeToggle"
+  >
+    <Memo(IconButton)
+      color="#172B4D"
+      height="30px"
+      icon={
+        Object {
+          "canInstrument": true,
+          "createTransformer": [Function],
+          "getCacheKey": [Function],
+          "process": [Function],
+        }
+      }
+      onClick={[Function]}
+      width="30px"
+    />
+  </div>
+  <div
+    className="headerColorPicker"
+  >
+    <ColorIcon
+      color="#9A58B9"
+      onClick={[Function]}
+    />
+  </div>
+  <ColorPicker
+    onChange={[Function]}
+  />
+</div>
+`;

@@ -2,26 +2,70 @@
 
 exports[`Conversation render should return a div with a className of conversationWrapper and conversationSelected 1`] = `
 <div
-  className="conversationWrapper conversationSelected"
+  className="conversationWrapper conversationSelected conversationUnread"
+  onClick={[MockFunction]}
 >
   <img
-    src="http://www.image.co.uk/img1"
+    src="http://www.image.co.uk/image.jpg"
   />
-  <span>
-    John Smith
-  </span>
+  <div
+    className="conversationPreview"
+  >
+    <span
+      className="conversationPreviewName"
+    >
+      I am a bot
+    </span>
+    <span
+      className="conversationPreviewMessage"
+    >
+      Hello world
+    </span>
+  </div>
 </div>
 `;
 
-exports[`Conversation render should return a div with an image and a name 1`] = `
+exports[`Conversation render should return a div with an image, a name and a preview message 1`] = `
 <div
-  className="conversationWrapper"
+  className="conversationWrapper conversationUnread"
+  onClick={[MockFunction]}
 >
   <img
-    src="http://www.image.co.uk/img1"
+    src="http://www.image.co.uk/image.jpg"
   />
-  <span>
-    John Smith
-  </span>
+  <div
+    className="conversationPreview"
+  >
+    <span
+      className="conversationPreviewName"
+    >
+      I am a bot
+    </span>
+    <span
+      className="conversationPreviewMessage"
+    >
+      Hello world
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Conversation render should return a div with an image, a name but not a preview message 1`] = `
+<div
+  className="conversationWrapper conversationUnread"
+  onClick={[MockFunction]}
+>
+  <img
+    src="http://www.image.co.uk/image.jpg"
+  />
+  <div
+    className="conversationPreview"
+  >
+    <span
+      className="conversationPreviewName"
+    >
+      I am a bot
+    </span>
+  </div>
 </div>
 `;

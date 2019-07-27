@@ -21,17 +21,19 @@ describe('MessagesList', () => {
 
     beforeEach(() => {
         props = {
-            messages,
+            onClickOption: jest.fn(),
+            id: 1,
             replying: false,
             currentUserId: 1,
-            selectedOption: 2,
-            onClickOption: jest.fn()
+            color: '#1ccb9e',
+            botName: 'I am a bot',
+            messages,
         };
         shallowedWrapper = undefined;
     });
 
     describe('render', () => {
-        it('should return a list of messages', () => {
+        it('should return a list of 2 messages', () => {
             expect(wrapper()).toMatchSnapshot();
         });
         it('should return no messages', () => {

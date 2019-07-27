@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChatBotLayout render should return 2 lazy components (HeaderContainer and ChatBotContainer) 1`] = `
+<Suspense
+  fallback={
+    <div
+      className="centerChatBotSpinner"
+    >
+      <Memo(Spinner) />
+    </div>
+  }
+>
+  <div
+    className="headerLayout"
+  >
+    <lazy />
+  </div>
+  <lazy />
+</Suspense>
+`;

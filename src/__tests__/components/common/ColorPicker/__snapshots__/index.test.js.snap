@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorPicker render should return four ColorIcon components with the orange ColorIcon selected 1`] = `
+<div
+  className="colorPickerWrapper"
+>
+  <ColorIcon
+    color="red"
+    key="red"
+    onClick={[Function]}
+    selected={false}
+  />
+  <ColorIcon
+    color="orange"
+    key="orange"
+    onClick={[Function]}
+    selected={true}
+  />
+  <ColorIcon
+    color="yellow"
+    key="yellow"
+    onClick={[Function]}
+    selected={false}
+  />
+  <ColorIcon
+    color="green"
+    key="green"
+    onClick={[Function]}
+    selected={false}
+  />
+</div>
+`;

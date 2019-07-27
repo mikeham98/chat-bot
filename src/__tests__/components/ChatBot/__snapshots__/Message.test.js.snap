@@ -7,6 +7,11 @@ exports[`Message render should return a message body with media and options 1`] 
   <div
     className="message"
     onClick={[MockFunction]}
+    style={
+      Object {
+        "backgroundColor": "",
+      }
+    }
   >
     <span
       className="messageBody"
@@ -45,6 +50,11 @@ exports[`Message render should return a message body with media and options alon
   <div
     className="message"
     onClick={[MockFunction]}
+    style={
+      Object {
+        "backgroundColor": "",
+      }
+    }
   >
     <span
       className="messageBody"
@@ -88,6 +98,11 @@ exports[`Message render should return a message body without media 1`] = `
   <div
     className="message"
     onClick={[MockFunction]}
+    style={
+      Object {
+        "backgroundColor": "",
+      }
+    }
   >
     <span
       className="messageBody"
@@ -118,6 +133,11 @@ exports[`Message render should return a message body without options 1`] = `
   <div
     className="message"
     onClick={[MockFunction]}
+    style={
+      Object {
+        "backgroundColor": "",
+      }
+    }
   >
     <span
       className="messageBody"

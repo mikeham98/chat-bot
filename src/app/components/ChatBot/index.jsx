@@ -23,6 +23,10 @@ const ChatBot = ({messages, replying, currentUserId, color, botName, sendMessage
     );
 };
 
+ChatBot.defaultProps = {
+    botName: ''
+};
+
 ChatBot.propTypes = {
     messages: MessagesPropTypes,
     replying: PropTypes.bool,

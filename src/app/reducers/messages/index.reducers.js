@@ -18,6 +18,12 @@ const messagesReducer = (state = initialState, action) => {
                 ...state,
                 replying: [...state.replying, action.payload]
             };
+        case constants.STOP_BOT_TYPING:
+            const replying = state.replying.filter(e => e !== action.payload);
+            return {
+                ...state,
+                replying
+            };
         case constants.BOT_IN_PROGRESS:
             return {
                 ...state,
@@ -28,12 +34,6 @@ const messagesReducer = (state = initialState, action) => {
             return {
                 ...state,
                 botInProgress
-            };
-        case constants.STOP_BOT_TYPING:
-            const replying = state.replying.filter(e => e !== action.payload);
-            return {
-                ...state,
-                replying
             };
         default:
             return state

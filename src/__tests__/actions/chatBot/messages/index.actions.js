@@ -1,5 +1,5 @@
 import axiosInstance from '../../../../app/actions/axiosInstance';
-import {constants, getMessages} from '../../../../app/actions/chatBot/messages/index.actions';
+import {constants, getMessages, setOption} from '../../../../app/actions/chatBot/messages/index.actions';
 import MockAdapter from 'axios-mock-adapter';
 
 const mockAxios = new MockAdapter(axiosInstance);
@@ -18,7 +18,7 @@ describe('messages actions', () => {
             beforeEach(() => {
                 mockAxios.onGet('http://localhost:3000/conversation/bot1/messages').reply(200, messages);
             });
-            it('should call dispatch with an action of type GET_CONVERSATION_MESSAGES and a payload of messages', () => {
+            it('should call mockDispatch with an action of type GET_CONVERSATION_MESSAGES and a payload of messages', () => {
                 expect(mockDispatch).not.toHaveBeenCalled();
 
                 return dispatch(getMessages('bot1')).then(() => {
@@ -27,6 +27,27 @@ describe('messages actions', () => {
                         type: constants.GET_CONVERSATION_MESSAGES,
                         payload: messages
                     })
+                });
+            });
+        });
+    });
+
+    describe('setOption', () => {
+        describe('success', () => {
+            beforeEach(() => {
+                mockAxios.onPatch('http://localhost:3000/messages/5', {
+                    selectedOption: 10
+                }).reply(200);
+            });
+            it('should not call mockDispatch but call the callback passed in', () => {
+                const optionId = 10;
+                const messageId = 5;
+                const callback = jest.fn();
+                const conversationId = 1;
+                expect(mockDispatch).not.toHaveBeenCalled();
+                return dispatch(setOption(optionId, messageId, callback, conversationId)).then(() => {
+                    expect(mockDispatch).not.toHaveBeenCalled();
+                    expect(callback).toHaveBeenCalled();
                 });
             });
         });

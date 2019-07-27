@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemeContainer render should return a dark theme with a div with text of Children 1`] = `
+<div
+  className="darkTheme"
+>
+  <div>
+    Children
+  </div>
+</div>
+`;
+
+exports[`ThemeContainer render should return a light theme (empty class name) with a div with text of Children 1`] = `
+<div
+  className=""
+>
+  <div>
+    Children
+  </div>
+</div>
+`;

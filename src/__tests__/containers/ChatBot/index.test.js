@@ -1,11 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {ChatBotContainer} from '../../../app/containers/ChatBot/index';
-import {setOption} from '../../../app/actions/chatBot/messages/index.actions';
-
-jest.mock('../../../app/actions/chatBot/messages/index.actions', () => ({
-    setOption: jest.fn()
-}));
+import ChatBot from '../../../app/components/ChatBot/index';
 
 describe('ChatBotContainer', () => {
 
@@ -25,7 +21,21 @@ describe('ChatBotContainer', () => {
             setOption: jest.fn(),
             messages: [1, 2, 3, 4, 5],
             replying: true,
-            currentConversationId: 100,
+            currentConversation: {
+                id: "100",
+                userId: "bot42",
+                userName: "travel_bot",
+                color: "#9A58B9",
+                profile: {
+                    name: "TravelBot",
+                    img: "https://images.unsplash.com/photo-1496046744122-2328018d60b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1664&q=80"
+                },
+                read: true,
+                latest: {
+                    message: "So just to confirm, you want to go to Florida for 2 weeks from August 12th (fly out 10am) August 26 (return flight 2pm) with 3 people.",
+                    createdAt: "2019-07-26T20:36:26.725Z"
+                }
+            },
             currentUserId: 1
         };
         shallowedWrapper = undefined;
@@ -44,7 +54,7 @@ describe('ChatBotContainer', () => {
                     expect(props.getMessages).not.toHaveBeenCalled();
                     wrapper();
                     expect(props.getMessages).toHaveBeenCalledTimes(1);
-                    expect(props.getMessages).toHaveBeenCalledWith(100);
+                    expect(props.getMessages).toHaveBeenCalledWith("100");
                 });
                 it('should be called on update only when props have changes', () => {
                     expect(props.getMessages).not.toHaveBeenCalled();
@@ -54,12 +64,15 @@ describe('ChatBotContainer', () => {
                     // should still only have called getMessages once because currentConversationId is still 100
                     expect(props.getMessages).toHaveBeenCalledTimes(1);
                     wrapper().setProps({
-                        currentConversationId: 50
+                        currentConversation: {
+                            ...props.currentConversation,
+                            id: "50"
+                        }
                     });
                     // should now call getMessages because currentConversationId has changed
                     expect(props.getMessages).toHaveBeenCalledTimes(2);
-                    expect(props.getMessages).toHaveBeenNthCalledWith(1, 100);
-                    expect(props.getMessages).toHaveBeenNthCalledWith(2, 50);
+                    expect(props.getMessages).toHaveBeenNthCalledWith(1, "100");
+                    expect(props.getMessages).toHaveBeenNthCalledWith(2, "50");
                 });
             });
             describe('sendMessage', () => {
@@ -67,19 +80,19 @@ describe('ChatBotContainer', () => {
                     const message = 'this is a message';
                     const callback = jest.fn();
                     expect(props.sendMessage).not.toHaveBeenCalled();
-                    wrapper().find('ChatBot').first().props().sendMessage(message, callback);
+                    wrapper().find(ChatBot).first().props().sendMessage(message, callback);
                     expect(props.sendMessage).toHaveBeenCalledTimes(1);
-                    expect(props.sendMessage).toHaveBeenCalledWith(100, message, expect.any(Function));
+                    expect(props.sendMessage).toHaveBeenCalledWith("100", message, expect.any(Function));
                 });
             });
             describe('setOption', () => {
                 it('should be called call of onClickOption with 42 (optionId), 5 (messageId), and a function (getMessages)', () => {
                     const optionId = 42;
                     const messageId = 5;
-                    expect(setOption).not.toHaveBeenCalled();
-                    wrapper().find('ChatBot').first().props().onClickOption(optionId, messageId);
-                    expect(setOption).toHaveBeenCalledTimes(1);
-                    expect(setOption).toHaveBeenCalledWith(42, 5, expect.any(Function));
+                    expect(props.setOption).not.toHaveBeenCalled();
+                    wrapper().find(ChatBot).first().props().onClickOption(optionId, messageId);
+                    expect(props.setOption).toHaveBeenCalledTimes(1);
+                    expect(props.setOption).toHaveBeenCalledWith(42, 5, expect.any(Function), "100");
                 });
             });
         });

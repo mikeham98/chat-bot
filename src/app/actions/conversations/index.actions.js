@@ -27,7 +27,7 @@ export const setCurrentConversation = (conversationId) => (dispatch) => {
         type: constants.SET_CURRENT_CONVERSATION,
         payload: conversationId
     });
-    axiosInstance.patch(`/conversation/${conversationId}`, {read: true})
+    return axiosInstance.patch(`/conversation/${conversationId}`, {read: true})
         .then(() => {
             dispatch(getConversationList());
         })

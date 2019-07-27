@@ -18,6 +18,7 @@ describe('ChatBot', () => {
             messages: [1,2,3,4,5],
             replying: true,
             currentUserId: 1,
+            color: '#1ccb9e',
             botName: 'bot1',
             sendMessage: jest.fn(),
             onClickOption: jest.fn()
@@ -34,14 +35,14 @@ describe('ChatBot', () => {
     describe('functionality', () => {
         describe('prop', () => {
             describe('onClickOption', () => {
-                it('should be called on onClick of message div', () => {
+                it('should be called on onClick of MessagesList', () => {
                     expect(props.onClickOption).not.toHaveBeenCalled();
                     wrapper().find('MessagesList').first().props().onClickOption();
                     expect(props.onClickOption).toHaveBeenCalledTimes(1);
                 });
             });
             describe('sendMessage', () => {
-                it('should be called on onClick of Options component', () => {
+                it('should be called on onClick of MessageForm', () => {
                     expect(props.sendMessage).not.toHaveBeenCalled();
                     wrapper().find('MessageForm').first().props().sendMessage();
                     expect(props.sendMessage).toHaveBeenCalledTimes(1);
