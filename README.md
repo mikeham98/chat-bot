@@ -5,6 +5,11 @@
 2. Run `npm i` in a command line within directory of the project
 3. Run `npm run dev` to load up the project
 
+## Example
+<div>
+<img src="https://raw.githubusercontent.com/mikeham98/chat-bot/master/assets/chatBot.gif" height="400">
+</div>
+
 ## Tests
 To run my unit tests please run `npm test`. I have not created integration tests as it would take much longer to do so.
 Test Coverage - 90.59% Statements, 80.99% Branches, 89.66% Functions, 90.18% Lines.
@@ -46,7 +51,7 @@ Due to the bot returning static responses, I have included a typical conversatio
 - (bot) Sure thing! what size pizza would you like?
 - (user) Can I have a large pizza please
 - (bot) Would you like any toppings?
-- (user) Pepperoini
+- (user) Pepperoni
 - (bot) We will get working on it right away
 - (user) Many thanks
 - (bot, delay of 10 seconds to pretend the Pizza is being prepared) Voila, your pizza has been made and is out for delivery

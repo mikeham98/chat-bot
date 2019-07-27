@@ -58,5 +58,9 @@
 }
 
 .conversationUnread {
-  background-color: #d9d9d9;
+  background-color: #e6e6e6;
+  color: $flat-lavender;
+  .conversationPreviewMessage {
+    color: $flat-lavender;
+  }
 }
