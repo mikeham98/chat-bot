@@ -61,8 +61,8 @@ export class HeaderContainer extends React.PureComponent {
                         icon={this.isLightTheme() ? moonIcon : sunIcon}
                         onClick={this.handleChangeTheme}
                         color={this.isLightTheme() ? '#172B4D' : 'white'}
-                        height='30px'
-                        width='30px'
+                        height='22px'
+                        width='22px'
                     />
                 </div>
                 <div className={styles.headerColorPicker}>

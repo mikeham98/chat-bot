@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import {Formik} from 'formik';
 import MessageInput from './MessageInput';
 import IconButton from "../../common/Icon/IconButton";
-import sendIcon from '../../../../../assets/icons/right-arrow-1.svg';
+import sendIcon from '../../../../../assets/icons/rightArrow.svg';
 import styles from '../../../../themes/components/toolbar.scss';
 
 class MessageForm extends React.Component {
