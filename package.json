@@ -2,12 +2,13 @@
   "name": "chat-bot",
   "version": "1.0.0",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --watch",
+    "start": "node server.js",
+    "devServer": "webpack-dev-server --env.API_URL=http://localhost:3000/ --mode development --open --watch",
     "json-server": "json-server --watch ./db/db.json --port 3000",
     "reset-json-server": "cpy './db/db_initial.json' db --rename='db.json'",
-    "dev": "concurrently \"npm start\" \"npm run reset-json-server\" \"npm run json-server\"",
+    "dev": "concurrently \"npm run devServer\" \"npm run reset-json-server\" \"npm run json-server\"",
     "test": "jest",
-    "build": "webpack --mode production",
+    "build": "webpack --mode production --env.API_URL=https://chatbot-tech-test-backend.herokuapp.com/",
     "fix-code": "prettier-eslint --write './src/**/*.{js,jsx}' ",
     "fix-styles": "prettier-stylelint --write './src/**/*.{css,scss}'"
   },

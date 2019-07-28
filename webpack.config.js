@@ -1,10 +1,11 @@
+const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const {UnusedFilesWebpackPlugin} = require("unused-files-webpack-plugin");
 
-module.exports = {
+module.exports = (env) => ({
     entry: {main: './src/app/index.jsx'},
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -79,9 +80,12 @@ module.exports = {
         new WebpackMd5Hash(),
         new UnusedFilesWebpackPlugin({
             patterns: ["src/app/**/*.*"]
+        }),
+        new webpack.DefinePlugin({
+            'process.env.API_URL': JSON.stringify(env.API_URL)
         })
     ],
     resolve: {
         extensions: [".js", ".jsx", ".json"],
     },
-};
+});
