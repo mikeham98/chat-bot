@@ -70,12 +70,12 @@ Due to the bot returning static responses, I have included a suitable conversati
 - **bot** - *Okay, feel free to ask for any help in the future, have a good day.*
 
 ## Notes
-- I am using json-server to act as a REST api for the application (the database is reset on running `npm run dev`)
-- If messages do not appear it is most likely due to json-server not responding therefore please refresh the page
+- I am using json-server to act as a REST api for the application (the database is reset on running `npm run dev`).
+- If messages do not appear it is most likely due to json-server not responding therefore please refresh the page.
 - I have used a mixture of both PureComponents and memos where I feel suitable, I tend to create memos for very simple
 components which do not need internal logic. The reason for this is so that I don't create a function within a functional
-component as this has performance implications due to the creation functions on render/update.
-- There are no hooks in this project because where I would end up implementing them I would also need to add other logic within the
+component as this has performance implications due to the creation of functions on render/update.
+- There are no hooks in this project, because where I would end up implementing them I would also need to add other logic within the
 component. Therefore would essentially be creating functions on render/update like the above comment.
-- I have avoided creating lambda functions within render methods where possible and have used bind(this) in the constructor to improve performance
+- I have avoided creating lambda functions within render methods where possible and have used bind(this) in the constructor to improve performance.
 - I haven't fully tested SideBar.jsx as it would take a very long time due to the nature of the component.

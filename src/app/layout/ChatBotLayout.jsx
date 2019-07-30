@@ -6,7 +6,7 @@ import messagesReducer from "../reducers/messages/index.reducers";
 import conversationsReducer from "../reducers/conversations/index.reducers";
 
 const ChatBotContainer = React.lazy(() =>
-    import(/* webpackChunkName: "MESSAGES_LIST_CONTAINER" */ "../containers/ChatBot/index")
+    import(/* webpackChunkName: "CHAT_BOT_CONTAINER" */ "../containers/ChatBot/index")
         .then(() => {
             store.injectReducer('messages', messagesReducer);
             return import ("../containers/ChatBot/index");

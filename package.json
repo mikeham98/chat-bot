@@ -2,12 +2,13 @@
   "name": "chat-bot",
   "version": "1.0.0",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --watch",
+    "start": "node server.js",
+    "devServer": "webpack-dev-server --env.API_URL=http://localhost:3000/ --mode development --open --watch",
     "json-server": "json-server --watch ./db/db.json --port 3000",
     "reset-json-server": "cpy './db/db_initial.json' db --rename='db.json'",
-    "dev": "concurrently \"npm start\" \"npm run reset-json-server\" \"npm run json-server\"",
+    "dev": "concurrently \"npm run devServer\" \"npm run reset-json-server\" \"npm run json-server\"",
     "test": "jest",
-    "build": "webpack --mode production",
+    "build": "webpack --mode production --env.API_URL=https://chatbot-tech-test-backend.herokuapp.com/",
     "fix-code": "prettier-eslint --write './src/**/*.{js,jsx}' ",
     "fix-styles": "prettier-stylelint --write './src/**/*.{css,scss}'"
   },
@@ -64,9 +65,11 @@
   "dependencies": {
     "axios": "^0.19.0",
     "classnames": "^2.2.6",
+    "express": "^4.17.1",
     "formik": "^1.5.8",
     "identity-obj-proxy": "^3.0.0",
     "moment": "^2.24.0",
+    "path": "^0.12.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
